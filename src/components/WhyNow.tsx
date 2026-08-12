@@ -1,62 +1,47 @@
 import { content } from "@/lib/content";
-import { Handoff, SectionHeader } from "@/components/SectionHeader";
+import {
+  ExhibitTable,
+  Handoff,
+  SectionHeader,
+} from "@/components/SectionHeader";
 
 export function WhyNow() {
   const { meta, arguments: args, fundingBox } = content.whyNow;
 
   return (
-    <section id={meta.id} className="border-b border-hairline bg-void">
-      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+    <section id={meta.id} className="border-b border-hairline">
+      <div className="mx-auto max-w-5xl px-6 py-20 sm:px-8 sm:py-24">
         <SectionHeader meta={meta} />
 
-        <div className="space-y-0 divide-y divide-hairline border-y border-hairline">
-          {args.map((arg, index) => (
-            <article
-              key={arg.claim}
-              className="grid gap-4 py-7 sm:grid-cols-[2.75rem_1fr] sm:gap-6 md:py-8"
-            >
-              <span className="font-mono text-[12px] tracking-[0.12em] text-cat-yellow">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <div className="max-w-3xl">
-                <h3 className="text-[1.1rem] font-medium leading-snug tracking-[-0.025em] text-ink">
-                  {arg.claim}
-                </h3>
-                <p className="mt-2.5 text-[0.95rem] leading-relaxed text-ink-muted">
-                  {arg.grounding}
-                </p>
-                <p className="mt-3 text-[0.95rem] leading-relaxed text-ink">
-                  {arg.soWhat}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
+        <ExhibitTable
+          headers={["Claim", "Fact", "So what"]}
+          rows={args.map((arg) => [arg.claim, arg.grounding, arg.soWhat])}
+        />
 
         <aside
-          className="mt-12 border border-cat-yellow bg-surface p-6 sm:mt-14 sm:p-8"
+          className="mt-12 border border-cat-yellow p-6 sm:p-7"
           aria-labelledby="funding-model-heading"
         >
           <h3
             id="funding-model-heading"
-            className="font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-cat-yellow"
+            className="text-sm font-medium text-ink"
           >
             {fundingBox.heading}
           </h3>
-          <ul className="mt-5 space-y-3">
-            {fundingBox.items.map((item) => (
-              <li
-                key={item}
-                className="flex gap-3 text-[0.98rem] leading-relaxed text-ink-muted"
-              >
-                <span
-                  className="mt-[0.55rem] h-1 w-1 shrink-0 bg-cat-yellow"
-                  aria-hidden="true"
-                />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          <dl className="mt-4 space-y-3 text-[15px] leading-relaxed">
+            <div>
+              <dt className="sr-only">During</dt>
+              <dd className="text-ink-muted">{fundingBox.during}</dd>
+            </div>
+            <div>
+              <dt className="sr-only">Output</dt>
+              <dd className="text-ink-muted">{fundingBox.output}</dd>
+            </div>
+            <div>
+              <dt className="sr-only">After</dt>
+              <dd className="text-ink-muted">{fundingBox.after}</dd>
+            </div>
+          </dl>
         </aside>
 
         {meta.handoff ? <Handoff text={meta.handoff} /> : null}

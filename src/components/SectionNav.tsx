@@ -20,9 +20,8 @@ export function SectionNav() {
   const [activeId, setActiveId] = useState(sections[0]?.id ?? "");
 
   useEffect(() => {
-    const ids = navItems.map((item) => item.id);
-    const elements = ids
-      .map((id) => document.getElementById(id))
+    const elements = navItems
+      .map((item) => document.getElementById(item.id))
       .filter((el): el is HTMLElement => Boolean(el));
 
     if (elements.length === 0) return;
@@ -53,27 +52,21 @@ export function SectionNav() {
   return (
     <nav
       aria-label="Sections"
-      className="sticky top-0 z-40 border-b border-hairline bg-void/90 backdrop-blur-[10px]"
+      className="sticky top-0 z-40 border-b border-hairline bg-void/90 backdrop-blur-md"
     >
-      <div className="mx-auto flex max-w-6xl items-stretch gap-0 overflow-x-auto px-5 sm:px-8 lg:px-10">
+      <div className="mx-auto flex max-w-5xl items-stretch overflow-x-auto px-6 sm:px-8">
         {navItems.map((item) => {
           const isActive = activeId === item.id;
           return (
             <a
               key={item.id}
               href={`#${item.id}`}
-              className={`relative flex shrink-0 items-center gap-2.5 px-3 py-3.5 text-[12px] tracking-[-0.01em] transition-colors sm:px-4 ${
-                isActive
-                  ? "font-medium text-ink"
-                  : "text-ink-faint hover:text-ink-muted"
+              className={`relative flex shrink-0 items-center gap-2 px-3 py-3.5 text-sm transition-colors sm:px-4 ${
+                isActive ? "text-ink" : "text-ink-faint hover:text-ink-muted"
               }`}
             >
               {item.number ? (
-                <span
-                  className={`font-mono text-[11px] tracking-[0.1em] ${
-                    isActive ? "text-cat-yellow" : "text-ink-faint"
-                  }`}
-                >
+                <span className={isActive ? "text-cat-yellow" : "text-ink-faint"}>
                   {item.number}
                 </span>
               ) : null}

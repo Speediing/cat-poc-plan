@@ -1,29 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --void: #0a0a0a;
-  --surface: #111111;
-  --surface-raised: #161616;
-  --ink: #f5f4ef;
-  --ink-muted: #a8a69c;
-  --ink-faint: #6e6c64;
-  --hairline: #2a2a2a;
-  --hairline-strong: #3a3a3a;
+  --void: #000000;
+  --surface: #0a0a0a;
+  --ink: #ededed;
+  --ink-muted: #888888;
+  --ink-faint: #666666;
+  --hairline: #222222;
+  --hairline-strong: #333333;
   --cat-yellow: #ffcd11;
-  --cursor-orange: #f54e00;
 }
 
 @theme inline {
   --color-void: var(--void);
   --color-surface: var(--surface);
-  --color-surface-raised: var(--surface-raised);
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
   --color-ink-faint: var(--ink-faint);
   --color-hairline: var(--hairline);
   --color-hairline-strong: var(--hairline-strong);
   --color-cat-yellow: var(--cat-yellow);
-  --color-cursor-orange: var(--cursor-orange);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -43,44 +39,23 @@ body {
   background: var(--void);
   color: var(--ink);
   font-family: var(--font-geist-sans), ui-sans-serif, sans-serif;
-  font-feature-settings: "ss01" on, "cv11" on;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--cat-yellow) 70%, transparent);
-  color: #0a0a0a;
+  background: var(--cat-yellow);
+  color: #000;
 }
 
-/* Sticky nav offset for in-page anchors */
 section[id],
 [id="next-steps"] {
-  scroll-margin-top: 4.75rem;
+  scroll-margin-top: 4.5rem;
 }
 
 @media (max-width: 640px) {
   section[id],
   [id="next-steps"] {
-    scroll-margin-top: 6.5rem;
+    scroll-margin-top: 6rem;
   }
-}
-
-/* Optional technical grid motif — faint, non-decorative clutter */
-.tech-grid {
-  background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 48px 48px;
-}
-
-.horizon-line {
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 205, 17, 0.35) 20%,
-    rgba(255, 205, 17, 0.55) 50%,
-    rgba(255, 205, 17, 0.35) 80%,
-    transparent 100%
-  );
 }
