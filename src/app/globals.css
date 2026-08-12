@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #f7f7f4;
+  --cream-deep: #efeee8;
+  --ink: #26251e;
+  --ink-muted: #5c5a50;
+  --ink-faint: #8a887c;
+  --hairline: rgba(38, 37, 30, 0.12);
+  --hairline-strong: rgba(38, 37, 30, 0.22);
+  --cat-yellow: #ffcd11;
+  --cursor-orange: #f54e00;
+  --surface: #ffffff;
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-hairline: var(--hairline);
+  --color-hairline-strong: var(--hairline-strong);
+  --color-cat-yellow: var(--cat-yellow);
+  --color-cursor-orange: var(--cursor-orange);
+  --color-surface: var(--surface);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), ui-sans-serif, sans-serif;
+  font-feature-settings: "ss01" on, "cv11" on;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--cat-yellow) 55%, transparent);
+  color: var(--ink);
+}
+
+/* Sticky nav offset for in-page anchors */
+section[id],
+[id="next-steps"] {
+  scroll-margin-top: 5.5rem;
+}
