@@ -12,7 +12,7 @@
 - **Badge:** Onsite follow-up · Chicago · August 11, 2026
 - **Title:** Caterpillar × Cursor
 - **Thesis:** What we heard from your team in Chicago, a plain primer on Cursor, and the smallest cross-functional group that could prove an end-to-end pattern inside digital — starting with photo quality detection.
-- **Prepared for:** Nate Litton. Credits also to Olivier and Shelby Bethea.
+- **Credits:** Jason Wiker, Joe Masello & Sahil Patel, Cursor. With thanks to Olivier and Shelby Bethea.
 
 ## 02 What we heard
 **The bottleneck isn't writing the code.**
