@@ -98,23 +98,11 @@ export interface SiteContent {
     rows: PathRow[];
     close: string;
   };
-  ideaWorthTesting: {
-    meta: SectionMeta;
-    quote: string;
-    attribution: string;
-    practice: string[];
-  };
   proposedPoc: {
     meta: SectionMeta;
     intro: string;
     checks: string[];
     why: Finding[];
-  };
-  theGroup: {
-    meta: SectionMeta;
-    ask: string;
-    members: GroupMember[];
-    expectation: string;
   };
   thePilot: {
     meta: SectionMeta;
@@ -288,28 +276,9 @@ export const content: SiteContent = {
       "Nothing here asks you to reorganize first. The pilot tests whether this is true on real Cat Digital work — end to end enough to show at a town hall or Augie offsite.",
   },
 
-  ideaWorthTesting: {
-    meta: {
-      number: "06",
-      id: "idea-worth-testing",
-      navLabel: "The idea",
-      heading: "The idea worth testing.",
-      kicker: "",
-    },
-    quote:
-      "Standard patterns should be modular enough that agents can reach for them upstream — not rebuilt from scratch in every architecture review.",
-    attribution: "Paraphrased from the August 11 session",
-    practice: [
-      "Security, entitlements, and compliance written down once as reusable rules and context.",
-      "Agents pull those patterns in at build time, so the first draft already reflects them.",
-      "Review starts ahead of zero — people argue about the interesting part, not the basics.",
-      "The outcome is a reusable skill other teams can copy — not an ad hoc demo leaders cannot replicate.",
-    ],
-  },
-
   proposedPoc: {
     meta: {
-      number: "07",
+      number: "06",
       id: "proposed-poc",
       navLabel: "Photo quality",
       heading: "Proposed work: photo quality detection.",
@@ -340,45 +309,9 @@ export const content: SiteContent = {
     ],
   },
 
-  theGroup: {
-    meta: {
-      number: "08",
-      id: "the-group",
-      navLabel: "The group",
-      heading: "Small, cross-functional, end to end.",
-      kicker:
-        "Enough people to represent the whole path to production. Few enough to move without a program plan.",
-    },
-    ask: "Nominate reps within two to three days. Then a short reconnect to confirm the group and the use case.",
-    members: [
-      {
-        name: "One rep from Daniela's space",
-        role: "Engineering — the build side of the handoff",
-      },
-      {
-        name: "One rep from Kevin's space",
-        role: "MLOps — production path",
-      },
-      {
-        name: "Charlie (DPM AI)",
-        role: "Friendly observer on requirements — not a hard dependency",
-      },
-      {
-        name: "Olivier",
-        role: "Facilitates end-to-end across the flow",
-      },
-      {
-        name: "Shelby Bethea",
-        role: "On the Aug 11 session — looped for continuity",
-      },
-    ],
-    expectation:
-      "What we ask: build real work during the window, and give us about an hour a week of honest feedback.",
-  },
-
   thePilot: {
     meta: {
-      number: "09",
+      number: "07",
       id: "the-pilot",
       navLabel: "The pilot",
       heading: "Thirty days, no procurement conversation to start.",
@@ -405,7 +338,7 @@ export const content: SiteContent = {
 
   timeline: {
     meta: {
-      number: "10",
+      number: "08",
       id: "timeline",
       navLabel: "Timeline",
       heading: "The next few weeks.",
@@ -441,7 +374,7 @@ export const content: SiteContent = {
   },
 
   nextSteps: {
-    label: "11 Next steps",
+    label: "09 Next steps",
     heading: "Four things, then we start.",
     steps: [
       {
@@ -474,14 +407,53 @@ export const content: SiteContent = {
   },
 };
 
+/** Visible nav / page sections only (continuous numbering). */
 export const sections: SectionMeta[] = [
   content.whatWeHeard.meta,
   content.theGap.meta,
   content.whoCursorIs.meta,
   content.whereItPlugsIn.meta,
-  content.ideaWorthTesting.meta,
   content.proposedPoc.meta,
-  content.theGroup.meta,
   content.thePilot.meta,
   content.timeline.meta,
 ];
+
+/**
+ * HIDDEN until Nate confirms peeps.
+ * Not in `content` / `sections` / page render. Re-wire via TheGroup when ready.
+ */
+export const hiddenGroup = {
+  meta: {
+    number: "08",
+    id: "the-group",
+    navLabel: "The group",
+    heading: "Small, cross-functional, end to end.",
+    kicker:
+      "Enough people to represent the whole path to production. Few enough to move without a program plan.",
+  },
+  ask: "Nominate reps within two to three days. Then a short reconnect to confirm the group and the use case.",
+  members: [
+    {
+      name: "One rep from Daniela's space",
+      role: "Engineering — the build side of the handoff",
+    },
+    {
+      name: "One rep from Kevin's space",
+      role: "MLOps — production path",
+    },
+    {
+      name: "Charlie (DPM AI)",
+      role: "Friendly observer on requirements — not a hard dependency",
+    },
+    {
+      name: "Olivier",
+      role: "Facilitates end-to-end across the flow",
+    },
+    {
+      name: "Shelby Bethea",
+      role: "On the Aug 11 session — looped for continuity",
+    },
+  ],
+  expectation:
+    "What we ask: build real work during the window, and give us about an hour a week of honest feedback.",
+};
