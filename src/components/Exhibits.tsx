@@ -64,37 +64,6 @@ export function OrgSplitExhibit({ items }: { items: OrgContextItem[] }) {
   );
 }
 
-/** Digital modernized vs Technology legacy */
-export function ModernizationExhibit({
-  heading,
-  digital,
-  technology,
-}: {
-  heading: string;
-  digital: string;
-  technology: string;
-}) {
-  return (
-    <div className="rounded-2xl bg-white/80 p-5 shadow-[0_0_0_1px_rgba(38,37,30,0.07)] sm:p-6">
-      <p className="mb-4 text-[13px] font-medium text-ink-faint">{heading}</p>
-      <div className="grid gap-3 sm:grid-cols-2">
-        <div className="rounded-xl bg-ink px-4 py-5 text-canvas">
-          <p className="text-[13px] font-medium text-canvas/55">Digital</p>
-          <p className="mt-2 text-[15px] leading-relaxed text-canvas/90">
-            {digital}
-          </p>
-        </div>
-        <div className="rounded-xl bg-panel px-4 py-5">
-          <p className="text-[13px] font-medium text-ink-faint">Technology</p>
-          <p className="mt-2 text-[15px] leading-relaxed text-ink-muted">
-            {technology}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 /** Idea → production ~6-month chain */
 export function CycleChainExhibit({
   heading,
@@ -427,7 +396,7 @@ export function WaveRoadmapExhibit({ waves }: { waves: Wave[] }) {
   return (
     <div className="rounded-2xl bg-white/80 p-5 shadow-[0_0_0_1px_rgba(38,37,30,0.07)] sm:p-6">
       <p className="mb-4 text-[13px] font-medium text-ink-faint">
-        One area → AI teams → ~7k digital
+        One area → prove → AI work → wider
       </p>
       <ol className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
         {waves.map((wave) => (

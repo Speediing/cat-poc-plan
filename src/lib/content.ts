@@ -74,11 +74,6 @@ export interface WhatWeHeardContent {
     steps: PrototypeTrapStep[];
     soWhat: string;
   };
-  modernization: {
-    heading: string;
-    digital: string;
-    technology: string;
-  };
   callout: Callout;
 }
 
@@ -267,11 +262,11 @@ export const content: SiteContent = {
     orgContext: [
       {
         label: "CAT Technology",
-        text: "Software in the cab. Brandon Newman / Jamie's org. Out of scope. They already have a Cursor track.",
+        text: "Software in the cab (Brandon Newman / Jamie). Hard legacy. Already scoping a Cursor pilot. Nate wants both tracks coordinated — this page is Digital only.",
       },
       {
         label: "Caterpillar Digital",
-        text: "Everything else: cat.com, parts.com, digital products, Cat AI assistant (cloud and edge). This plan.",
+        text: "Everything else: cat.com, parts.com, digital products, Cat AI assistant (cloud and edge). 5–7 years into a rebuild. This plan.",
       },
       {
         label: "Nate → CDO (Augie)",
@@ -286,22 +281,23 @@ export const content: SiteContent = {
       {
         label: "Six months to ship",
         situation:
-          "Plan, build, and integration sit in separate teams. A simple feature clears every handoff before anyone sees it in production.",
+          "Plan is one big org. Build sits across about two or three engineering orgs. Then integration. Lots of routines and handoffs. The right people are in the loop — output quality is high. The tax is time.",
         meaning:
-          "Quality is high. Speed is not. That is a delivery problem, not a research gap.",
+          "Your team wants speed without giving up that quality bar. That is a delivery problem, not a research gap.",
       },
       {
         label: "Prototypes reset the clock",
         situation:
-          "AI R&D can stand something up in two weeks. Getting it into production starts the full cycle over from the top. Security and entitlements get re-litigated instead of reused.",
+          "AI R&D can stand something up in two weeks. Then it stalls on entitlements, security, or something nobody thought about — and the work goes back to the drawing board through the full cycle.",
         meaning:
           "Closing that gap is the whole point of the pilot. Not more prototypes — the same prototype, through the whole path, faster.",
       },
       {
         label: "Nothing here asks you to reorganize first",
         situation:
-          "Your team wants tools that help without forcing thousands of people to change overnight. The digital org is still ~7,000 people.",
-        meaning: "One area first. Prove it. Then AI teams. Then the broader org.",
+          "You do not have a thin agile domain team that carries an idea all the way to ship as one unit. And you do not want to change thousands of people overnight. The digital org is still ~7,000.",
+        meaning:
+          "One area first. Prove it. Expand to AI-focused work. Then wider.",
       },
     ],
     portfolio: {
@@ -315,7 +311,7 @@ export const content: SiteContent = {
         {
           name: "Translation",
           detail:
-            "Still unsolved. Cat-specific words and safety rules block generic translate tools. Manuals can run tens of thousands of pages. Spend is close to tens of millions on human translators.",
+            "You thought this was solved. It isn't. Manuals can run tens of thousands of pages. Cat-specific vocabulary plus safety rules block generic translate tools. Spend is close to tens of millions on human translators.",
         },
         {
           name: "Cat AI assistant",
@@ -326,41 +322,34 @@ export const content: SiteContent = {
     },
     operatingModel: {
       heading: "Six months to ship",
-      stages: ["Idea", "Plan", "Build", "Integrate", "Ship"],
-      pain: "Plan, build, and integration are separate orgs. Heavy handoffs. Every AI product pays the same toll — not because Digital has bad legacy code.",
+      stages: ["Plan (1 org)", "Build (~2–3 orgs)", "Integrate", "Ship"],
+      pain: "Not a thin domain team that owns idea to ship. Separate orgs, heavy handoffs, lots of routines. Quality stays high because the right people are involved. A simple feature still takes about six months. When vendors ask for a gnarly codebase, that is not Digital's bottleneck — yours is the production path.",
     },
     prototypeTrap: {
       heading: "Prototypes reset the clock",
       steps: [
         {
           label: "Prototype",
-          text: "AI R&D stands something up, self-contained",
+          text: "AI R&D stands something up in about two weeks",
           duration: "~2 weeks",
         },
         {
-          label: "Restart",
-          text: "Same idea re-enters plan → build → integrate",
-          duration: "Handoffs",
+          label: "Stuck",
+          text: "Entitlements, security, or “we didn’t think about X”",
+          duration: "Daily failure",
         },
         {
-          label: "Ship",
-          text: "Security and entitlements argued again from scratch",
+          label: "Restart",
+          text: "Back to the drawing board through plan → build → integrate",
           duration: "~6 months",
         },
       ],
       soWhat:
         "Closing that gap is the whole point of the pilot. Not more prototypes — the same prototype, through the whole path, faster.",
     },
-    modernization: {
-      heading: "Digital vs Technology",
-      digital:
-        "Digital is 5–7 years into a rebuild. Most surfaces are new. Less legacy drag. A clean place to test on real work.",
-      technology:
-        "In-cab code under Brandon is a different story — hard legacy, and a separate Cursor track already moving. Not this plan.",
-    },
     callout: {
       heading: "How your team wants to start",
-      body: "Self-contained AI R&D sandbox, with incoming AI/ML Ops in the room. Real enough to matter. Contained enough to move. One area first, then wider. Nothing here asks you to reorganize first.",
+      body: "Your AI R&D lead's note: a self-contained sandbox avoids the usual infosec and integration tax just to stand a tool up. Bring incoming AI/ML Ops into the room. Real enough to matter. Contained enough to move. One area → prove it → expand to AI-focused work → then wider. Nothing here asks you to reorganize first.",
     },
   },
 
@@ -527,16 +516,9 @@ export const content: SiteContent = {
       {
         claim: "Aug 1 only helps if production gets faster.",
         grounding:
-          "Two-week demos still restart the cycle. Security and entitlements get re-litigated. ML and AI Ops now report to you to own that path.",
+          "Two-week demos still restart the cycle. Security and entitlements get re-litigated. ML and AI Ops now sit with the same owner as the AI product work.",
         soWhat:
           "Test tickets through pull requests with that group now, before old habits settle back in.",
-      },
-      {
-        claim: "Digital is the right place to prove it.",
-        grounding:
-          "Your side is 5–7 years into a rebuild. Brandon's in-cab world is hard legacy — and already has its own Cursor track.",
-        soWhat:
-          "A Digital pilot tests this on modern stacks. Not a legacy cleanup experiment.",
       },
       {
         claim: "Start small. The digital org is still ~7k.",
@@ -555,7 +537,7 @@ export const content: SiteContent = {
       navLabel: "The pilot",
       heading: "Thirty days, no procurement conversation to start.",
       kicker:
-        "Cursor covers token costs. Setup under a day. Your team picks the work at Dallas.",
+        "You were open to six or eight weeks. Longer cycles lose focus. We proposed thirty days. Tokens covered. Setup under a day.",
       handoff: "If the readout is green, scale follows the sequence you set.",
     },
     dealParagraph:
@@ -565,7 +547,7 @@ export const content: SiteContent = {
       requirements: [
         {
           label: "Self-contained",
-          text: "AI R&D sandbox. Fewer integrations. Lower infosec drag. Fast start.",
+          text: "AI R&D sandbox — avoids the usual infosec and integration tax to stand a tool up.",
         },
         {
           label: "Real enough",
@@ -640,12 +622,12 @@ export const content: SiteContent = {
       number: "05",
       id: "go-forward",
       navLabel: "If it works",
-      heading: "One area. Then AI teams. Then ~7k digital.",
+      heading: "One area. Prove it. Then AI work. Then wider.",
       kicker:
-        "Evidence gates everything after. Nothing asks the broader org to move on faith.",
+        "Your sequence. Evidence gates everything after. Nothing asks thousands of people to change overnight.",
     },
     destination:
-      "The pilot is the first step. Your team keeps the sequencing. We do not ask thousands of people to change overnight.",
+      "Start in one area. Prove it. Expand to AI-focused work. Then the broader digital org. We do not ask ~7,000 people to move on faith.",
     waves: [
       {
         label: "0",
@@ -699,7 +681,13 @@ export const content: SiteContent = {
         name: "Madison Motyl",
         role: "EA to Nate",
         thread: "Scheduling",
-        ask: "Confirm the Dallas window with Joe.",
+        ask: "Confirm Dallas with Joe.",
+      },
+      {
+        name: "Chief of staff (incoming)",
+        role: "Nate's org",
+        thread: "Coordination",
+        ask: "Help Madison land the Dallas window and attendees.",
       },
     ],
   },
@@ -708,18 +696,19 @@ export const content: SiteContent = {
     heading: "Three things, then we start.",
     steps: [
       {
-        owner: "Joe Masello",
-        action: "Reach Madison Motyl to schedule Dallas.",
+        owner: "Joe → Madison + chief of staff",
+        action:
+          "Schedule Dallas in 2–3 weeks. Madison (EA) and the new chief of staff coordinate.",
       },
       {
-        owner: "Dallas on-site (2–3 weeks)",
+        owner: "Who is in the room",
         action:
-          "AI R&D lead and incoming AI/ML Ops lead in the room. Coordinated via Madison.",
+          "AI R&D lead and incoming AI/ML Ops lead. Same group that will run the pilot.",
       },
       {
-        owner: "At Dallas",
+        owner: "Dallas agenda",
         action:
-          "Confirm the constraints. Pick the initiative. Name the group. Sandbox infosec. Then the clock starts.",
+          "Where time goes today vs desired. SDLC bottlenecks. AI maturity. Use cases, the value case, and how we measure. Then pick the initiative and start the clock.",
       },
     ],
     contacts: [

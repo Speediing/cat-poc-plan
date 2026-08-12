@@ -3,7 +3,6 @@ import { Handoff, SectionHeader, SoftPanel } from "@/components/SectionHeader";
 import {
   CycleChainExhibit,
   FindingsStrip,
-  ModernizationExhibit,
   OrgSplitExhibit,
   PortfolioExhibit,
   PrototypeTrapExhibit,
@@ -18,7 +17,6 @@ export function WhatWeHeard() {
     portfolio,
     operatingModel,
     prototypeTrap,
-    modernization,
   } = content.whatWeHeard;
 
   return (
@@ -27,14 +25,6 @@ export function WhatWeHeard() {
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-14 lg:items-start">
           <SectionHeader meta={meta} />
           <OrgSplitExhibit items={orgContext} />
-        </div>
-
-        <div className="mt-10 md:mt-12">
-          <ModernizationExhibit
-            heading={modernization.heading}
-            digital={modernization.digital}
-            technology={modernization.technology}
-          />
         </div>
 
         <div className="mt-10 grid gap-10 md:mt-12 lg:grid-cols-2 lg:gap-6">
