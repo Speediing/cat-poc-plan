@@ -56,7 +56,14 @@ body {
 /* Sticky nav offset for in-page anchors */
 section[id],
 [id="next-steps"] {
-  scroll-margin-top: 5.5rem;
+  scroll-margin-top: 4.75rem;
+}
+
+@media (max-width: 640px) {
+  section[id],
+  [id="next-steps"] {
+    scroll-margin-top: 6.5rem;
+  }
 }
 
 /* Optional technical grid motif — faint, non-decorative clutter */
