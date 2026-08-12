@@ -8,9 +8,9 @@
 ## Hero
 
 - **Badge:** Prepared for Nate Litton · Caterpillar Digital · August 2026
-- **Title:** Caterpillar Digital × Cursor — proposed pilot structure
+- **Title:** Caterpillar Digital × Cursor: proposed pilot structure
 - **Thesis:** We propose a Cursor-funded 30-day pilot with your Digital AI organization to measure one thing: whether the teams building Caterpillar’s AI products can cut the ~6-month idea-to-production cycle. If it works, we have a pattern to scale across your ~7,000-person digital org.
-- **Meta:** From Jason Wiker, Joe Masello & Sahil Patel, Cursor · Following our July 28 conversation with Nate Litton
+- **Meta:** From Jason Wiker, Joe Masello & Sahil Patel, Cursor. Following our July 28 conversation with Nate Litton.
 
 ---
 
@@ -97,8 +97,8 @@ You gave us two constraints. We designed the pilot to hold both:
 
 ### Funding model
 - **During:** 30-day pilot; we pay 100% of token costs (all models); setup under one day.
-- **Output:** viability verdict, token baseline, reusable playbook — yours to keep.
-- **After:** enterprise agreement — shared token pool with per-developer spend controls.
+- **Output:** Viability verdict, token baseline, and a reusable playbook you keep.
+- **After:** Enterprise agreement with a shared token pool and per-developer spend controls.
 
 **Handoff:** The pilot answers the question for one cohort. Below is how we’d scale with you after that.
 
@@ -148,4 +148,4 @@ You gave us two constraints. We designed the pilot to hold both:
 - Joe Masello, Cursor — TBD
 - Sahil Patel, Cursor — TBD
 
-**Footer:** Confidential — prepared by Cursor for Caterpillar Digital. Please do not redistribute.
+**Footer:** Confidential. Prepared by Cursor for Caterpillar Digital. Please do not redistribute.

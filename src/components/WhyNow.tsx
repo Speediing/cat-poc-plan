@@ -3,46 +3,44 @@ import {
   ExhibitTable,
   Handoff,
   SectionHeader,
+  SoftPanel,
 } from "@/components/SectionHeader";
 
 export function WhyNow() {
   const { meta, arguments: args, fundingBox } = content.whyNow;
 
   return (
-    <section id={meta.id} className="border-b border-hairline">
-      <div className="mx-auto max-w-5xl px-6 py-20 sm:px-8 sm:py-24">
-        <SectionHeader meta={meta} />
+    <section id={meta.id} className="bg-canvas-warm/40">
+      <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-28">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16 lg:items-start">
+          <SectionHeader meta={meta} />
+          <SoftPanel>
+            <h3 className="text-[1.05rem] font-medium tracking-tight text-ink">
+              {fundingBox.heading}
+            </h3>
+            <dl className="mt-5 space-y-5 text-[17px] leading-[1.55] text-ink-muted">
+              <div>
+                <dt className="text-[14px] font-medium text-ink">During</dt>
+                <dd className="mt-1">{fundingBox.during}</dd>
+              </div>
+              <div>
+                <dt className="text-[14px] font-medium text-ink">Output</dt>
+                <dd className="mt-1">{fundingBox.output}</dd>
+              </div>
+              <div>
+                <dt className="text-[14px] font-medium text-ink">After</dt>
+                <dd className="mt-1">{fundingBox.after}</dd>
+              </div>
+            </dl>
+          </SoftPanel>
+        </div>
 
-        <ExhibitTable
-          headers={["Claim", "Fact", "So what"]}
-          rows={args.map((arg) => [arg.claim, arg.grounding, arg.soWhat])}
-        />
-
-        <aside
-          className="mt-12 border border-cat-yellow p-6 sm:p-7"
-          aria-labelledby="funding-model-heading"
-        >
-          <h3
-            id="funding-model-heading"
-            className="text-sm font-medium text-ink"
-          >
-            {fundingBox.heading}
-          </h3>
-          <dl className="mt-4 space-y-3 text-[15px] leading-relaxed">
-            <div>
-              <dt className="sr-only">During</dt>
-              <dd className="text-ink-muted">{fundingBox.during}</dd>
-            </div>
-            <div>
-              <dt className="sr-only">Output</dt>
-              <dd className="text-ink-muted">{fundingBox.output}</dd>
-            </div>
-            <div>
-              <dt className="sr-only">After</dt>
-              <dd className="text-ink-muted">{fundingBox.after}</dd>
-            </div>
-          </dl>
-        </aside>
+        <div className="mt-16">
+          <ExhibitTable
+            headers={["Claim", "What you told us", "So what"]}
+            rows={args.map((arg) => [arg.claim, arg.grounding, arg.soWhat])}
+          />
+        </div>
 
         {meta.handoff ? <Handoff text={meta.handoff} /> : null}
       </div>

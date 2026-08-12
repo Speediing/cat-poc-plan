@@ -165,13 +165,13 @@ export interface SiteContent {
 export const content: SiteContent = {
   meta: {
     badge: "Prepared for Nate Litton · Caterpillar Digital · August 2026",
-    title: "Caterpillar Digital × Cursor — proposed pilot structure",
+    title: "Caterpillar Digital × Cursor: proposed pilot structure",
     thesis:
       "We propose a Cursor-funded 30-day pilot with your Digital AI organization to measure one thing: whether the teams building Caterpillar’s AI products can cut the ~6-month idea-to-production cycle. If it works, we have a pattern to scale across your ~7,000-person digital org.",
     preparedBy:
-      "From Jason Wiker, Joe Masello & Sahil Patel, Cursor · Following our July 28 conversation with Nate Litton",
+      "From Jason Wiker, Joe Masello & Sahil Patel, Cursor. Following our July 28 conversation with Nate Litton.",
     footer:
-      "Confidential — prepared by Cursor for Caterpillar Digital. Please do not redistribute.",
+      "Confidential. Prepared by Cursor for Caterpillar Digital. Please do not redistribute.",
   },
 
   whatWeHeard: {
@@ -181,7 +181,7 @@ export const content: SiteContent = {
       navLabel: "What we heard",
       heading: "What we heard",
       kicker:
-        "Our synthesis of the July 28 conversation — offered back so we can align before we propose structure.",
+        "Our synthesis of the July 28 conversation, offered back so we can align before we propose structure.",
       handoff:
         "The bottleneck we heard across every thread: idea to shipped software takes ~6 months. The pilot below is how we’d measure whether Cursor changes that for you.",
     },
@@ -209,12 +209,12 @@ export const content: SiteContent = {
         situation:
           "You described handoffs across plan, build, and integration stretching idea-to-production to roughly six months.",
         meaning:
-          "That’s a delivery problem — the one we designed Cursor to attack — not an AI research gap.",
+          "That’s a delivery problem, the one we designed Cursor to attack, not an AI research gap.",
       },
       {
         label: "AI product load is heavy and specific",
         situation:
-          "Parts identification across 1M+ parts; translation near tens of millions on human translators — CAT vocabulary and safety block generic LLMs.",
+          "Parts identification across 1M+ parts; translation near tens of millions on human translators. CAT vocabulary and safety block generic LLMs.",
         meaning:
           "Your teams build these products. We accelerate those teams; we do not build the products for you.",
       },
@@ -222,12 +222,12 @@ export const content: SiteContent = {
         label: "August 1 reorg",
         situation: "ML and AI Ops platform teams moved under Nate.",
         meaning:
-          "You now control more of the productionization path — a window to set tooling patterns deliberately.",
+          "You now control more of the productionization path. That’s a window to set tooling patterns deliberately.",
       },
     ],
     callout: {
       heading: "How you want to run this",
-      body: "We heard a clear preference: self-contained enough to start fast (your AI R&D lead), representative enough to set a pattern — ideally ticket-to-shipped. One area first; then AI workstreams; then the broader org. We are not asking thousands of people to change overnight.",
+      body: "We heard a clear preference: self-contained enough to start fast (your AI R&D lead), representative enough to set a pattern, ideally ticket-to-shipped. One area first, then AI workstreams, then the broader org. We are not asking thousands of people to change overnight.",
     },
   },
 
@@ -376,11 +376,11 @@ export const content: SiteContent = {
     fundingBox: {
       heading: "Funding model",
       during:
-        "During: 30-day pilot; we pay 100% of token costs (all models); setup under one day.",
+        "30-day pilot; we pay 100% of token costs (all models); setup under one day.",
       output:
-        "Output: viability verdict, token baseline, reusable playbook — yours to keep.",
+        "Viability verdict, token baseline, and a reusable playbook you keep.",
       after:
-        "After: enterprise agreement — shared token pool with per-developer spend controls.",
+        "Enterprise agreement with a shared token pool and per-developer spend controls.",
     },
   },
 

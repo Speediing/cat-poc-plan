@@ -1,21 +1,46 @@
 import { content } from "@/lib/content";
-import { ExhibitTable, SectionHeader } from "@/components/SectionHeader";
+import {
+  ExhibitTable,
+  SectionHeader,
+  SoftPanel,
+} from "@/components/SectionHeader";
 
 export function GoForward() {
   const { meta, destination, waves, readyToScale, stakeholders } =
     content.goForward;
 
   return (
-    <section id={meta.id} className="border-b border-hairline">
-      <div className="mx-auto max-w-5xl px-6 py-20 sm:px-8 sm:py-24">
-        <SectionHeader meta={meta} />
+    <section id={meta.id}>
+      <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-28">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16 lg:items-start">
+          <div>
+            <SectionHeader meta={meta} />
+            <p className="prose-measure text-[17px] leading-[1.55] text-ink-muted">
+              {destination}
+            </p>
+          </div>
+          <SoftPanel>
+            <h3 className="text-[1.05rem] font-medium tracking-tight text-ink">
+              {readyToScale.heading}
+            </h3>
+            <ol className="mt-5 space-y-3">
+              {readyToScale.items.map((item, i) => (
+                <li
+                  key={item}
+                  className="flex gap-3 text-[15px] leading-[1.5] text-ink-muted"
+                >
+                  <span className="shrink-0 text-ink-faint">{i + 1}.</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ol>
+          </SoftPanel>
+        </div>
 
-        <p className="max-w-2xl text-[15px] leading-relaxed text-ink-muted">
-          {destination}
-        </p>
-
-        <div className="mt-12">
-          <h3 className="mb-4 text-sm font-medium text-ink">Wave roadmap</h3>
+        <div className="mt-16">
+          <h3 className="mb-5 text-[1.05rem] font-medium tracking-tight text-ink">
+            Wave roadmap
+          </h3>
           <ExhibitTable
             headers={["Wave", "Name", "Timing", "Entry", "Exit"]}
             rows={waves.map((wave) => [
@@ -28,25 +53,10 @@ export function GoForward() {
           />
         </div>
 
-        <div className="mt-14">
-          <h3 className="mb-4 text-sm font-medium text-ink">
-            {readyToScale.heading}
+        <div className="mt-16">
+          <h3 className="mb-5 text-[1.05rem] font-medium tracking-tight text-ink">
+            Who carries what
           </h3>
-          <ol className="max-w-xl space-y-2.5">
-            {readyToScale.items.map((item, i) => (
-              <li
-                key={item}
-                className="flex gap-3 text-[15px] leading-relaxed text-ink-muted"
-              >
-                <span className="text-ink-faint">{i + 1}.</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ol>
-        </div>
-
-        <div className="mt-14">
-          <h3 className="mb-4 text-sm font-medium text-ink">Stakeholders</h3>
           <ExhibitTable
             headers={["Name", "Role", "Thread", "Ask"]}
             rows={stakeholders.map((person) => [

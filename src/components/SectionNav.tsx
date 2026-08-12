@@ -7,12 +7,10 @@ const navItems = [
   ...sections.map((s) => ({
     id: s.id,
     label: s.navLabel,
-    number: s.number,
   })),
   {
     id: "next-steps",
     label: content.nextSteps.heading,
-    number: null as string | null,
   },
 ];
 
@@ -40,8 +38,8 @@ export function SectionNav() {
         }
       },
       {
-        rootMargin: "-20% 0px -55% 0px",
-        threshold: [0, 0.25, 0.5, 0.75],
+        rootMargin: "-18% 0px -58% 0px",
+        threshold: [0, 0.25, 0.5],
       },
     );
 
@@ -52,28 +50,25 @@ export function SectionNav() {
   return (
     <nav
       aria-label="Sections"
-      className="sticky top-0 z-40 border-b border-hairline bg-void/90 backdrop-blur-md"
+      className="sticky top-0 z-40 border-b border-hairline bg-canvas/80 backdrop-blur-md"
     >
-      <div className="mx-auto flex max-w-5xl items-stretch overflow-x-auto px-6 sm:px-8">
+      <div className="mx-auto flex max-w-6xl items-stretch overflow-x-auto px-6 sm:px-10">
         {navItems.map((item) => {
           const isActive = activeId === item.id;
           return (
             <a
               key={item.id}
               href={`#${item.id}`}
-              className={`relative flex shrink-0 items-center gap-2 px-3 py-3.5 text-sm transition-colors sm:px-4 ${
-                isActive ? "text-ink" : "text-ink-faint hover:text-ink-muted"
+              className={`relative flex shrink-0 items-center px-3 py-3.5 text-[14px] transition-colors sm:px-4 ${
+                isActive
+                  ? "font-medium text-ink"
+                  : "text-ink-faint hover:text-ink-muted"
               }`}
             >
-              {item.number ? (
-                <span className={isActive ? "text-cat-yellow" : "text-ink-faint"}>
-                  {item.number}
-                </span>
-              ) : null}
               <span className="whitespace-nowrap">{item.label}</span>
               {isActive ? (
                 <span
-                  className="absolute inset-x-3 bottom-0 h-px bg-cat-yellow sm:inset-x-4"
+                  className="absolute inset-x-3 bottom-0 h-[2px] rounded-full bg-cursor-orange sm:inset-x-4"
                   aria-hidden="true"
                 />
               ) : null}

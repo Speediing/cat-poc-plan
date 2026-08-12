@@ -3,44 +3,52 @@ import {
   ExhibitTable,
   Handoff,
   SectionHeader,
+  SoftPanel,
 } from "@/components/SectionHeader";
 
 export function WhatWeHeard() {
   const { meta, orgContext, truths, callout } = content.whatWeHeard;
 
   return (
-    <section id={meta.id} className="border-b border-hairline">
-      <div className="mx-auto max-w-5xl px-6 py-20 sm:px-8 sm:py-24">
-        <SectionHeader meta={meta} />
+    <section id={meta.id} className="bg-canvas-warm/40">
+      <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-28">
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16 lg:items-start">
+          <SectionHeader meta={meta} />
+          <ExhibitTable
+            headers={["Topic", "Detail"]}
+            rows={orgContext.map((item) => [item.label, item.text])}
+          />
+        </div>
 
-        <ExhibitTable
-          headers={["Dimension", "Fact"]}
-          rows={orgContext.map((item) => [item.label, item.text])}
-        />
-
-        <div className="mt-12 divide-y divide-hairline border-y border-hairline">
+        <div className="mt-16 space-y-0 md:mt-20">
           {truths.map((truth) => (
-            <article key={truth.label} className="max-w-2xl py-7">
-              <h3 className="text-base font-medium tracking-tight text-ink">
+            <article
+              key={truth.label}
+              className="grid gap-3 border-t border-hairline py-9 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] md:gap-12"
+            >
+              <h3 className="text-[1.2rem] font-medium leading-snug tracking-[-0.02em] text-ink">
                 {truth.label}
               </h3>
-              <p className="mt-2 text-[15px] leading-relaxed text-ink-muted">
-                {truth.situation}
-              </p>
-              <p className="mt-2 text-[15px] leading-relaxed text-ink">
-                <span className="text-ink-faint">Implication — </span>
-                {truth.meaning}
-              </p>
+              <div>
+                <p className="text-[17px] leading-[1.55] text-ink-muted">
+                  {truth.situation}
+                </p>
+                <p className="mt-3 text-[17px] leading-[1.55] text-ink">
+                  {truth.meaning}
+                </p>
+              </div>
             </article>
           ))}
         </div>
 
-        <aside className="mt-12 border border-hairline p-6 sm:p-7">
-          <h3 className="text-sm font-medium text-ink">{callout.heading}</h3>
-          <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-ink-muted">
+        <SoftPanel className="mt-6 max-w-3xl">
+          <h3 className="text-[1.05rem] font-medium tracking-tight text-ink">
+            {callout.heading}
+          </h3>
+          <p className="mt-3 text-[17px] leading-[1.55] text-ink-muted">
             {callout.body}
           </p>
-        </aside>
+        </SoftPanel>
 
         {meta.handoff ? <Handoff text={meta.handoff} /> : null}
       </div>

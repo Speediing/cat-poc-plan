@@ -1,32 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  --void: #000000;
-  --surface: #0a0a0a;
-  --ink: #ededed;
-  --ink-muted: #888888;
-  --ink-faint: #666666;
-  --hairline: #222222;
-  --hairline-strong: #333333;
+  --canvas: #f7f7f4;
+  --canvas-warm: #f5f3ef;
+  --panel: #efece6;
+  --panel-deep: #e8e4db;
+  --ink: #26251e;
+  --ink-muted: #5c5b54;
+  --ink-faint: #8a8982;
+  --hairline: rgba(38, 37, 30, 0.1);
+  --hairline-strong: rgba(38, 37, 30, 0.16);
+  --cursor-orange: #f54e00;
   --cat-yellow: #ffcd11;
+  --white: #ffffff;
 }
 
 @theme inline {
-  --color-void: var(--void);
-  --color-surface: var(--surface);
+  --color-canvas: var(--canvas);
+  --color-canvas-warm: var(--canvas-warm);
+  --color-panel: var(--panel);
+  --color-panel-deep: var(--panel-deep);
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
   --color-ink-faint: var(--ink-faint);
   --color-hairline: var(--hairline);
   --color-hairline-strong: var(--hairline-strong);
+  --color-cursor-orange: var(--cursor-orange);
   --color-cat-yellow: var(--cat-yellow);
+  --color-white: var(--white);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -36,26 +43,35 @@ html {
 }
 
 body {
-  background: var(--void);
+  background: var(--canvas);
   color: var(--ink);
   font-family: var(--font-geist-sans), ui-sans-serif, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
+/* Quiet paper grain — earns its place, almost invisible */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
 ::selection {
-  background: var(--cat-yellow);
-  color: #000;
+  background: color-mix(in srgb, var(--cursor-orange) 28%, transparent);
+  color: var(--ink);
 }
 
 section[id],
 [id="next-steps"] {
-  scroll-margin-top: 4.5rem;
+  scroll-margin-top: 5rem;
 }
 
-@media (max-width: 640px) {
-  section[id],
-  [id="next-steps"] {
-    scroll-margin-top: 6rem;
-  }
+.prose-measure {
+  max-width: 36rem;
 }
