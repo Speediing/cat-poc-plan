@@ -53,36 +53,34 @@ export function SectionNav() {
   return (
     <nav
       aria-label="Sections"
-      className="sticky top-0 z-40 border-b border-hairline bg-cream/90 backdrop-blur-[8px]"
+      className="sticky top-0 z-40 border-b border-hairline bg-void/90 backdrop-blur-[10px]"
     >
-      <div className="mx-auto flex max-w-6xl items-stretch gap-1 overflow-x-auto px-5 sm:px-8 lg:px-10">
+      <div className="mx-auto flex max-w-6xl items-stretch gap-0 overflow-x-auto px-5 sm:px-8 lg:px-10">
         {navItems.map((item) => {
           const isActive = activeId === item.id;
           return (
             <a
               key={item.id}
               href={`#${item.id}`}
-              className={`relative flex shrink-0 items-center gap-2 px-3 py-3.5 text-[13px] tracking-[-0.01em] transition-colors sm:px-4 ${
+              className={`relative flex shrink-0 items-center gap-2.5 px-3 py-3.5 text-[12px] tracking-[-0.01em] transition-colors sm:px-4 ${
                 isActive
                   ? "font-medium text-ink"
-                  : "text-ink-muted hover:text-ink"
+                  : "text-ink-faint hover:text-ink-muted"
               }`}
             >
               {item.number ? (
                 <span
-                  className={`font-mono text-[11px] tracking-[0.06em] ${
-                    isActive
-                      ? "bg-cat-yellow px-1 py-0.5 font-semibold text-ink"
-                      : "text-ink-faint"
+                  className={`font-mono text-[11px] tracking-[0.1em] ${
+                    isActive ? "text-cat-yellow" : "text-ink-faint"
                   }`}
                 >
                   {item.number}
                 </span>
               ) : null}
-              <span>{item.label}</span>
+              <span className="whitespace-nowrap">{item.label}</span>
               {isActive ? (
                 <span
-                  className="absolute inset-x-3 bottom-0 h-[2px] bg-cat-yellow sm:inset-x-4"
+                  className="absolute inset-x-3 bottom-0 h-px bg-cat-yellow sm:inset-x-4"
                   aria-hidden="true"
                 />
               ) : null}
