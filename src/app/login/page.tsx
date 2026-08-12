@@ -55,10 +55,6 @@ function LoginForm() {
       <h1 className="mt-3 text-[1.75rem] font-medium leading-[1.12] tracking-[-0.02em] text-ink">
         Enter the password to continue.
       </h1>
-      <p className="mt-4 text-[16px] leading-[1.55] text-ink-muted">
-        Prepared for Nate Litton and the people he forwards it to. Not for
-        public distribution.
-      </p>
 
       <form onSubmit={onSubmit} className="mt-10 space-y-4">
         <label className="block">
