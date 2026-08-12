@@ -1,10 +1,14 @@
 import type { ReactNode } from "react";
 import type { SectionMeta } from "@/lib/content";
 
+/** Follow-up pattern: short plain label + large sentence-case argument. */
 export function SectionHeader({ meta }: { meta: SectionMeta }) {
   return (
     <header className="mb-10 max-w-2xl md:mb-12">
-      <h2 className="text-[1.75rem] font-medium leading-[1.12] tracking-[-0.02em] text-ink md:text-[2rem]">
+      <p className="text-[12px] font-medium tracking-[0.06em] text-cursor-orange uppercase">
+        {meta.number} {meta.navLabel}
+      </p>
+      <h2 className="mt-3 text-[1.75rem] font-medium leading-[1.12] tracking-[-0.02em] text-ink md:text-[2rem]">
         {meta.heading}
       </h2>
       <p className="prose-measure mt-4 text-[17px] leading-[1.55] text-ink-muted">

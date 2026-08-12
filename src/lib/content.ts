@@ -243,12 +243,12 @@ export interface SiteContent {
 
 export const content: SiteContent = {
   meta: {
-    badge: "Prepared for Nate Litton · Caterpillar Digital · August 2026",
+    badge: "Discovery follow-up · July 28, 2026",
     title: "Caterpillar Digital × Cursor",
     thesis:
-      "The bottleneck isn't writing the code. Every constraint you described sits between the idea and production. Here's what we heard on July 28, how Cloud Agents would help on visual parts ID, and a thirty-day pilot to close that gap.",
+      "What we heard from your team, how agents would help on the blurry-photo parts ID work you described, and a thirty-day pilot small enough to start without a procurement conversation.",
     preparedBy:
-      "Jason Wiker, Joe Masello & Sahil Patel, Cursor. After the July 28 conversation with Nate Litton.",
+      "Prepared for Nate Litton. Jason Wiker, Joe Masello & Sahil Patel, Cursor. Draft for your review before it goes wider.",
     footer:
       "Confidential. Prepared by Cursor for Caterpillar Digital. Please do not redistribute.",
   },
@@ -260,9 +260,9 @@ export const content: SiteContent = {
       navLabel: "What we heard",
       heading: "The bottleneck isn't writing the code.",
       kicker:
-        "Every constraint you described sits between the idea and production — not inside the editor.",
+        "Every constraint your team described sits between the idea and production — not inside the editor.",
       handoff:
-        "Parts ID, translation, and the assistant all pay that toll. Next: how agents help on the blurry-photo case.",
+        "Parts ID, translation, and the assistant all pay that toll. Next: the blurry-photo case.",
     },
     orgContext: [
       {
@@ -293,16 +293,15 @@ export const content: SiteContent = {
       {
         label: "Prototypes reset the clock",
         situation:
-          "AI R&D can stand something up in two weeks. Productionizing it starts the full cycle over from the top. Security and entitlements get re-litigated instead of reused.",
+          "AI R&D can stand something up in two weeks. Getting it into production starts the full cycle over from the top. Security and entitlements get re-litigated instead of reused.",
         meaning:
           "Closing that gap is the whole point of the pilot. Not more prototypes — the same prototype, through the whole path, faster.",
       },
       {
-        label: "Nothing asks you to reorganize first",
+        label: "Nothing here asks you to reorganize first",
         situation:
-          "You want tools that help without forcing thousands of people to change overnight. Destination is still ~7,000 in digital.",
-        meaning:
-          "One area first. Prove it. Then AI teams. Then the broader org.",
+          "Your team wants tools that help without forcing thousands of people to change overnight. The digital org is still ~7,000 people.",
+        meaning: "One area first. Prove it. Then AI teams. Then the broader org.",
       },
     ],
     portfolio: {
@@ -355,26 +354,26 @@ export const content: SiteContent = {
     modernization: {
       heading: "Digital vs Technology",
       digital:
-        "Digital is 5–7 years into a rebuild. Most surfaces are new. Less legacy drag. Good place to prove Cursor on real work.",
+        "Digital is 5–7 years into a rebuild. Most surfaces are new. Less legacy drag. A clean place to test on real work.",
       technology:
         "In-cab code under Brandon is a different story — hard legacy, and a separate Cursor track already moving. Not this plan.",
     },
     callout: {
-      heading: "How you want to start",
-      body: "Self-contained AI R&D sandbox, with incoming AI/ML Ops in the room. Real enough to matter. Contained enough to move. One area first — then wider. Nothing here asks you to reorganize first.",
+      heading: "How your team wants to start",
+      body: "Self-contained AI R&D sandbox, with incoming AI/ML Ops in the room. Real enough to matter. Contained enough to move. One area first, then wider. Nothing here asks you to reorganize first.",
     },
   },
 
   useCase: {
     meta: {
-      number: "01b",
+      number: "02",
       id: "use-case",
       navLabel: "Parts ID",
       heading: "Blurry photo → part number.",
       kicker:
-        "A real product you described — and four plain ways Cloud Agents help on the engineering work behind it.",
+        "Your team builds this product. Same repositories, same pull requests, same review gates — with agents on the tickets behind it.",
       handoff:
-        "Same idea applies to translation and the assistant. Next: why this is worth a thirty-day test.",
+        "Same idea applies to translation and the assistant. Next: why a thirty-day test is enough.",
     },
     intro:
       "A dealer or tech takes a blurry photo of a part. The system returns the part number. That opens the path to parts.com. Your team builds that product. We help them ship the pieces faster.",
@@ -403,9 +402,9 @@ export const content: SiteContent = {
       outcome: "Hard photo in. Correct part out. Path to parts.com.",
     },
     agents: {
-      heading: "Four ways your team would use agents on it",
+      heading: "Four ways your team would use it.",
       intro:
-        "Same repositories. Same pull requests. Same review gates. Agents take tickets in the background; your people spend time on judgment.",
+        "Same repositories, same pull requests, same review gates. The change is how much of the work an engineer has to type themselves.",
       factoryLabel: "Steps on a ticket",
       stations: [
         {
@@ -481,25 +480,25 @@ export const content: SiteContent = {
         },
       ],
       success:
-        "Success looks like real tickets moving to merged PRs on a slice of this work — faster than the six-month handoff path. Not a toy demo.",
+        "Success looks like real tickets moving to merged pull requests on a slice of this work — faster than the six-month handoff path. Not a toy demo.",
     },
     fit: {
-      heading: "Why start here",
+      heading: "Why start here.",
       rows: [
         {
-          dimension: "Real product work",
-          why: "Data, models, services — not a disposable sandbox.",
+          dimension: "Real product work.",
+          why: "Data, models, services. Not a disposable sandbox.",
         },
         {
-          dimension: "Contained start",
+          dimension: "Contained start.",
           why: "Can begin in AI R&D's environment with less infosec drag.",
         },
         {
-          dimension: "Full path",
-          why: "Forces the prototype-to-production gap the Aug 1 reorg is meant to close.",
+          dimension: "Full path.",
+          why: "Hits the prototype-to-production gap the Aug 1 reorg is meant to close.",
         },
         {
-          dimension: "Copies elsewhere",
+          dimension: "Copies elsewhere.",
           why: "What works here transfers to translation, the assistant, then other digital teams.",
         },
       ],
@@ -508,7 +507,7 @@ export const content: SiteContent = {
 
   whyNow: {
     meta: {
-      number: "02",
+      number: "03",
       id: "why-now",
       navLabel: "Why it matters",
       heading: "Closing that gap is the whole point.",
@@ -519,28 +518,28 @@ export const content: SiteContent = {
     },
     arguments: [
       {
-        claim: "Every AI product pays the same six-month tax",
+        claim: "Every AI product pays the same six-month tax.",
         grounding:
           "Parts ID, translation (near tens of millions on human spend), and the Cat AI assistant all sit behind the same handoffs.",
         soWhat:
           "Prove a cut on one real initiative. That informs the rest of the portfolio.",
       },
       {
-        claim: "Aug 1 only helps if production gets faster",
+        claim: "Aug 1 only helps if production gets faster.",
         grounding:
           "Two-week demos still restart the cycle. Security and entitlements get re-litigated. ML and AI Ops now report to you to own that path.",
         soWhat:
-          "Test ticket-to-shipped with that group now, before old habits settle back in.",
+          "Test tickets through pull requests with that group now, before old habits settle back in.",
       },
       {
-        claim: "Digital is the right place to prove it",
+        claim: "Digital is the right place to prove it.",
         grounding:
-          "Your side is 5–7 years modernized. Brandon's in-cab world is hard legacy — and already has its own Cursor track.",
+          "Your side is 5–7 years into a rebuild. Brandon's in-cab world is hard legacy — and already has its own Cursor track.",
         soWhat:
-          "A Digital pilot proves this on modern stacks. Not a legacy-refactor experiment.",
+          "A Digital pilot tests this on modern stacks. Not a legacy cleanup experiment.",
       },
       {
-        claim: "Start small. Destination is still ~7k.",
+        claim: "Start small. The digital org is still ~7k.",
         grounding:
           "You were clear: do not force thousands of people overnight.",
         soWhat:
@@ -551,17 +550,18 @@ export const content: SiteContent = {
 
   thePilot: {
     meta: {
-      number: "03",
+      number: "04",
       id: "the-pilot",
       navLabel: "The pilot",
       heading: "Thirty days, no procurement conversation to start.",
-      kicker: "Tokens covered. Setup under a day. Dallas next.",
+      kicker:
+        "Cursor covers token costs. Setup under a day. Your team picks the work at Dallas.",
       handoff: "If the readout is green, scale follows the sequence you set.",
     },
     dealParagraph:
       "Thirty days. Cursor covers 100% of token costs across every model. Setup under a day. Group: AI R&D plus incoming AI/ML Ops, on one real initiative you pick at Dallas. You leave with evidence against the six-month path, and a real token number for the budget talk.",
     shape: {
-      intro: "Two constraints you set. One proposal that holds both.",
+      intro: "Two constraints your team set. One proposal that holds both.",
       requirements: [
         {
           label: "Self-contained",
@@ -590,12 +590,12 @@ export const content: SiteContent = {
       {
         week: "1",
         focus: "Stand up",
-        detail: "Cursor eng with the group. Real repos by day 2–3.",
+        detail: "Cursor eng with the group. Real repositories by day 2–3.",
       },
       {
         week: "2–3",
         focus: "Build",
-        detail: "Tickets to draft PRs on the chosen work.",
+        detail: "Tickets to draft pull requests on the chosen work.",
       },
       {
         week: "4",
@@ -609,7 +609,7 @@ export const content: SiteContent = {
       rows: [
         {
           criterion: "Real Digital work",
-          evidence: "Most days on your repos — not a throwaway sandbox",
+          evidence: "Most days on your repositories — not a throwaway sandbox",
           owner: "Pilot lead",
         },
         {
@@ -637,14 +637,15 @@ export const content: SiteContent = {
 
   goForward: {
     meta: {
-      number: "04",
+      number: "05",
       id: "go-forward",
-      navLabel: "Scale",
-      heading: "If it works.",
-      kicker: "One area → AI teams → ~7,000 digital. Short version.",
+      navLabel: "If it works",
+      heading: "One area. Then AI teams. Then ~7k digital.",
+      kicker:
+        "Evidence gates everything after. Nothing asks the broader org to move on faith.",
     },
     destination:
-      "The pilot is the first step. Evidence gates everything after. We do not ask the broader digital org to move on faith.",
+      "The pilot is the first step. Your team keeps the sequencing. We do not ask thousands of people to change overnight.",
     waves: [
       {
         label: "0",
@@ -664,7 +665,7 @@ export const content: SiteContent = {
         label: "2",
         name: "Platform",
         timeframe: "Gated",
-        entry: "Wave 1 evidence",
+        entry: "Step 1 evidence",
         exit: "Enterprise deal, standing infosec, Cat-owned enablement",
       },
       {
@@ -704,7 +705,7 @@ export const content: SiteContent = {
   },
 
   nextSteps: {
-    heading: "Next steps",
+    heading: "Three things, then we start.",
     steps: [
       {
         owner: "Joe Masello",

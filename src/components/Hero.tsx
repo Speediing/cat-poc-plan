@@ -18,8 +18,9 @@ export function Hero() {
         {/* cursor.com rhythm: type on plain bone, painting as quiet fragment */}
         <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-16">
           <div className="max-w-xl">
-            <h1 className="max-w-[15ch] text-[2.75rem] font-medium leading-[1.05] tracking-[-0.035em] text-ink sm:text-[3.2rem] lg:text-[3.45rem]">
-              {meta.title}
+            <h1 className="max-w-[18ch] text-[2.75rem] font-medium leading-[1.05] tracking-[-0.035em] text-ink sm:text-[3.2rem] lg:text-[3.45rem]">
+              Caterpillar Digital{" "}
+              <span className="text-cursor-orange">×</span> Cursor
             </h1>
             <p className="mt-7 max-w-[34rem] text-[17px] leading-[1.55] text-ink-muted">
               {meta.thesis}

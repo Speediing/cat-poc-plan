@@ -92,10 +92,13 @@ export function UseCase() {
 
         <div className="mt-12 md:mt-14">
           <div className="rounded-2xl bg-white/80 p-5 shadow-[0_0_0_1px_rgba(38,37,30,0.07)] sm:p-7">
-            <p className="mb-2 text-[13px] font-medium text-ink-faint">
-              {agents.heading}
+            <p className="text-[12px] font-medium tracking-[0.06em] text-cursor-orange uppercase">
+              How agents help
             </p>
-            <p className="max-w-3xl text-[16px] leading-[1.55] text-ink-muted">
+            <h3 className="mt-2 text-[1.35rem] font-medium tracking-tight text-ink md:text-[1.5rem]">
+              {agents.heading}
+            </h3>
+            <p className="mt-3 max-w-3xl text-[16px] leading-[1.55] text-ink-muted">
               {agents.intro}
             </p>
 

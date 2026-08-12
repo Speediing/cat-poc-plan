@@ -397,8 +397,8 @@ export function FundingPanelsExhibit({
 export function WhyNowMatrix({ args }: { args: ArgumentBlock[] }) {
   return (
     <div className="space-y-3">
-      <p className="text-[13px] font-medium text-ink-faint">
-        From what you described
+      <p className="text-[12px] font-medium tracking-[0.06em] text-cursor-orange uppercase">
+        From what your team described
       </p>
       <div className="grid gap-3 md:grid-cols-2">
         {args.map((arg) => (
