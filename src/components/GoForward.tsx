@@ -24,7 +24,7 @@ export function GoForward() {
 
         <div className="mt-10 md:mt-12">
           <h3 className="mb-4 text-[1.05rem] font-medium tracking-tight text-ink">
-            Who carries what
+            Who does what
           </h3>
           <StakeholderMatrix stakeholders={stakeholders} />
         </div>

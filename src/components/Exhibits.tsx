@@ -18,7 +18,7 @@ export function OrgSplitExhibit({ items }: { items: OrgContextItem[] }) {
   return (
     <div className="rounded-2xl bg-white/80 p-5 shadow-[0_0_0_1px_rgba(38,37,30,0.07)] sm:p-6">
       <p className="mb-4 text-[13px] font-medium text-ink-faint">
-        Situation · where this plan applies
+        Where this plan applies
       </p>
       <div className="grid gap-3 sm:grid-cols-2">
         <div className="rounded-xl bg-panel px-4 py-4">
@@ -110,7 +110,7 @@ export function CycleChainExhibit({
       <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
         <p className="text-[13px] font-medium text-ink-faint">{heading}</p>
         <p className="text-[13px] font-medium text-cursor-orange">
-          ~6 months for a simple feature
+          ~6 months
         </p>
       </div>
       <div className="flex flex-wrap items-center gap-2">
@@ -225,7 +225,7 @@ export function PortfolioExhibit({
                   isTranslation ? "text-canvas/55" : "text-ink-faint"
                 }`}
               >
-                {isTranslation ? "Unsolved · high spend" : "On your plate"}
+                {isTranslation ? "Unsolved. High spend." : "On your plate"}
               </p>
               <p className="mt-1 text-[16px] font-medium">{item.name}</p>
               <p
@@ -247,24 +247,26 @@ export function PortfolioExhibit({
 export function FindingsStrip({
   items,
 }: {
-  items: { label: string; meaning: string }[];
+  items: { label: string; meaning: string; soWhat?: string }[];
 }) {
   return (
     <div className="grid gap-3 md:grid-cols-3">
-      {items.map((item, i) => (
+      {items.map((item) => (
         <div
           key={item.label}
           className="rounded-2xl bg-white/80 p-5 shadow-[0_0_0_1px_rgba(38,37,30,0.07)]"
         >
-          <p className="text-[13px] font-medium text-ink-faint">
-            Finding {i + 1}
-          </p>
-          <p className="mt-2 text-[15px] font-medium leading-snug tracking-tight text-ink">
+          <p className="text-[15px] font-medium leading-snug tracking-tight text-ink">
             {item.label}
           </p>
           <p className="mt-3 text-[14px] leading-relaxed text-ink-muted">
             {item.meaning}
           </p>
+          {item.soWhat ? (
+            <p className="mt-3 border-t border-hairline pt-3 text-[14px] leading-relaxed text-ink">
+              {item.soWhat}
+            </p>
+          ) : null}
         </div>
       ))}
     </div>
@@ -276,14 +278,14 @@ export function CompactPilotArc({ weeks }: { weeks: PilotWeek[] }) {
   return (
     <div className="rounded-2xl bg-white/80 p-5 shadow-[0_0_0_1px_rgba(38,37,30,0.07)] sm:p-6">
       <p className="mb-4 text-[13px] font-medium text-ink-faint">
-        30 days · one arc
+        Thirty days
       </p>
       <ol className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-stretch">
         {weeks.map((week, i) => (
           <li key={week.week} className="flex flex-1 items-stretch gap-2">
             <div className="flex-1 rounded-xl bg-panel px-4 py-3">
               <p className="text-[12px] font-medium text-cursor-orange">
-                {week.week === "0" ? "Dallas" : `Wk ${week.week}`}
+                {week.week === "0" ? "Before" : `Week ${week.week}`}
               </p>
               <p className="mt-1 text-[15px] font-medium text-ink">
                 {week.focus}
@@ -320,7 +322,7 @@ export function PilotShapeExhibit({
       <div className="grid gap-3 sm:grid-cols-2">
         {requirements.map((req) => (
           <div key={req.label} className="rounded-2xl bg-panel px-5 py-5">
-            <p className="text-[13px] font-medium text-ink-faint">Constraint</p>
+            <p className="text-[13px] font-medium text-ink-faint">You asked for</p>
             <p className="mt-1 text-[16px] font-medium text-ink">{req.label}</p>
             <p className="mt-2 text-[14px] leading-relaxed text-ink-muted">
               {req.text}
@@ -332,7 +334,7 @@ export function PilotShapeExhibit({
         <span className="text-ink-faint">↓</span>
       </div>
       <div className="rounded-2xl bg-ink px-5 py-5 text-canvas">
-        <p className="text-[13px] font-medium text-canvas/55">Our proposal</p>
+        <p className="text-[13px] font-medium text-canvas/55">What we propose</p>
         <p className="mt-2 text-[15px] leading-relaxed text-canvas/90">
           {recommendation}
         </p>
@@ -360,7 +362,7 @@ export function FundingPanelsExhibit({
   return (
     <div className="rounded-2xl bg-white/80 p-5 shadow-[0_0_0_1px_rgba(38,37,30,0.07)] sm:p-6">
       <p className="mb-4 text-[13px] font-medium text-ink-faint">
-        Commercial · 30 days
+        Thirty days
       </p>
       <div className="grid gap-3 md:grid-cols-3">
         {panels.map((panel, i) => (
@@ -396,7 +398,7 @@ export function WhyNowMatrix({ args }: { args: ArgumentBlock[] }) {
   return (
     <div className="space-y-3">
       <p className="text-[13px] font-medium text-ink-faint">
-        Why this matters · from what you described
+        From what you described
       </p>
       <div className="grid gap-3 md:grid-cols-2">
         {args.map((arg) => (
@@ -425,13 +427,13 @@ export function WaveRoadmapExhibit({ waves }: { waves: Wave[] }) {
   return (
     <div className="rounded-2xl bg-white/80 p-5 shadow-[0_0_0_1px_rgba(38,37,30,0.07)] sm:p-6">
       <p className="mb-4 text-[13px] font-medium text-ink-faint">
-        Scale · one area → AI workstreams → ~7k digital
+        One area → AI teams → ~7k digital
       </p>
       <ol className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
         {waves.map((wave) => (
           <li key={wave.label} className="rounded-xl bg-panel px-4 py-4">
             <p className="text-[12px] font-medium text-ink-faint">
-              {wave.label}
+              Step {wave.label}
             </p>
             <p className="mt-1 text-[15px] font-medium text-ink">{wave.name}</p>
             <p className="mt-1 text-[12px] text-ink-faint">{wave.timeframe}</p>

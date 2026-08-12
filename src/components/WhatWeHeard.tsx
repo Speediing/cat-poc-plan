@@ -61,7 +61,8 @@ export function WhatWeHeard() {
           <FindingsStrip
             items={truths.map((t) => ({
               label: t.label,
-              meaning: t.meaning,
+              meaning: t.situation,
+              soWhat: t.meaning,
             }))}
           />
         </div>

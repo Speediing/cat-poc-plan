@@ -38,10 +38,10 @@ export function Hero() {
                 </span>
               </a>
               <a
-                href="#use-case"
+                href="#the-pilot"
                 className="inline-flex items-center rounded-full bg-panel px-5 py-2.5 text-[14px] font-medium text-ink transition-opacity hover:opacity-85"
               >
-                Parts ID + agents
+                Thirty-day pilot
               </a>
             </p>
           </div>

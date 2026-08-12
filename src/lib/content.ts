@@ -4,6 +4,8 @@
  * Customer-facing leave-behind from Cursor to Caterpillar Digital.
  * Grounding: Jul 28, 2026 "Nate Litton | Cursor - Discovery" + Cursor pilot terms.
  * Destination after a successful pilot: ~7,000-person Caterpillar digital org.
+ *
+ * Voice bar: plain and short, matching cat-cursor-followup.vercel.app.
  */
 
 // ---------------------------------------------------------------------------
@@ -58,24 +60,20 @@ export interface WhatWeHeardContent {
   meta: SectionMeta;
   orgContext: OrgContextItem[];
   truths: TruthCard[];
-  /** AI product portfolio Nate owns — parts ID, translation, assistant */
   portfolio: {
     heading: string;
     items: PortfolioItem[];
   };
-  /** Operating model: plan/build/integration handoffs */
   operatingModel: {
     heading: string;
     stages: string[];
     pain: string;
   };
-  /** 2-week prototype → restart → ~6 months to productionize */
   prototypeTrap: {
     heading: string;
     steps: PrototypeTrapStep[];
     soWhat: string;
   };
-  /** Digital vs Technology modernization asymmetry */
   modernization: {
     heading: string;
     digital: string;
@@ -248,9 +246,9 @@ export const content: SiteContent = {
     badge: "Prepared for Nate Litton · Caterpillar Digital · August 2026",
     title: "Caterpillar Digital × Cursor",
     thesis:
-      "You briefed us on a modern Digital stack slowed by handoffs — ~6 months for a simple feature, a prototype trap after every exciting two-week demo, and AI products (parts ID, translation, the Cat assistant) paying that tax. Here’s what we heard, how we’d attack visual parts ID with Cloud Agents, and a tight 30-day pilot to prove the pattern before you take it wider.",
+      "The bottleneck isn't writing the code. Every constraint you described sits between the idea and production. Here's what we heard on July 28, how Cloud Agents would help on visual parts ID, and a thirty-day pilot to close that gap.",
     preparedBy:
-      "From Jason Wiker, Joe Masello & Sahil Patel, Cursor. Following our July 28 conversation with Nate Litton.",
+      "Jason Wiker, Joe Masello & Sahil Patel, Cursor. After the July 28 conversation with Nate Litton.",
     footer:
       "Confidential. Prepared by Cursor for Caterpillar Digital. Please do not redistribute.",
   },
@@ -260,110 +258,110 @@ export const content: SiteContent = {
       number: "01",
       id: "what-we-heard",
       navLabel: "What we heard",
-      heading: "What we heard",
+      heading: "The bottleneck isn't writing the code.",
       kicker:
-        "Current-state depth from your July 28 briefing — the tech and operating reality we are designing against.",
+        "Every constraint you described sits between the idea and production — not inside the editor.",
       handoff:
-        "Speed is the shared constraint across parts ID, translation, and the assistant. Next: how we’d attack visual parts ID with Cloud Agents.",
+        "Parts ID, translation, and the assistant all pay that toll. Next: how agents help on the blurry-photo case.",
     },
     orgContext: [
       {
         label: "CAT Technology",
-        text: "Cab-of-machine software. Brandon Newman / Jamie’s org. Out of scope here — parallel Cursor work already exists on that side.",
+        text: "Software in the cab. Brandon Newman / Jamie's org. Out of scope. They already have a Cursor track.",
       },
       {
         label: "Caterpillar Digital",
-        text: "Everything else: cat.com, parts.com, digital products, Cat AI assistant (cloud + edge). This plan.",
+        text: "Everything else: cat.com, parts.com, digital products, Cat AI assistant (cloud and edge). This plan.",
       },
       {
         label: "Nate → CDO (Augie)",
-        text: "Owns all AI, data, and ML on Digital — including AI R&D. Reports to the Chief Digital Officer.",
+        text: "Owns AI, data, and ML on Digital, including AI R&D.",
       },
       {
         label: "Aug 1 reorg",
-        text: "ML + AI Ops platform teams move under Nate so productionization destiny sits with the same owner as the AI product work.",
+        text: "ML and AI Ops move under Nate. Same owner for the product and for getting it into production.",
       },
     ],
     truths: [
       {
-        label: "Handoffs, not code quality",
+        label: "Six months to ship",
         situation:
-          "Plan, build, and integration are separate orgs. No cohesive agile domain teams — sequential routines stretch every feature.",
+          "Plan, build, and integration sit in separate teams. A simple feature clears every handoff before anyone sees it in production.",
         meaning:
-          "~6 months for a simple feature. Quality is high; speed is not. That is a delivery problem Cursor is built to attack.",
+          "Quality is high. Speed is not. That is a delivery problem, not a research gap.",
       },
       {
-        label: "Prototype trap",
+        label: "Prototypes reset the clock",
         situation:
-          "AI R&D can spark something exciting in ~2 weeks, then restarts the operating model to productionize — another ~6 months. Entitlements and security get missed the first pass.",
+          "AI R&D can stand something up in two weeks. Productionizing it starts the full cycle over from the top. Security and entitlements get re-litigated instead of reused.",
         meaning:
-          "Aug 1 puts productionization under you. The proof we care about is ticket-to-shipped — not another demo.",
+          "Closing that gap is the whole point of the pilot. Not more prototypes — the same prototype, through the whole path, faster.",
       },
       {
-        label: "Change without a big-bang",
+        label: "Nothing asks you to reorganize first",
         situation:
-          "You want AI-forward ways of working without forcing thousands of people to change overnight.",
+          "You want tools that help without forcing thousands of people to change overnight. Destination is still ~7,000 in digital.",
         meaning:
-          "One area → prove → AI workstreams → broader digital (~7k). Sequencing is yours; we operationalize it.",
+          "One area first. Prove it. Then AI teams. Then the broader org.",
       },
     ],
     portfolio: {
-      heading: "AI product load on your plate",
+      heading: "What sits on your plate",
       items: [
         {
           name: "Visual parts ID",
           detail:
-            "Blurry / pixelated photo → part number → parts.com. 1M+ SKU classification; thin imagery on older parts; synthetic image generation required to fill sparse coverage.",
+            "Blurry or pixelated photo → part number → parts.com. Over a million parts. Thin photos on older parts. You need synthetic images to fill the gaps.",
         },
         {
           name: "Translation",
           detail:
-            "Still surprisingly unsolved at Cat. CAT-specific vocabulary + safety risk block generic LLM / Google Translate. Manuals can run tens of thousands of pages. Spend close to tens of millions on human translators — on Nate’s AI / digital plate.",
+            "Still unsolved. Cat-specific words and safety rules block generic translate tools. Manuals can run tens of thousands of pages. Spend is close to tens of millions on human translators.",
         },
         {
           name: "Cat AI assistant",
           detail:
-            "Cloud + edge assistant work inside Digital. Same idea-to-production tax as the rest of the portfolio.",
+            "Cloud and edge. Same six-month path from idea to production as everything else.",
         },
       ],
     },
     operatingModel: {
-      heading: "Operating model today",
+      heading: "Six months to ship",
       stages: ["Idea", "Plan", "Build", "Integrate", "Ship"],
-      pain: "Plan / build / integration orgs with heavy handoffs — not a legacy-code problem on Digital. Every AI product (parts ID, translation, assistant) pays the same ~6-month toll for a simple feature.",
+      pain: "Plan, build, and integration are separate orgs. Heavy handoffs. Every AI product pays the same toll — not because Digital has bad legacy code.",
     },
     prototypeTrap: {
-      heading: "AI R&D prototype trap",
+      heading: "Prototypes reset the clock",
       steps: [
         {
-          label: "Spark",
-          text: "AI R&D ships an exciting, self-contained prototype",
+          label: "Prototype",
+          text: "AI R&D stands something up, self-contained",
           duration: "~2 weeks",
         },
         {
           label: "Restart",
-          text: "Work re-enters plan → build → integrate to productionize",
-          duration: "Handoff tax",
+          text: "Same idea re-enters plan → build → integrate",
+          duration: "Handoffs",
         },
         {
           label: "Ship",
-          text: "Entitlements, security, packaging caught late — another full cycle",
+          text: "Security and entitlements argued again from scratch",
           duration: "~6 months",
         },
       ],
       soWhat:
-        "Cursor should compress the productionization path with the incoming AI/ML Ops cohort — not mint another prototype that dies in handoffs.",
+        "Closing that gap is the whole point of the pilot. Not more prototypes — the same prototype, through the whole path, faster.",
     },
     modernization: {
-      heading: "Modernization asymmetry",
+      heading: "Digital vs Technology",
       digital:
-        "5–7 years into transformation — most surfaces built or rebuilt. Far less legacy gnarliness. “Art of the possible”: new capability delivery, not refactoring. Best surface for a representative Cursor pilot.",
+        "Digital is 5–7 years into a rebuild. Most surfaces are new. Less legacy drag. Good place to prove Cursor on real work.",
       technology:
-        "In-cab / Brandon’s world: brutal legacy codebases. Different pilot, already in motion. Not this plan — and not the bottleneck you described for Digital.",
+        "In-cab code under Brandon is a different story — hard legacy, and a separate Cursor track already moving. Not this plan.",
     },
     callout: {
-      heading: "How you want to run this",
-      body: "Self-contained AI R&D sandbox (+ incoming AI/ML Ops) to start fast with less infosec drag — but meaty and representative enough to set a repeatable pattern, ideally ticket-to-shipped. One area → prove → expand AI workstreams → broader digital org (~7k). We are not asking thousands of people to change overnight.",
+      heading: "How you want to start",
+      body: "Self-contained AI R&D sandbox, with incoming AI/ML Ops in the room. Real enough to matter. Contained enough to move. One area first — then wider. Nothing here asks you to reorganize first.",
     },
   },
 
@@ -372,142 +370,137 @@ export const content: SiteContent = {
       number: "01b",
       id: "use-case",
       navLabel: "Parts ID",
-      heading: "Example use case: visual parts ID from a blurry photo",
+      heading: "Blurry photo → part number.",
       kicker:
-        "Centerpiece use case from your briefing — and how Cursor Cloud Agents / a multi-station factory attacks the engineering workstreams.",
+        "A real product you described — and four plain ways Cloud Agents help on the engineering work behind it.",
       handoff:
-        "Same factory pattern applies to translation and the assistant. Next: why acting on this now compounds.",
+        "Same idea applies to translation and the assistant. Next: why this is worth a thirty-day test.",
     },
     intro:
-      "You described building visual parts identification: a user captures a photo (often blurry or poorly pixelated), the system returns the part number, and the path continues to parts.com. Your teams build that product. We propose accelerating how you design, evaluate, and productionize it.",
+      "A dealer or tech takes a blurry photo of a part. The system returns the part number. That opens the path to parts.com. Your team builds that product. We help them ship the pieces faster.",
     problem: {
-      heading: "The problem",
+      heading: "The job",
       flow: [
         {
           label: "Capture",
-          text: "Field or dealer takes a blurry / pixelated photo of a part.",
+          text: "Someone shoots a blurry or pixelated photo of a part.",
         },
         {
           label: "Identify",
-          text: "Map the image to the correct part number among 1M+ SKUs.",
+          text: "Match it to the right part among 1M+ SKUs.",
         },
         {
-          label: "Transact",
-          text: "Correct ID opens the path to buy on parts.com.",
+          label: "Buy",
+          text: "Correct ID opens the buy path on parts.com.",
         },
       ],
       blockers: [
-        "Thin historical imagery, especially on older parts",
-        "Synthetic image generation required to fill sparse coverage",
-        "Large classification / retrieval problem at 1M+ parts",
-        "Safety and quality bar rules out casual LLM guesses",
+        "Thin photo history, especially on older parts",
+        "Need synthetic images to fill sparse coverage",
+        "1M+ parts — a hard matching problem",
+        "Safety bar rules out casual guesses",
       ],
-      outcome:
-        "Correct part ID on hard inputs → catalog match → parts.com purchase path.",
+      outcome: "Hard photo in. Correct part out. Path to parts.com.",
     },
     agents: {
-      heading: "How we’ve designed the Cursor approach",
+      heading: "Four ways your team would use agents on it",
       intro:
-        "We don’t run visual parts ID as one chat thread. We design it as a multi-station software factory: ticketed work, parallel Cloud Agents on their own machines, draft PRs for your humans to review. Agents grind the engineering; your AI R&D and ML/AI Ops stay on acceptance criteria and judgment.",
-      factoryLabel: "Software factory · visual parts ID stations",
+        "Same repositories. Same pull requests. Same review gates. Agents take tickets in the background; your people spend time on judgment.",
+      factoryLabel: "Steps on a ticket",
       stations: [
         {
-          name: "Intake",
-          role: "Scope the slice, write the lead ticket, split child work",
+          name: "Scope",
+          role: "Write the lead ticket. Split child work.",
         },
         {
-          name: "Implement",
-          role: "Cloud Agent explores the repo and opens a draft PR",
+          name: "Build",
+          role: "Agent reads the repo and opens a draft PR.",
         },
         {
-          name: "Validate",
-          role: "Agent runs tests / eval hooks against blurry-input cases",
+          name: "Test",
+          role: "Agent runs tests on blurry-input cases.",
         },
         {
           name: "Fix",
-          role: "Follow-up agent tickets close gaps found in validate",
+          role: "Follow-up tickets close gaps the tests find.",
         },
         {
           name: "Review",
-          role: "Your engineers review the draft PR and merge or redirect",
+          role: "Your engineers review the PR and merge or send it back.",
         },
       ],
       leadTicket: "Visual Parts ID — blurry photo → part number",
       proofPattern:
-        "Pattern we’ve already exercised on Cat demos: label / ticket → automation → Cloud Agent → draft PR on the visual parts ID workstream. Same shape scales into the 30-day pilot — without exposing internal plumbing.",
+        "Hand a ticket to an agent. Get a pull request back. People review. We have already run this shape on Cat demos for this use case.",
       loop: [
-        "Label / ticket",
-        "Automation",
-        "Cloud Agent",
+        "Ticket",
+        "Agent",
         "Draft PR",
         "Human review",
       ],
       loopNote:
-        "Each station can trigger its own Cloud Agent. Agents work in parallel; humans stay at Review.",
+        "Agents work in parallel on child tickets. Humans stay on review.",
       backlogNote:
-        "Illustrative child tickets under the lead ticket — grounded in the problem you described. Final backlog selected at Dallas.",
+        "Example child tickets under the lead. Final set picked at Dallas.",
       backlog: [
         {
           id: "T-01",
           workstream: "Synthetic data",
-          station: "Implement",
-          ticket:
-            "Scaffold synthetic image generation for sparse / older parts",
+          station: "Build",
+          ticket: "Scaffold synthetic images for sparse / older parts",
         },
         {
           id: "T-02",
-          workstream: "Eval harness",
-          station: "Validate",
-          ticket:
-            "Classification / retrieval harness for blurry & pixelated inputs",
+          workstream: "Eval",
+          station: "Test",
+          ticket: "Harness for blurry and pixelated inputs",
         },
         {
           id: "T-03",
           workstream: "Eval set",
-          station: "Intake",
-          ticket: "Labeling + eval set from thin historical imagery",
+          station: "Scope",
+          ticket: "Labeling + eval set from thin historical photos",
         },
         {
           id: "T-04",
-          workstream: "Catalog lookup",
-          station: "Implement",
-          ticket:
-            "parts.com / catalog lookup surface in the self-contained sandbox",
+          workstream: "Catalog",
+          station: "Build",
+          ticket: "parts.com / catalog lookup in the sandbox",
         },
         {
           id: "T-05",
-          workstream: "API packaging",
-          station: "Implement",
-          ticket: "Service packaging with basic entitlements / security hooks",
+          workstream: "Packaging",
+          station: "Build",
+          ticket: "Service packaging with basic entitlements and security hooks",
         },
         {
           id: "T-06",
-          workstream: "Failure triage",
+          workstream: "Triage",
           station: "Fix",
-          ticket: "Failure taxonomy + fix tickets from hard-input eval misses",
+          ticket: "Failure taxonomy + fix tickets from hard misses",
         },
       ],
       success:
-        "Pilot success: the factory loop is repeatable and faster than the ~6-month handoff path you described — proven on a real slice of blurry-photo parts ID, not a toy demo.",
+        "Success looks like real tickets moving to merged PRs on a slice of this work — faster than the six-month handoff path. Not a toy demo.",
     },
     fit: {
-      heading: "Why this use case fits the pilot",
+      heading: "Why start here",
       rows: [
         {
-          dimension: "Meaty + representative",
-          why: "Real AI product work: data, ML, services — not a toy sandbox.",
+          dimension: "Real product work",
+          why: "Data, models, services — not a disposable sandbox.",
         },
         {
-          dimension: "Self-contained start",
-          why: "Can begin in AI R&D’s environment with less infosec / integration drag.",
+          dimension: "Contained start",
+          why: "Can begin in AI R&D's environment with less infosec drag.",
         },
         {
-          dimension: "Surfaces idea→production",
-          why: "Forces the prototype-to-productionize gap your Aug 1 reorg is meant to close.",
+          dimension: "Full path",
+          why: "Forces the prototype-to-production gap the Aug 1 reorg is meant to close.",
         },
         {
-          dimension: "Pattern for scale",
-          why: "Ticket→agent→PR loop copies to other Digital AI workstreams, then the ~7k digital org.",
+          dimension: "Copies elsewhere",
+          why: "What works here transfers to translation, the assistant, then other digital teams.",
         },
       ],
     },
@@ -518,40 +511,40 @@ export const content: SiteContent = {
       number: "02",
       id: "why-now",
       navLabel: "Why it matters",
-      heading: "Why this matters",
+      heading: "Closing that gap is the whole point.",
       kicker:
-        "Business case rooted in the current-state facts above — not a generic AI pitch.",
+        "Not more prototypes. The same work, through the whole path, faster.",
       handoff:
-        "If that holds, the ask is small: a 30-day, Cursor-funded pilot with the cohort you now own.",
+        "If that holds, the ask is small: thirty days, tokens covered, with the team you now own.",
     },
     arguments: [
       {
-        claim: "Every AI product pays the same ~6-month tax",
+        claim: "Every AI product pays the same six-month tax",
         grounding:
-          "Parts ID, translation (near tens of millions in human spend), and the Cat AI assistant each sit behind plan → build → integrate handoffs.",
+          "Parts ID, translation (near tens of millions on human spend), and the Cat AI assistant all sit behind the same handoffs.",
         soWhat:
-          "A measured cut on one meaty initiative informs the whole Digital AI portfolio — we don’t ask you to take that on faith.",
+          "Prove a cut on one real initiative. That informs the rest of the portfolio.",
       },
       {
-        claim: "The prototype trap wastes the Aug 1 reorg",
+        claim: "Aug 1 only helps if production gets faster",
         grounding:
-          "Exciting ~2-week R&D demos still restart the operating model; entitlements and security get missed. ML + AI Ops now report to you specifically to own productionization.",
+          "Two-week demos still restart the cycle. Security and entitlements get re-litigated. ML and AI Ops now report to you to own that path.",
         soWhat:
-          "Prove ticket-to-shipped with that cohort now, before old habits reassert.",
+          "Test ticket-to-shipped with that group now, before old habits settle back in.",
       },
       {
-        claim: "Digital is the right surface — Technology is a different story",
+        claim: "Digital is the right place to prove it",
         grounding:
-          "Your side is 5–7 years modernized; Brandon’s in-cab world carries the brutal legacy (and a parallel Cursor track).",
+          "Your side is 5–7 years modernized. Brandon's in-cab world is hard legacy — and already has its own Cursor track.",
         soWhat:
-          "A representative Digital pilot proves “art of the possible” on modern stacks — not a legacy-refactor experiment.",
+          "A Digital pilot proves this on modern stacks. Not a legacy-refactor experiment.",
       },
       {
-        claim: "Scale only after one area works",
+        claim: "Start small. Destination is still ~7k.",
         grounding:
-          "You were clear: AI-forward ways of working without changing thousands overnight. Destination is still ~7k digital.",
+          "You were clear: do not force thousands of people overnight.",
         soWhat:
-          "One area → prove → AI workstreams → broader org. The 30-day pilot is Wave 0 of that sequence — nothing more until evidence.",
+          "One area. Prove it. Then AI teams. Then the broader digital org. Nothing more until evidence.",
       },
     ],
   },
@@ -561,73 +554,72 @@ export const content: SiteContent = {
       number: "03",
       id: "the-pilot",
       navLabel: "The pilot",
-      heading: "Proposed pilot",
-      kicker:
-        "Tight proposal only: 30 days, tokens covered, AI R&D + AI/ML Ops, Dallas next.",
-      handoff: "If the readout is green, scale follows the sequence you described.",
+      heading: "Thirty days, no procurement conversation to start.",
+      kicker: "Tokens covered. Setup under a day. Dallas next.",
+      handoff: "If the readout is green, scale follows the sequence you set.",
     },
     dealParagraph:
-      "Cursor-funded 30 days — 100% of token costs, all models. Implement in under a day. Cohort: AI R&D + incoming AI/ML Ops on one real initiative you pick at Dallas. Output: ticket-to-shipped evidence vs the ~6-month path, plus a token baseline for your budget conversation.",
+      "Thirty days. Cursor covers 100% of token costs across every model. Setup under a day. Group: AI R&D plus incoming AI/ML Ops, on one real initiative you pick at Dallas. You leave with evidence against the six-month path, and a real token number for the budget talk.",
     shape: {
-      intro: "Two constraints you set; one proposal that holds both:",
+      intro: "Two constraints you set. One proposal that holds both.",
       requirements: [
         {
           label: "Self-contained",
-          text: "AI R&D sandbox — fewer integrations, lower infosec drag, fast start.",
+          text: "AI R&D sandbox. Fewer integrations. Lower infosec drag. Fast start.",
         },
         {
-          label: "Representative",
-          text: "Meaty pattern (ideally ticket-to-shipped) — not a toy you’d rebuild later.",
+          label: "Real enough",
+          text: "Full path preferred — tickets through pull requests. Not a corner case you'd rebuild later.",
         },
       ],
       recommendation:
-        "Pilot with AI R&D + ML/AI Ops — the cohort you control post–Aug 1 — on one Digital AI initiative (parts ID is the working example). You pick the use case at Dallas; we bring the factory shape.",
+        "Run it with AI R&D and ML/AI Ops — the group you control after Aug 1 — on one Digital AI initiative. Parts ID is the working example. You pick at Dallas.",
     },
     funding: {
-      heading: "Commercial",
-      during: "30 days · 100% tokens covered · setup < 1 day",
-      output: "Viability on real work + measured token baseline you keep",
-      after: "Enterprise path: shared token pool + per-developer controls",
+      heading: "The commercial deal",
+      during: "30 days. 100% of tokens covered. Setup under a day.",
+      output: "Evidence on real work. A measured token baseline you keep.",
+      after: "If you continue: shared token pool and per-developer spend caps.",
     },
     weeks: [
       {
         week: "0",
-        focus: "Align",
-        detail: "Dallas: pick initiative, name cohort, infosec on sandbox",
+        focus: "Dallas",
+        detail: "Pick the initiative. Name the group. Sandbox infosec.",
       },
       {
         week: "1",
-        focus: "Enable",
-        detail: "Cursor eng with cohort; real codebases by day 2–3",
+        focus: "Stand up",
+        detail: "Cursor eng with the group. Real repos by day 2–3.",
       },
       {
         week: "2–3",
-        focus: "Ship",
-        detail: "Ticket → agent → PR on the chosen initiative",
+        focus: "Build",
+        detail: "Tickets to draft PRs on the chosen work.",
       },
       {
         week: "4",
         focus: "Decide",
-        detail: "Readout vs ~6 months · go / no-go on Wave 1",
+        detail: "Readout vs six months. Go or no-go.",
       },
     ],
     successCriteria: {
-      heading: "What “worked” means",
-      note: "Co-signed at Dallas — three bars only.",
+      heading: "What comes out of it",
+      note: "Three bars. Co-signed at Dallas.",
       rows: [
         {
           criterion: "Real Digital work",
-          evidence: "Majority of days on your codebases — not a disposable sandbox",
+          evidence: "Most days on your repos — not a throwaway sandbox",
           owner: "Pilot lead",
         },
         {
-          criterion: "Ticket-to-shipped",
-          evidence: "End-to-end demo at readout — faster than the handoff path",
+          criterion: "Ticket to shipped",
+          evidence: "End-to-end demo at readout, faster than the handoff path",
           owner: "Pilot lead",
         },
         {
-          criterion: "Reusable pattern",
-          evidence: "Short playbook another AI workstream can pick up",
+          criterion: "Something others can copy",
+          evidence: "Short write-up another AI team can pick up",
           owner: "Cursor + pilot lead",
         },
       ],
@@ -635,10 +627,10 @@ export const content: SiteContent = {
     asks: {
       heading: "What we need",
       items: [
-        "Dallas on-site in 2–3 weeks (Joe → Madison) with AI R&D + AI/ML Ops leads",
-        "Named pilot lead (natural fit: AI R&D)",
-        "Use-case selection + sandbox infosec at Dallas",
-        "~2 hrs/week from the pilot lead through readout",
+        "Dallas in 2–3 weeks (Joe → Madison) with AI R&D and AI/ML Ops leads",
+        "A named pilot lead (natural fit: AI R&D)",
+        "Use case + sandbox infosec decided at Dallas",
+        "About two hours a week from the pilot lead through readout",
       ],
     },
   },
@@ -648,40 +640,39 @@ export const content: SiteContent = {
       number: "04",
       id: "go-forward",
       navLabel: "Scale",
-      heading: "If it works",
-      kicker:
-        "Your sequence — one area → AI workstreams → ~7k digital. Short version.",
+      heading: "If it works.",
+      kicker: "One area → AI teams → ~7,000 digital. Short version.",
     },
     destination:
-      "Pilot is Wave 0. Evidence (cycle time, tokens, playbook) gates everything after — we don’t ask the broader digital org to move on faith.",
+      "The pilot is the first step. Evidence gates everything after. We do not ask the broader digital org to move on faith.",
     waves: [
       {
-        label: "Wave 0",
+        label: "0",
         name: "Pilot",
         timeframe: "~30 days",
-        entry: "Dallas + cohort",
-        exit: "Go / no-go on real work",
+        entry: "Dallas + group",
+        exit: "Go or no-go on real work",
       },
       {
-        label: "Wave 1",
-        name: "AI workstreams",
-        timeframe: "Post-readout",
-        entry: "Wave 0 green",
-        exit: "Parts ID / translation / assistant teams on Cursor",
+        label: "1",
+        name: "AI teams",
+        timeframe: "After readout",
+        entry: "Pilot green",
+        exit: "Parts ID, translation, assistant teams on Cursor",
       },
       {
-        label: "Wave 2",
+        label: "2",
         name: "Platform",
         timeframe: "Gated",
         entry: "Wave 1 evidence",
-        exit: "Enterprise + standing infosec + Cat-owned enablement",
+        exit: "Enterprise deal, standing infosec, Cat-owned enablement",
       },
       {
-        label: "Wave 3",
+        label: "3",
         name: "~7k digital",
         timeframe: "Pull-based",
         entry: "Platform ready",
-        exit: "Team-by-team onboarding; spend visible per team",
+        exit: "Team by team. Spend visible per team.",
       },
     ],
     stakeholders: [
@@ -689,25 +680,25 @@ export const content: SiteContent = {
         name: "Nate Litton",
         role: "AI / data / ML — Digital",
         thread: "Sponsor",
-        ask: "Sponsor Wave 0; keep sequencing intact",
+        ask: "Sponsor the pilot. Keep the sequence intact.",
       },
       {
         name: "AI R&D lead",
-        role: "Nate’s org",
+        role: "Nate's org",
         thread: "Pilot lead",
-        ask: "Lead Wave 0; join Dallas",
+        ask: "Lead the pilot. Join Dallas.",
       },
       {
         name: "Incoming AI/ML Ops lead",
-        role: "Nate’s org",
-        thread: "Productionization",
-        ask: "Join Dallas; own ops thread",
+        role: "Nate's org",
+        thread: "Path to production",
+        ask: "Join Dallas. Own the ops thread.",
       },
       {
         name: "Madison Motyl",
         role: "EA to Nate",
         thread: "Scheduling",
-        ask: "Confirm Dallas window with Joe",
+        ask: "Confirm the Dallas window with Joe.",
       },
     ],
   },
@@ -716,19 +707,18 @@ export const content: SiteContent = {
     heading: "Next steps",
     steps: [
       {
-        owner: "Cursor — Joe Masello",
-        action:
-          "We’ll reach out to Madison Motyl to schedule the Dallas on-site.",
+        owner: "Joe Masello",
+        action: "Reach Madison Motyl to schedule Dallas.",
       },
       {
-        owner: "Caterpillar + Cursor — Dallas on-site (within 2–3 weeks)",
+        owner: "Dallas on-site (2–3 weeks)",
         action:
-          "With your AI R&D lead and incoming AI/ML Ops lead; coordinated via Madison and your chief of staff.",
+          "AI R&D lead and incoming AI/ML Ops lead in the room. Coordinated via Madison.",
       },
       {
-        owner: "Shared agenda for Dallas",
+        owner: "At Dallas",
         action:
-          "Confirm current-state constraints · pick the initiative · name the AI R&D + AI/ML Ops cohort · sandbox infosec. Pilot clock starts when that ends.",
+          "Confirm the constraints. Pick the initiative. Name the group. Sandbox infosec. Then the clock starts.",
       },
     ],
     contacts: [
