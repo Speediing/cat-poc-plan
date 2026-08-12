@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { content, sections } from "@/lib/content";
+import { sections } from "@/lib/content";
 
 const navItems = [
   ...sections.map((s) => ({
@@ -10,7 +10,7 @@ const navItems = [
   })),
   {
     id: "next-steps",
-    label: content.nextSteps.heading,
+    label: "Next steps",
   },
 ];
 

@@ -1,10 +1,16 @@
 import { Hero } from "@/components/Hero";
 import { SectionNav } from "@/components/SectionNav";
-import { WhatWeHeard } from "@/components/WhatWeHeard";
-import { UseCase } from "@/components/UseCase";
-import { ThePilot } from "@/components/ThePilot";
-import { WhyNow } from "@/components/WhyNow";
-import { GoForward } from "@/components/GoForward";
+import {
+  WhatWeHeard,
+  TheGap,
+  WhoCursorIs,
+  WhereItPlugsIn,
+  IdeaWorthTesting,
+  ProposedPoc,
+  TheGroup,
+  ThePilot,
+  Timeline,
+} from "@/components/Sections";
 import { NextSteps } from "@/components/NextSteps";
 
 export default function HomePage() {
@@ -13,10 +19,14 @@ export default function HomePage() {
       <Hero />
       <SectionNav />
       <WhatWeHeard />
-      <UseCase />
-      <WhyNow />
+      <TheGap />
+      <WhoCursorIs />
+      <WhereItPlugsIn />
+      <IdeaWorthTesting />
+      <ProposedPoc />
+      <TheGroup />
       <ThePilot />
-      <GoForward />
+      <Timeline />
       <NextSteps />
     </main>
   );

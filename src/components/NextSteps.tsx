@@ -3,32 +3,32 @@ import { Lockup } from "@/components/Lockup";
 import { SoftPanel } from "@/components/SectionHeader";
 
 export function NextSteps() {
-  const { heading, steps, contacts } = content.nextSteps;
+  const { label, heading, steps, close, contacts } = content.nextSteps;
   const { footer } = content.meta;
 
   return (
     <>
       <section id="next-steps" className="bg-canvas-warm/40">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-28">
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
             <header className="max-w-xl">
               <p className="text-[12px] font-medium tracking-[0.06em] text-cursor-orange uppercase">
-                06 Next steps
+                {label}
               </p>
               <h2 className="mt-3 text-[1.75rem] font-medium leading-[1.12] tracking-[-0.02em] text-ink md:text-[2rem]">
                 {heading}
               </h2>
+              <p className="mt-8 text-[1.5rem] font-medium tracking-tight text-ink">
+                {close}
+              </p>
             </header>
 
             <ol className="space-y-3">
               {steps.map((step, index) => (
-                <li key={step.owner}>
+                <li key={`${step.owner}-${index}`}>
                   <SoftPanel>
                     <p className="text-[13px] text-ink-faint">
-                      Step {index + 1}
-                    </p>
-                    <p className="mt-1 text-[1.05rem] font-medium tracking-tight text-ink">
-                      {step.owner}
+                      Step {index + 1} · {step.owner}
                     </p>
                     <p className="mt-2 text-[17px] leading-[1.55] text-ink-muted">
                       {step.action}
@@ -54,9 +54,6 @@ export function NextSteps() {
                   </p>
                   <p className="mt-1 text-[14px] text-ink-muted">
                     {contact.role}
-                  </p>
-                  <p className="mt-3 text-[14px] text-ink-faint">
-                    {contact.email}
                   </p>
                 </li>
               ))}
