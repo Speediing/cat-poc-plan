@@ -1,6 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { SectionNav } from "@/components/SectionNav";
 import { WhatWeHeard } from "@/components/WhatWeHeard";
+import { UseCase } from "@/components/UseCase";
 import { ThePilot } from "@/components/ThePilot";
 import { WhyNow } from "@/components/WhyNow";
 import { GoForward } from "@/components/GoForward";
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Hero />
       <SectionNav />
       <WhatWeHeard />
+      <UseCase />
       <ThePilot />
       <WhyNow />
       <GoForward />

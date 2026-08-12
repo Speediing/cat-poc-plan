@@ -50,6 +50,44 @@ export interface WhatWeHeardContent {
   callout: Callout;
 }
 
+export interface UseCaseFlowStep {
+  label: string;
+  text: string;
+}
+
+export interface UseCaseTicket {
+  id: string;
+  workstream: string;
+  ticket: string;
+}
+
+export interface UseCaseFitRow {
+  dimension: string;
+  why: string;
+}
+
+export interface UseCaseContent {
+  meta: SectionMeta;
+  intro: string;
+  problem: {
+    heading: string;
+    flow: UseCaseFlowStep[];
+    blockers: string[];
+    outcome: string;
+  };
+  agents: {
+    heading: string;
+    intro: string;
+    loop: string[];
+    backlogNote: string;
+    backlog: UseCaseTicket[];
+  };
+  fit: {
+    heading: string;
+    rows: UseCaseFitRow[];
+  };
+}
+
 export interface PilotShapeRequirement {
   label: string;
   text: string;
@@ -152,6 +190,7 @@ export interface NextStepsContent {
 export interface SiteContent {
   meta: SiteMeta;
   whatWeHeard: WhatWeHeardContent;
+  useCase: UseCaseContent;
   thePilot: ThePilotContent;
   whyNow: WhyNowContent;
   goForward: GoForwardContent;
@@ -183,7 +222,7 @@ export const content: SiteContent = {
       kicker:
         "Our synthesis of the July 28 conversation, offered back so we can align before we propose structure.",
       handoff:
-        "The bottleneck we heard across every thread: idea to shipped software takes ~6 months. The pilot below is how we’d measure whether Cursor changes that for you.",
+        "The bottleneck we heard across every thread: idea to shipped software takes ~6 months. Next we show how that plays on visual parts ID — and how Cloud Agents would attack it.",
     },
     orgContext: [
       {
@@ -228,6 +267,119 @@ export const content: SiteContent = {
     callout: {
       heading: "How you want to run this",
       body: "We heard a clear preference: self-contained enough to start fast (your AI R&D lead), representative enough to set a pattern, ideally ticket-to-shipped. One area first, then AI workstreams, then the broader org. We are not asking thousands of people to change overnight.",
+    },
+  },
+
+  useCase: {
+    meta: {
+      number: "01b",
+      id: "use-case",
+      navLabel: "Parts ID",
+      heading: "Example use case: visual parts ID from a blurry photo",
+      kicker:
+        "A meaty slice of the AI product work you described — and how we’d run it with Cursor Cloud Agents in a 30-day pilot.",
+      handoff:
+        "Dallas picks the exact initiative. Below is the pilot structure we’d wrap around it.",
+    },
+    intro:
+      "You described building visual parts identification: a user captures a photo (often blurry or poorly pixelated), the system returns the part number, and the path continues to parts.com. Your teams build that product. We propose accelerating how you design, evaluate, and productionize it.",
+    problem: {
+      heading: "The problem",
+      flow: [
+        {
+          label: "Capture",
+          text: "Field or dealer takes a blurry / pixelated photo of a part.",
+        },
+        {
+          label: "Identify",
+          text: "Map the image to the correct part number among 1M+ SKUs.",
+        },
+        {
+          label: "Transact",
+          text: "Correct ID opens the path to buy on parts.com.",
+        },
+      ],
+      blockers: [
+        "Thin historical imagery, especially on older parts",
+        "Synthetic image generation required to fill sparse coverage",
+        "Large classification / retrieval problem at 1M+ parts",
+        "Safety and quality bar rules out casual LLM guesses",
+      ],
+      outcome:
+        "Correct part ID on hard inputs → catalog match → parts.com purchase path.",
+    },
+    agents: {
+      heading: "How we’d design this with Cursor Cloud Agents",
+      intro:
+        "We’d treat a scoped slice of visual parts ID as a factory of engineering tickets. Cursor Cloud Agents process tickets in parallel on their own machines — explore, implement, test, open a PR. Your AI R&D and ML/AI Ops teams set acceptance criteria and review. The 30-day goal is a repeatable ticket → agent → PR → review loop on a meaty slice — not boiling the ocean on all 1M parts.",
+      loop: [
+        "Ticket",
+        "Cloud Agent",
+        "PR",
+        "Human review",
+        "Merge",
+      ],
+      backlogNote:
+        "Illustrative pilot backlog grounded in the problem you described — not a committed sprint plan. Final tickets selected at Dallas.",
+      backlog: [
+        {
+          id: "T-01",
+          workstream: "Synthetic data",
+          ticket:
+            "Scaffold synthetic image generation pipeline for sparse / older parts",
+        },
+        {
+          id: "T-02",
+          workstream: "Eval harness",
+          ticket:
+            "Build classification / retrieval evaluation harness for blurry & pixelated inputs",
+        },
+        {
+          id: "T-03",
+          workstream: "Eval set",
+          ticket:
+            "Construct labeling + eval set from thin historical imagery",
+        },
+        {
+          id: "T-04",
+          workstream: "Catalog surface",
+          ticket:
+            "Prototype parts.com / catalog integration surface in the sandbox",
+        },
+        {
+          id: "T-05",
+          workstream: "Productionization",
+          ticket:
+            "Package service API with basic entitlements / security hooks",
+        },
+        {
+          id: "T-06",
+          workstream: "Eval dashboard",
+          ticket:
+            "Ship top-k accuracy view + failure taxonomy on hard inputs",
+        },
+      ],
+    },
+    fit: {
+      heading: "Why this use case fits the pilot",
+      rows: [
+        {
+          dimension: "Meaty + representative",
+          why: "Real AI product work: data, ML, services — not a toy sandbox.",
+        },
+        {
+          dimension: "Self-contained start",
+          why: "Can begin in AI R&D’s environment with less infosec / integration drag.",
+        },
+        {
+          dimension: "Surfaces idea→production",
+          why: "Forces the prototype-to-productionize gap your Aug 1 reorg is meant to close.",
+        },
+        {
+          dimension: "Pattern for scale",
+          why: "Ticket→agent→PR loop copies to other Digital AI workstreams, then the ~7k digital org.",
+        },
+      ],
     },
   },
 
@@ -504,6 +656,7 @@ export const content: SiteContent = {
 
 export const sections: SectionMeta[] = [
   content.whatWeHeard.meta,
+  content.useCase.meta,
   content.thePilot.meta,
   content.whyNow.meta,
   content.goForward.meta,

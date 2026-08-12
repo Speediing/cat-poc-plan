@@ -34,7 +34,48 @@
 ### How you want to run this
 We heard a clear preference: self-contained enough to start fast (your AI R&D lead), representative enough to set a pattern — ideally ticket-to-shipped. One area first; then AI workstreams; then the broader org. We are not asking thousands of people to change overnight.
 
-**Handoff:** The bottleneck we heard across every thread: idea to shipped software takes ~6 months. The pilot below is how we’d measure whether Cursor changes that for you.
+**Handoff:** The bottleneck we heard across every thread: idea to shipped software takes ~6 months. Next we show how that plays on visual parts ID — and how Cloud Agents would attack it.
+
+---
+
+## Parts ID — Example use case
+
+**Heading:** Example use case: visual parts ID from a blurry photo  
+**Kicker:** A meaty slice of the AI product work you described — and how we’d run it with Cursor Cloud Agents in a 30-day pilot.
+
+**Intro:** You described building visual parts identification: a user captures a photo (often blurry or poorly pixelated), the system returns the part number, and the path continues to parts.com. Your teams build that product. We propose accelerating how you design, evaluate, and productionize it.
+
+### Exhibit A — The problem
+Flow: Capture (blurry / pixelated photo) → Identify (map among 1M+ SKUs) → Transact (parts.com path).
+
+Blockers: thin historical imagery (esp. older parts); synthetic image generation required; large classification/retrieval at 1M+ parts; safety/quality bar rules out casual LLM guesses.
+
+Outcome: Correct part ID on hard inputs → catalog match → parts.com purchase path.
+
+### Exhibit B — Cursor Cloud Agents approach
+Treat a scoped slice as a factory of engineering tickets. Cloud Agents process tickets in parallel (explore → implement → test → PR). Cat AI R&D + ML/AI Ops review. Goal: repeatable ticket → agent → PR → review loop — not boiling the ocean on all 1M parts.
+
+Loop: Ticket → Cloud Agent → PR → Human review → Merge
+
+Illustrative backlog (selected at Dallas):
+| ID | Workstream | Example ticket |
+|----|------------|----------------|
+| T-01 | Synthetic data | Scaffold synthetic image generation pipeline for sparse / older parts |
+| T-02 | Eval harness | Build classification / retrieval evaluation harness for blurry & pixelated inputs |
+| T-03 | Eval set | Construct labeling + eval set from thin historical imagery |
+| T-04 | Catalog surface | Prototype parts.com / catalog integration surface in the sandbox |
+| T-05 | Productionization | Package service API with basic entitlements / security hooks |
+| T-06 | Eval dashboard | Ship top-k accuracy view + failure taxonomy on hard inputs |
+
+### Exhibit C — Why this fits the pilot
+| Dimension | Why |
+|-----------|-----|
+| Meaty + representative | Real AI product work: data, ML, services — not a toy sandbox. |
+| Self-contained start | Can begin in AI R&D’s environment with less infosec / integration drag. |
+| Surfaces idea→production | Forces the prototype-to-productionize gap your Aug 1 reorg is meant to close. |
+| Pattern for scale | Ticket→agent→PR loop copies to other Digital AI workstreams, then the ~7k digital org. |
+
+**Handoff:** Dallas picks the exact initiative. Below is the pilot structure we’d wrap around it.
 
 ---
 
