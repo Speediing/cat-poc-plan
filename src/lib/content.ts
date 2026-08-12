@@ -59,6 +59,12 @@ export interface UseCaseTicket {
   id: string;
   workstream: string;
   ticket: string;
+  station: string;
+}
+
+export interface UseCaseStation {
+  name: string;
+  role: string;
 }
 
 export interface UseCaseFitRow {
@@ -78,9 +84,15 @@ export interface UseCaseContent {
   agents: {
     heading: string;
     intro: string;
+    factoryLabel: string;
+    stations: UseCaseStation[];
+    leadTicket: string;
+    proofPattern: string;
     loop: string[];
+    loopNote: string;
     backlogNote: string;
     backlog: UseCaseTicket[];
+    success: string;
   };
   fit: {
     heading: string;
@@ -309,56 +321,89 @@ export const content: SiteContent = {
         "Correct part ID on hard inputs → catalog match → parts.com purchase path.",
     },
     agents: {
-      heading: "How we’d design this with Cursor Cloud Agents",
+      heading: "How we’ve designed the Cursor approach",
       intro:
-        "We’d treat a scoped slice of visual parts ID as a factory of engineering tickets. Cursor Cloud Agents process tickets in parallel on their own machines — explore, implement, test, open a PR. Your AI R&D and ML/AI Ops teams set acceptance criteria and review. The 30-day goal is a repeatable ticket → agent → PR → review loop on a meaty slice — not boiling the ocean on all 1M parts.",
-      loop: [
-        "Ticket",
-        "Cloud Agent",
-        "PR",
-        "Human review",
-        "Merge",
+        "We don’t run visual parts ID as one chat thread. We design it as a multi-station software factory: ticketed work, parallel Cloud Agents on their own machines, draft PRs for your humans to review. Agents grind the engineering; your AI R&D and ML/AI Ops stay on acceptance criteria and judgment.",
+      factoryLabel: "Software factory · visual parts ID stations",
+      stations: [
+        {
+          name: "Intake",
+          role: "Scope the slice, write the lead ticket, split child work",
+        },
+        {
+          name: "Implement",
+          role: "Cloud Agent explores the repo and opens a draft PR",
+        },
+        {
+          name: "Validate",
+          role: "Agent runs tests / eval hooks against blurry-input cases",
+        },
+        {
+          name: "Fix",
+          role: "Follow-up agent tickets close gaps found in validate",
+        },
+        {
+          name: "Review",
+          role: "Your engineers review the draft PR and merge or redirect",
+        },
       ],
+      leadTicket: "Visual Parts ID — blurry photo → part number",
+      proofPattern:
+        "Pattern we’ve already exercised on Cat demos: label / ticket → automation → Cloud Agent → draft PR on the visual parts ID workstream. Same shape scales into the 30-day pilot — without exposing internal plumbing.",
+      loop: [
+        "Label / ticket",
+        "Automation",
+        "Cloud Agent",
+        "Draft PR",
+        "Human review",
+      ],
+      loopNote:
+        "Each station can trigger its own Cloud Agent. Agents work in parallel; humans stay at Review.",
       backlogNote:
-        "Illustrative pilot backlog grounded in the problem you described — not a committed sprint plan. Final tickets selected at Dallas.",
+        "Illustrative child tickets under the lead ticket — grounded in the problem you described. Final backlog selected at Dallas.",
       backlog: [
         {
           id: "T-01",
           workstream: "Synthetic data",
+          station: "Implement",
           ticket:
-            "Scaffold synthetic image generation pipeline for sparse / older parts",
+            "Scaffold synthetic image generation for sparse / older parts",
         },
         {
           id: "T-02",
           workstream: "Eval harness",
+          station: "Validate",
           ticket:
-            "Build classification / retrieval evaluation harness for blurry & pixelated inputs",
+            "Classification / retrieval harness for blurry & pixelated inputs",
         },
         {
           id: "T-03",
           workstream: "Eval set",
-          ticket:
-            "Construct labeling + eval set from thin historical imagery",
+          station: "Intake",
+          ticket: "Labeling + eval set from thin historical imagery",
         },
         {
           id: "T-04",
-          workstream: "Catalog surface",
+          workstream: "Catalog lookup",
+          station: "Implement",
           ticket:
-            "Prototype parts.com / catalog integration surface in the sandbox",
+            "parts.com / catalog lookup surface in the self-contained sandbox",
         },
         {
           id: "T-05",
-          workstream: "Productionization",
-          ticket:
-            "Package service API with basic entitlements / security hooks",
+          workstream: "API packaging",
+          station: "Implement",
+          ticket: "Service packaging with basic entitlements / security hooks",
         },
         {
           id: "T-06",
-          workstream: "Eval dashboard",
-          ticket:
-            "Ship top-k accuracy view + failure taxonomy on hard inputs",
+          workstream: "Failure triage",
+          station: "Fix",
+          ticket: "Failure taxonomy + fix tickets from hard-input eval misses",
         },
       ],
+      success:
+        "Pilot success: the factory loop is repeatable and faster than the ~6-month handoff path you described — proven on a real slice of blurry-photo parts ID, not a toy demo.",
     },
     fit: {
       heading: "Why this use case fits the pilot",

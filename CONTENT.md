@@ -52,20 +52,30 @@ Blockers: thin historical imagery (esp. older parts); synthetic image generation
 
 Outcome: Correct part ID on hard inputs → catalog match → parts.com purchase path.
 
-### Exhibit B — Cursor Cloud Agents approach
-Treat a scoped slice as a factory of engineering tickets. Cloud Agents process tickets in parallel (explore → implement → test → PR). Cat AI R&D + ML/AI Ops review. Goal: repeatable ticket → agent → PR → review loop — not boiling the ocean on all 1M parts.
+### Exhibit B — How we’ve designed the Cursor approach
+Multi-station software factory (not one chat thread).
 
-Loop: Ticket → Cloud Agent → PR → Human review → Merge
+**Stations:** Intake → Implement → Validate → Fix → Review  
+(Implement / Validate / Fix = Cloud Agent primary; Intake + Review = your team)
 
-Illustrative backlog (selected at Dallas):
-| ID | Workstream | Example ticket |
-|----|------------|----------------|
-| T-01 | Synthetic data | Scaffold synthetic image generation pipeline for sparse / older parts |
-| T-02 | Eval harness | Build classification / retrieval evaluation harness for blurry & pixelated inputs |
-| T-03 | Eval set | Construct labeling + eval set from thin historical imagery |
-| T-04 | Catalog surface | Prototype parts.com / catalog integration surface in the sandbox |
-| T-05 | Productionization | Package service API with basic entitlements / security hooks |
-| T-06 | Eval dashboard | Ship top-k accuracy view + failure taxonomy on hard inputs |
+**Lead ticket:** Visual Parts ID — blurry photo → part number  
+Broken into scoped child tickets. Agents work in parallel; humans review draft PRs.
+
+**Proof pattern:** label / ticket → automation → Cloud Agent → draft PR on the visual parts ID workstream (shape exercised in Cat demos; no internal plumbing exposed).
+
+**Runtime loop:** Label / ticket → Automation → Cloud Agent → Draft PR → Human review
+
+**Illustrative child backlog** (Dallas selects final set):
+| ID | Workstream | Station | Child ticket |
+|----|------------|---------|--------------|
+| T-01 | Synthetic data | Implement | Scaffold synthetic image generation for sparse / older parts |
+| T-02 | Eval harness | Validate | Classification / retrieval harness for blurry & pixelated inputs |
+| T-03 | Eval set | Intake | Labeling + eval set from thin historical imagery |
+| T-04 | Catalog lookup | Implement | parts.com / catalog lookup surface in the sandbox |
+| T-05 | API packaging | Implement | Service packaging with basic entitlements / security hooks |
+| T-06 | Failure triage | Fix | Failure taxonomy + fix tickets from hard-input eval misses |
+
+**Pilot success:** Factory loop is repeatable and faster than the ~6-month handoff path — on a real slice of blurry-photo parts ID.
 
 ### Exhibit C — Why this fits the pilot
 | Dimension | Why |
