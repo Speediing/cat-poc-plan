@@ -146,7 +146,7 @@ export const content: SiteContent = {
     thesis:
       "What we heard from your team in Chicago, a plain primer on Cursor, and the smallest cross-functional group that could prove an end-to-end pattern inside digital — starting with photo quality detection.",
     preparedBy:
-      "Prepared for Nate Litton. Draft — for your review before it goes wider. Credits also to Olivier and Shelby Bethea.",
+      "Jason Wiker, Joe Masello & Sahil Patel, Cursor. With thanks to Olivier and Shelby Bethea.",
     footer:
       "Follow-up to the August 11 onsite · Prepared by Cursor for Caterpillar Digital. Confidential.",
   },
