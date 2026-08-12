@@ -28,7 +28,7 @@ export function WhatWeHeard() {
                 {truth.situation}
               </p>
               <p className="mt-2 text-[15px] leading-relaxed text-ink">
-                <span className="text-ink-faint">So what — </span>
+                <span className="text-ink-faint">Implication — </span>
                 {truth.meaning}
               </p>
             </article>

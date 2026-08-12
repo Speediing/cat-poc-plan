@@ -1,9 +1,9 @@
 /**
  * Content model — Caterpillar Digital × Cursor pilot briefing.
  *
- * Source of truth for site copy. CONTENT.md mirrors this file; content.ts wins.
+ * Customer-facing leave-behind from Cursor to Caterpillar Digital.
  * Grounding: Jul 28, 2026 "Nate Litton | Cursor - Discovery" + Cursor pilot terms.
- * Go-forward destination: ~7,000-person Caterpillar digital organization.
+ * Destination after a successful pilot: ~7,000-person Caterpillar digital org.
  */
 
 // ---------------------------------------------------------------------------
@@ -164,13 +164,14 @@ export interface SiteContent {
 
 export const content: SiteContent = {
   meta: {
-    badge: "Private · Caterpillar Digital · August 2026",
-    title: "30-day Cursor pilot for Caterpillar Digital",
+    badge: "Prepared for Nate Litton · Caterpillar Digital · August 2026",
+    title: "Caterpillar Digital × Cursor — proposed pilot structure",
     thesis:
-      "Recommendation: run a Cursor-funded 30-day pilot in Nate Litton’s organization to measure whether Digital’s AI product teams can cut the ~6-month idea-to-production cycle. Success creates a repeatable pattern for the ~7,000-person digital org.",
+      "We propose a Cursor-funded 30-day pilot with your Digital AI organization to measure one thing: whether the teams building Caterpillar’s AI products can cut the ~6-month idea-to-production cycle. If it works, we have a pattern to scale across your ~7,000-person digital org.",
     preparedBy:
-      "Jason Wiker, Joe Masello, Sahil Patel · Source: July 28 discovery with Nate Litton",
-    footer: "Private — prepared for Caterpillar. Not for redistribution.",
+      "From Jason Wiker, Joe Masello & Sahil Patel, Cursor · Following our July 28 conversation with Nate Litton",
+    footer:
+      "Confidential — prepared by Cursor for Caterpillar Digital. Please do not redistribute.",
   },
 
   whatWeHeard: {
@@ -179,22 +180,23 @@ export const content: SiteContent = {
       id: "what-we-heard",
       navLabel: "What we heard",
       heading: "What we heard",
-      kicker: "Facts from the July 28 discovery. Implications in italics.",
+      kicker:
+        "Our synthesis of the July 28 conversation — offered back so we can align before we propose structure.",
       handoff:
-        "Shared constraint: idea-to-shipped software takes ~6 months. The pilot measures whether Cursor changes that.",
+        "The bottleneck we heard across every thread: idea to shipped software takes ~6 months. The pilot below is how we’d measure whether Cursor changes that for you.",
     },
     orgContext: [
       {
-        label: "Scope of this plan",
-        text: "Caterpillar Digital only — not CAT Technology (in-cab).",
+        label: "Where this plan applies",
+        text: "Your Digital org — not CAT Technology (in-cab).",
       },
       {
         label: "Digital covers",
         text: "cat.com, parts.com, digital products, CAT AI assistant (cloud + edge).",
       },
       {
-        label: "Nate Litton",
-        text: "Owns AI, data, and ML on Digital, including AI R&D. Reports to the Chief Digital Officer.",
+        label: "Your scope (Nate)",
+        text: "AI, data, and ML on Digital, including AI R&D. Reports to the Chief Digital Officer.",
       },
       {
         label: "Org posture",
@@ -205,25 +207,27 @@ export const content: SiteContent = {
       {
         label: "~6 months to ship a simple feature",
         situation:
-          "Handoffs across plan, build, and integration stretch idea-to-production to roughly six months.",
-        meaning: "Delivery problem, not an AI research problem. Direct fit for Cursor.",
+          "You described handoffs across plan, build, and integration stretching idea-to-production to roughly six months.",
+        meaning:
+          "That’s a delivery problem — the one we designed Cursor to attack — not an AI research gap.",
       },
       {
         label: "AI product load is heavy and specific",
         situation:
           "Parts identification across 1M+ parts; translation near tens of millions on human translators — CAT vocabulary and safety block generic LLMs.",
         meaning:
-          "Nate’s teams build these products. Cursor accelerates those teams; it does not build the products.",
+          "Your teams build these products. We accelerate those teams; we do not build the products for you.",
       },
       {
         label: "August 1 reorg",
         situation: "ML and AI Ops platform teams moved under Nate.",
-        meaning: "He now controls more of the productionization path.",
+        meaning:
+          "You now control more of the productionization path — a window to set tooling patterns deliberately.",
       },
     ],
     callout: {
-      heading: "Nate’s stated sequencing",
-      body: "Self-contained enough to start fast (AI R&D lead); representative enough to set a pattern — ideally ticket-to-shipped. One area first; then AI workstreams; then the broader org. Do not force thousands to change overnight.",
+      heading: "How you want to run this",
+      body: "We heard a clear preference: self-contained enough to start fast (your AI R&D lead), representative enough to set a pattern — ideally ticket-to-shipped. One area first; then AI workstreams; then the broader org. We are not asking thousands of people to change overnight.",
     },
   },
 
@@ -233,13 +237,13 @@ export const content: SiteContent = {
       id: "the-pilot",
       navLabel: "The pilot",
       heading: "The pilot",
-      kicker: "30 days. Cursor pays token costs. Setup under one day.",
-      handoff: "Structure above. Case for timing below.",
+      kicker: "What we propose to run with you. 30 days. We cover token costs. Setup under one day.",
+      handoff: "That’s the structure we’d run. Here’s why we’d start now.",
     },
     dealParagraph:
-      "Cursor funds 30 days of usage (100% of token costs, all models). Setup takes under a day. Two deliverables: a viability verdict on real Digital work, and a measured token baseline for the budget conversation.",
+      "We fund 30 days of usage — 100% of token costs across all models. Setup takes under a day. Together we produce two outputs: a viability verdict on real Digital work, and a measured token baseline for your budget conversation.",
     shape: {
-      intro: "Hold two constraints from the call at once:",
+      intro: "You gave us two constraints. We designed the pilot to hold both:",
       requirements: [
         {
           label: "Self-contained",
@@ -247,56 +251,56 @@ export const content: SiteContent = {
         },
         {
           label: "Representative",
-          text: "Full idea-to-production path preferred, including ticketing — not a corner case.",
+          text: "Full idea-to-production path preferred, including ticketing — not a corner case you’d have to rebuild later.",
         },
       ],
       recommendation:
-        "Cohort: AI R&D + ML/AI Ops (under Nate post-reorg). One real initiative, selected at Dallas. Ticket-to-shipped inside a self-contained environment. Dallas picks the use case; this brief fixes the shape.",
+        "We propose piloting with AI R&D + ML/AI Ops — the cohort you control post-reorg — on one real initiative you select at Dallas. Ticket-to-shipped inside a self-contained environment. You pick the use case; we propose the shape.",
     },
     weeks: [
       {
         week: "0",
         focus: "Decide",
         detail:
-          "Dallas selects use case; name 10–20 developers (AI R&D + ML/AI Ops); infosec sign-off; co-sign success criteria. Outcome: kickoff-ready.",
+          "At Dallas you select the use case; we name 10–20 developers (AI R&D + ML/AI Ops) with you; infosec sign-off; we co-sign success criteria. Outcome: kickoff-ready.",
       },
       {
         week: "1",
         focus: "Enable",
         detail:
-          "Cursor engineer onboarding; developers in real codebase by day 2–3; map ticket → shipped. Outcome: cohort productive.",
+          "We put a Cursor engineer with your cohort; developers in real codebases by day 2–3; map ticket → shipped. Outcome: cohort productive.",
       },
       {
         week: "2–3",
         focus: "Build",
         detail:
-          "Initiative runs ticket-to-production with Cursor in the loop; weekly office hours; usage data accumulates. Outcome: evidence on real work.",
+          "Your initiative runs ticket-to-production with Cursor in the loop; weekly office hours; usage data accumulates. Outcome: evidence on real work.",
       },
       {
         week: "4",
         focus: "Decide",
         detail:
-          "Readout: what shipped, cycle time vs ~6 months, developer feedback, token baseline, Wave 1 proposal. Outcome: go / no-go.",
+          "Joint readout: what shipped, cycle time vs ~6 months, developer feedback, token baseline, Wave 1 proposal. Outcome: go / no-go together.",
       },
     ],
     successCriteria: {
       heading: "Success criteria",
-      note: "Proposed — co-signed at kickoff.",
+      note: "Proposed — we’d co-sign these with you at kickoff.",
       rows: [
         {
           criterion: "Real work, not sandboxes",
-          evidence: "Majority of 30 days on Digital codebases",
-          owner: "Pilot lead",
+          evidence: "Majority of 30 days on your Digital codebases",
+          owner: "Your pilot lead",
         },
         {
           criterion: "Ticket-to-shipped completed",
-          evidence: "Cat developers demo end-to-end at readout",
-          owner: "Pilot lead",
+          evidence: "Your developers demo end-to-end at readout",
+          owner: "Your pilot lead",
         },
         {
           criterion: "Repeatable playbook",
-          evidence: "Written enablement + delivery guide another team can reuse",
-          owner: "Cursor + pilot lead",
+          evidence: "Written enablement + delivery guide another Digital team can reuse",
+          owner: "Cursor + your pilot lead",
         },
         {
           criterion: "Token baseline",
@@ -306,19 +310,19 @@ export const content: SiteContent = {
         {
           criterion: "Infosec closed in-window",
           evidence: "Open questions answered before readout",
-          owner: "Infosec + pilot lead",
+          owner: "Your infosec + pilot lead",
         },
       ],
     },
     asks: {
-      heading: "Asks of Caterpillar",
+      heading: "What we’d need from you",
       items: [
-        "Dallas on-site scheduled (Joe → Madison)",
-        "Named pilot lead (AI R&D lead)",
-        "Use case selected at Dallas",
-        "Infosec sign-off on self-contained environment",
-        "~2 hrs/week from pilot lead",
-        "Readout date set at kickoff",
+        "Dallas on-site on the calendar (we’ll reach Madison via Joe)",
+        "A named pilot lead — natural fit: your AI R&D lead",
+        "Use-case selection at Dallas",
+        "Infosec sign-off on a self-contained environment",
+        "~2 hrs/week from the pilot lead",
+        "A readout date set at kickoff",
       ],
     },
   },
@@ -329,44 +333,52 @@ export const content: SiteContent = {
       id: "why-now",
       navLabel: "Why now",
       heading: "Why now",
-      kicker: "Only claims grounded in the July 28 call or Cursor pilot terms.",
-      handoff: "Pilot proves one cohort. Scale path follows.",
+      kicker:
+        "The case for moving this quarter — grounded only in what you told us and our standard pilot terms.",
+      handoff:
+        "The pilot answers the question for one cohort. Below is how we’d scale with you after that.",
     },
     arguments: [
       {
-        claim: "Cycle-time tax hits every AI initiative",
+        claim: "The cycle-time tax hits every AI initiative",
         grounding:
-          "Parts ID, translation, and the CAT AI assistant each pay the ~6-month toll.",
-        soWhat: "A measured cut on one initiative informs the whole Digital AI portfolio.",
+          "Parts ID, translation, and the CAT AI assistant each pay the ~6-month toll today.",
+        soWhat:
+          "A measured cut on one initiative informs the whole Digital AI portfolio — we don’t ask you to take that on faith.",
       },
       {
-        claim: "Reporting lines just changed",
-        grounding: "August 1: ML and AI Ops report to Nate.",
-        soWhat: "Tooling patterns set now stick; retrofits cost more later.",
+        claim: "Your reporting lines just changed",
+        grounding: "As of August 1, ML and AI Ops report to Nate.",
+        soWhat:
+          "Patterns you set now stick; retrofitting tooling later costs more.",
       },
       {
         claim: "Smallest honest test before scale",
         grounding:
-          "Nate’s constraint: do not force thousands to change overnight.",
-        soWhat: "A 30-day, one-area pilot is the minimum evidence to greenlight or kill expansion.",
+          "You were clear: don’t force thousands of people to change overnight.",
+        soWhat:
+          "A 30-day, one-area pilot is the minimum evidence to greenlight or stop expansion.",
       },
       {
-        claim: "Replace budget guesses with a baseline",
-        grounding: "Cursor covers 100% of token costs for 30 days.",
-        soWhat: "Post-pilot pricing discussion starts from measured Caterpillar usage.",
+        claim: "A token baseline instead of a budget guess",
+        grounding: "We’ll cover 100% of token costs for the 30 days.",
+        soWhat:
+          "Your post-pilot pricing discussion starts from measured Caterpillar usage, with a shared pool and per-developer controls.",
       },
       {
         claim: "Technology side already has a scoped case",
-        grounding: "Brandon Newman’s org (CAT Technology) has a Cursor use case in motion.",
-        soWhat: "Digital can generate its own evidence, or wait for Technology’s.",
+        grounding:
+          "Brandon Newman’s org (CAT Technology) has a Cursor use case in motion.",
+        soWhat:
+          "Caterpillar will have Cursor evidence soon either way. Digital can generate its own — or wait on Technology’s.",
       },
     ],
     fundingBox: {
       heading: "Funding model",
       during:
-        "During: 30-day pilot; Cursor pays 100% of token costs (all models); setup under one day.",
+        "During: 30-day pilot; we pay 100% of token costs (all models); setup under one day.",
       output:
-        "Output: viability verdict, token baseline, reusable playbook.",
+        "Output: viability verdict, token baseline, reusable playbook — yours to keep.",
       after:
         "After: enterprise agreement — shared token pool with per-developer spend controls.",
     },
@@ -379,10 +391,10 @@ export const content: SiteContent = {
       navLabel: "Go forward",
       heading: "Go forward",
       kicker:
-        "Destination: ~7,000-person Caterpillar digital organization. Sequence is Nate’s.",
+        "How we’d scale with you across the ~7,000-person digital organization — sequenced the way you described.",
     },
     destination:
-      "Pilot = Wave 0. Sequence from the call: one area → prove → AI workstreams → broader org. Pilot metrics (cycle time, tokens, playbook) gate every later wave.",
+      "We treat the pilot as Wave 0, not a one-off. Your sequence from the conversation: one area → prove it → AI workstreams → broader org. Everything we measure in 30 days (cycle time, tokens, playbook) gates the waves that follow.",
     waves: [
       {
         label: "Wave 0",
@@ -414,13 +426,13 @@ export const content: SiteContent = {
       },
     ],
     readyToScale: {
-      heading: "Gate to scale (beyond Wave 0)",
+      heading: "What “ready to scale” means to us",
       items: [
         "Wave 0 success criteria met",
-        "Token baseline maps to acceptable per-developer cost",
-        "Infosec approval for a standing pattern (not a pilot exception)",
-        "≥2 teams outside the cohort requesting access",
-        "Cat champion ran an onboarding from the playbook without Cursor staff",
+        "Token baseline maps to an acceptable per-developer cost for you",
+        "Infosec approval for a standing pattern — not a pilot exception",
+        "≥2 teams outside the cohort asking to onboard",
+        "A Caterpillar champion ran an onboarding from the playbook without Cursor in the room",
       ],
     },
     stakeholders: [
@@ -428,25 +440,25 @@ export const content: SiteContent = {
         name: "Nate Litton",
         role: "AI / data / ML — Digital",
         thread: "Executive sponsor, Waves 0–3",
-        ask: "Sponsor pilot; protect sequencing",
+        ask: "Sponsor the pilot; keep the sequencing intact",
       },
       {
         name: "AI R&D lead",
         role: "Nate’s org",
-        thread: "Pilot lead; proposed self-contained shape",
+        thread: "Pilot lead; proposed the self-contained shape",
         ask: "Lead Wave 0; ~2 hrs/week",
       },
       {
         name: "Incoming AI/ML Ops lead",
         role: "Nate’s org",
         thread: "Productionization path, Waves 0–2",
-        ask: "Join Dallas; own ops thread",
+        ask: "Join Dallas; own the ops thread",
       },
       {
         name: "Madison Motyl",
         role: "EA to Nate",
         thread: "Dallas scheduling",
-        ask: "Confirm on-site window",
+        ask: "Confirm the on-site window with Joe",
       },
       {
         name: "Chief of staff (incoming)",
@@ -458,7 +470,7 @@ export const content: SiteContent = {
         name: "Brandon Newman",
         role: "CAT Technology",
         thread: "Parallel Cursor track",
-        ask: "None in this plan (reference only)",
+        ask: "None in this plan — reference only",
       },
     ],
   },
@@ -467,18 +479,19 @@ export const content: SiteContent = {
     heading: "Next steps",
     steps: [
       {
-        owner: "Joe Masello (Cursor)",
-        action: "Contact Madison Motyl; schedule Dallas on-site.",
+        owner: "Cursor — Joe Masello",
+        action:
+          "We’ll reach out to Madison Motyl to schedule the Dallas on-site.",
       },
       {
-        owner: "Dallas on-site (≤2–3 weeks)",
+        owner: "Caterpillar + Cursor — Dallas on-site (within 2–3 weeks)",
         action:
-          "Attendees: AI R&D lead, incoming AI/ML Ops lead; coordinated via Madison and chief of staff.",
+          "With your AI R&D lead and incoming AI/ML Ops lead; coordinated via Madison and your chief of staff.",
       },
       {
-        owner: "Dallas agenda",
+        owner: "Shared agenda for Dallas",
         action:
-          "Time today vs desired state · SDLC bottlenecks · AI maturity · use-case mapping. Week 0 starts at the end of this agenda.",
+          "Where the team spends time today vs desired state · SDLC bottlenecks · AI maturity · use-case mapping. Week 0 of the pilot starts where this agenda ends.",
       },
     ],
     contacts: [

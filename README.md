@@ -1,6 +1,6 @@
 # Caterpillar Digital × Cursor — Pilot Plan
 
-Private leave-behind microsite for the Caterpillar Digital Cursor pilot (Nate Litton discovery, Jul 28, 2026).
+Customer-facing leave-behind from Cursor to Caterpillar Digital (Nate Litton discovery, Jul 28, 2026).
 
 ## Stack
 
