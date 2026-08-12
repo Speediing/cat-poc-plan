@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --canvas: #f7f7f4;
-  --canvas-warm: #f5f3ef;
-  --panel: #efece6;
-  --panel-deep: #e8e4db;
+  --canvas: #f6f5f2;
+  --canvas-warm: #f3f1ec;
+  --panel: #ebe8e1;
+  --panel-deep: #e4e0d7;
   --ink: #26251e;
   --ink-muted: #5c5b54;
   --ink-faint: #8a8982;

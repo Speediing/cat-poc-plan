@@ -1,20 +1,20 @@
 import Image from "next/image";
 
 /**
- * Painted Caterpillar haul truck accent — soft gouache/watercolor energy,
- * matching Cursor homepage illustrated accents (not vector clipart).
+ * Approved soft-washed painted haul truck (Jason / truck B).
+ * Quiet atmospheric fragment for cream hero — not vector, not sticker.
  */
 export function HaulTruck({ className = "" }: { className?: string }) {
   return (
     <div className={`relative ${className}`}>
       <Image
-        src="/images/haul-truck.png"
-        alt="Painted illustration of a Caterpillar haul truck"
+        src="/illustrations/cat-haul-truck.png"
+        alt="Soft-washed painted Caterpillar haul truck"
         width={1536}
         height={1024}
         priority
         className="h-auto w-full select-none"
-        sizes="(max-width: 1024px) 90vw, 480px"
+        sizes="(max-width: 1024px) 92vw, 540px"
       />
     </div>
   );
