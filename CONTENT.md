@@ -1,48 +1,53 @@
 # CONTENT.md — Site copy (mirror of `src/lib/content.ts`)
 
-> Voice bar: cat-cursor-followup. Plain, sharp, short.  
-> Org / Augie / Digital-vs-Technology stated **once** in What we heard.
+> **Source of truth:** Aug 11, 2026 Chicago onsite — *Cursor & Cat Digital*  
+> Granola: `87ae339d-1c0d-4890-867f-37e9be06d190`  
+> Structure / voice sibling of [cat-cursor-followup](https://cat-cursor-followup.vercel.app)  
+> Attendees: Jason Wiker, Joe Masello, Sahil Patel, Nate Litton, Shelby Bethea. Olivier carried operating-model depth.  
+> If this file and `src/lib/content.ts` diverge, `content.ts` wins.
 
 ---
 
 ## Hero
-What we heard from your team, how agents would help on blurry-photo parts ID, and a thirty-day pilot small enough to start without a procurement conversation.
+- **Badge:** Onsite follow-up · Chicago · August 11, 2026
+- **Title:** Caterpillar × Cursor
+- **Thesis:** What we heard from your team in Chicago, a plain primer on Cursor, and the smallest cross-functional group that could prove an end-to-end pattern inside digital — starting with photo quality detection.
+- **Prepared for:** Nate Litton. Credits also to Olivier and Shelby Bethea.
 
-## 01 What we heard
+## 02 What we heard
 **The bottleneck isn't writing the code.**
 
-### Org (once only)
-- **CAT Technology** — Cab software (Brandon / Jamie). Hard legacy. Already scoping a Cursor pilot. Nate wants tracks coordinated. This page = Digital only.
-- **Caterpillar Digital** — cat.com, parts.com, products, Cat AI assistant. 5–7 yr rebuild. This plan.
-- **Nate → CDO (Augie)** — AI, data, ML including AI R&D.
-- **Aug 1** — ML + AI Ops under Nate.
+Operating model: Intake → Design (HLA + AVT) → Execution → Release → Support. DPM ~700 upstream. Design longest pull. Shared eng rotates → context erodes.
 
-### Operating model
-Plan (1 org) → Build (~2–3 orgs) → Integrate → Ship. Not a thin domain team. Quality high; ~6 months for a simple feature. Digital's bottleneck is the production path, not a gnarly codebase.
+Findings: incomplete requirements · prototypes reset the clock (“random Claude code”) · review from zero (dashboard POC stuck on entitlements) · context leaks at the seams.
 
-### Prototype trap
-~2 weeks → stuck on entitlements/security/“didn't think about X” → back to the drawing board (~6 months).
+## 03 The gap
+Fast R&D prototype vs months into production vs ~700 DPM upstream.
 
-### Portfolio
-- Parts ID: blurry photo → part number → parts.com
-- Translation: thought it was solved; tens of thousands of pages; Cat vocab + safety; close to tens of millions on human translators
-- Cat AI assistant: same six-month path
+## 04–05 Cursor primer
+Cursor in one slide. Four ways: editor, agent, background PRs, review.
 
-### Start shape
-AI R&D sandbox avoids infosec/integration tax. One area → prove → AI-focused work → wider.
+## 06 Where it plugs in
+Same path (DPM → HLA/AVT → R&D → execution → review → release). Removes waiting. Nothing asks you to reorganize first.
 
-## 02 Parts ID
-**Blurry photo → part number.** Agents on tickets. Same repos, PRs, review gates.
+## 07 The idea
+Modular standard patterns agents reach for upstream. Reusable skill — not an ad hoc demo.
 
-## 03 Why it matters
-**Closing that gap is the whole point.**
+## 08 Proposed POC: photo quality detection
+Warranty / inspections / field photos. Self-contained. Reusable into Cat Inspect, Spotters Guide. Unlocks parts ID / anomaly / repair cost downstream.
 
-## 04 The pilot
-**Thirty days, no procurement conversation to start.**  
-Open to 6–8 weeks but longer cycles lose focus — we proposed 30 days.
+## 09 The group
+Daniela’s eng · Kevin’s MLOps · Charlie (DPM AI, observer) · Olivier (end-to-end) · Shelby. Nominate in 2–3 days.
 
-## 05 If it works
-**One area. Prove it. Then AI work. Then wider.**
+## 10 The pilot
+30 days · 100% tokens · &lt;1 day setup · real photo-quality work. Infra: AWS private link / self-hosted agents; GitHub app review; Cat communications for external sharing.
 
-## 06 Next steps
-Joe → Madison + chief of staff · AI R&D + AI/ML Ops leads · Dallas agenda (time today vs desired, SDLC bottlenecks, AI maturity, use cases + value/measure).
+## 11 Timeline
+2–3 days nominate → Nate+Olivier align → early next week reconnect → credits + overview deck → 30-day pilot.
+
+## 12 FAQ + 13 Next steps
+As on follow-up / call. Nate / Joe / Cursor.
+
+---
+
+**Dropped:** Jul 28 Dallas-as-centerpiece · Richard Green / MindStar · blurry-parts-ID as sole spine.

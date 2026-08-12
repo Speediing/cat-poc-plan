@@ -1,6 +1,7 @@
 # Caterpillar Digital × Cursor — Pilot Plan
 
-Customer-facing leave-behind from Cursor to Caterpillar Digital (Nate Litton discovery, Jul 28, 2026).
+Customer-facing leave-behind from Cursor to Caterpillar Digital.  
+**Source:** Aug 11, 2026 Chicago onsite (*Cursor & Cat Digital*) + [cat-cursor-followup](https://cat-cursor-followup.vercel.app) structure/voice.
 
 ## Stack
 

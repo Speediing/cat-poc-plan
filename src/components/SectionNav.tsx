@@ -10,7 +10,7 @@ const navItems = [
   })),
   {
     id: "next-steps",
-    label: content.nextSteps.heading,
+    label: "Next steps",
   },
 ];
 

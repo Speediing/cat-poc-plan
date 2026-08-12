@@ -10,17 +10,15 @@ export function Hero() {
       <div className="mx-auto max-w-6xl px-6 pb-16 pt-10 sm:px-10 sm:pb-24 sm:pt-12">
         <div className="mb-16 flex flex-col gap-4 sm:mb-20 sm:flex-row sm:items-start sm:justify-between">
           <Lockup />
-          <p className="max-w-[16rem] text-[14px] leading-snug text-ink-faint sm:text-right">
+          <p className="max-w-[18rem] text-[13px] font-medium tracking-[0.04em] text-ink-faint uppercase sm:text-right">
             {meta.badge}
           </p>
         </div>
 
-        {/* cursor.com rhythm: type on plain bone, painting as quiet fragment */}
         <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-16">
           <div className="max-w-xl">
-            <h1 className="max-w-[18ch] text-[2.75rem] font-medium leading-[1.05] tracking-[-0.035em] text-ink sm:text-[3.2rem] lg:text-[3.45rem]">
-              Caterpillar Digital{" "}
-              <span className="text-cursor-orange">×</span> Cursor
+            <h1 className="max-w-[14ch] text-[2.75rem] font-medium leading-[1.05] tracking-[-0.035em] text-ink sm:text-[3.2rem] lg:text-[3.45rem]">
+              Caterpillar <span className="text-cursor-orange">×</span> Cursor
             </h1>
             <p className="mt-7 max-w-[34rem] text-[17px] leading-[1.55] text-ink-muted">
               {meta.thesis}
@@ -39,10 +37,10 @@ export function Hero() {
                 </span>
               </a>
               <a
-                href="#the-pilot"
+                href="#proposed-poc"
                 className="inline-flex items-center rounded-full bg-panel px-5 py-2.5 text-[14px] font-medium text-ink transition-opacity hover:opacity-85"
               >
-                Thirty-day pilot
+                Photo quality POC
               </a>
             </p>
           </div>
