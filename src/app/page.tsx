@@ -14,8 +14,8 @@ export default function HomePage() {
       <SectionNav />
       <WhatWeHeard />
       <UseCase />
-      <ThePilot />
       <WhyNow />
+      <ThePilot />
       <GoForward />
       <NextSteps />
     </main>

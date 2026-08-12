@@ -1,21 +1,18 @@
 import { content } from "@/lib/content";
+import { Handoff, SectionHeader } from "@/components/SectionHeader";
 import {
-  ExhibitTable,
-  Handoff,
-  SectionHeader,
-} from "@/components/SectionHeader";
-import {
+  CompactPilotArc,
+  FundingPanelsExhibit,
   PilotShapeExhibit,
-  WeekTimelineExhibit,
 } from "@/components/Exhibits";
 
 export function ThePilot() {
-  const { meta, dealParagraph, shape, weeks, successCriteria, asks } =
+  const { meta, dealParagraph, shape, weeks, successCriteria, asks, funding } =
     content.thePilot;
 
   return (
     <section id={meta.id}>
-      <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-28">
+      <div className="mx-auto max-w-6xl px-6 py-16 sm:px-10 sm:py-20">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-14 lg:items-start">
           <div>
             <SectionHeader meta={meta} />
@@ -23,46 +20,54 @@ export function ThePilot() {
               {dealParagraph}
             </p>
           </div>
-          <div>
-            <p className="mb-4 text-[17px] leading-[1.55] text-ink-muted">
-              {shape.intro}
+          <PilotShapeExhibit
+            requirements={shape.requirements}
+            recommendation={shape.recommendation}
+          />
+        </div>
+
+        <div className="mt-10 md:mt-12">
+          <FundingPanelsExhibit
+            during={funding.during}
+            output={funding.output}
+            after={funding.after}
+          />
+        </div>
+
+        <div className="mt-10 md:mt-12">
+          <CompactPilotArc weeks={weeks} />
+        </div>
+
+        <div className="mt-10 grid gap-6 md:mt-12 lg:grid-cols-2">
+          <div className="rounded-2xl bg-white/80 p-5 shadow-[0_0_0_1px_rgba(38,37,30,0.07)] sm:p-6">
+            <h3 className="text-[1.05rem] font-medium tracking-tight text-ink">
+              {successCriteria.heading}
+            </h3>
+            <p className="mt-1 text-[13px] text-ink-faint">
+              {successCriteria.note}
             </p>
-            <PilotShapeExhibit
-              requirements={shape.requirements}
-              recommendation={shape.recommendation}
-            />
-          </div>
-        </div>
-
-        <div className="mt-16 md:mt-20">
-          <WeekTimelineExhibit weeks={weeks} />
-        </div>
-
-        <div className="mt-16 grid gap-12 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)] lg:gap-14 md:mt-20">
-          <div>
-            <div className="mb-5 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-              <h3 className="text-[1.05rem] font-medium tracking-tight text-ink">
-                {successCriteria.heading}
-              </h3>
-              <span className="text-[14px] text-ink-faint">
-                {successCriteria.note}
-              </span>
-            </div>
-            <ExhibitTable
-              headers={["Criterion", "Evidence", "Owner"]}
-              rows={successCriteria.rows.map((row) => [
-                row.criterion,
-                row.evidence,
-                row.owner,
-              ])}
-            />
+            <ul className="mt-4 space-y-2.5">
+              {successCriteria.rows.map((row) => (
+                <li
+                  key={row.criterion}
+                  className="rounded-xl bg-panel px-4 py-3"
+                >
+                  <p className="text-[15px] font-medium text-ink">
+                    {row.criterion}
+                  </p>
+                  <p className="mt-1 text-[13px] leading-relaxed text-ink-muted">
+                    {row.evidence}
+                  </p>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <div>
-            <h3 className="mb-5 text-[1.05rem] font-medium tracking-tight text-ink">
+          <div className="rounded-2xl bg-white/80 p-5 shadow-[0_0_0_1px_rgba(38,37,30,0.07)] sm:p-6">
+            <h3 className="text-[1.05rem] font-medium tracking-tight text-ink">
               {asks.heading}
             </h3>
-            <ul className="space-y-2.5">
+            <ul className="mt-4 space-y-2.5">
               {asks.items.map((item) => (
                 <li
                   key={item}

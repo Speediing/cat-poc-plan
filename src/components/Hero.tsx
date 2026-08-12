@@ -29,10 +29,10 @@ export function Hero() {
             </p>
             <p className="mt-10 flex flex-wrap gap-3">
               <a
-                href="#the-pilot"
+                href="#what-we-heard"
                 className="inline-flex items-center rounded-full bg-ink px-5 py-2.5 text-[14px] font-medium text-canvas transition-opacity hover:opacity-85"
               >
-                See the proposed pilot
+                What we heard
                 <span aria-hidden="true" className="ml-2">
                   →
                 </span>
@@ -41,7 +41,7 @@ export function Hero() {
                 href="#use-case"
                 className="inline-flex items-center rounded-full bg-panel px-5 py-2.5 text-[14px] font-medium text-ink transition-opacity hover:opacity-85"
               >
-                Parts ID use case
+                Parts ID + agents
               </a>
             </p>
           </div>
