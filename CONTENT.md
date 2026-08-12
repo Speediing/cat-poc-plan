@@ -24,30 +24,30 @@ Findings: incomplete requirements · prototypes reset the clock (“random Claud
 ## 03 The gap
 Fast R&D prototype vs months into production vs ~700 DPM upstream.
 
-## 04–05 Cursor primer
-Cursor in one slide. Four ways: editor, agent, background PRs, review.
+## 04 Who Cursor is
+Cursor in one slide. Model choice, agents on tickets, review, enterprise controls.
 
-## 06 Where it plugs in
+## 05 Where it plugs in
 Same path (DPM → HLA/AVT → R&D → execution → review → release). Removes waiting. Nothing asks you to reorganize first.
 
-## 07 The idea
+## 06 The idea
 Modular standard patterns agents reach for upstream. Reusable skill — not an ad hoc demo.
 
-## 08 Proposed POC: photo quality detection
+## 07 Proposed POC: photo quality detection
 Warranty / inspections / field photos. Self-contained. Reusable into Cat Inspect, Spotters Guide. Unlocks parts ID / anomaly / repair cost downstream.
 
-## 09 The group
+## 08 The group
 Daniela’s eng · Kevin’s MLOps · Charlie (DPM AI, observer) · Olivier (end-to-end) · Shelby. Nominate in 2–3 days.
 
-## 10 The pilot
+## 09 The pilot
 30 days · 100% tokens · &lt;1 day setup · real photo-quality work. Infra: AWS private link / self-hosted agents; GitHub app review; Cat communications for external sharing.
 
-## 11 Timeline
+## 10 Timeline
 2–3 days nominate → Nate+Olivier align → early next week reconnect → credits + overview deck → 30-day pilot.
 
-## 12 FAQ + 13 Next steps
-As on follow-up / call. Nate / Joe / Cursor.
+## 11 Next steps
+Nate / Joe / Cursor — nominate, align, reconnect, stand up.
 
 ---
 
-**Dropped:** Jul 28 Dallas-as-centerpiece · Richard Green / MindStar · blurry-parts-ID as sole spine.
+**Dropped:** Jul 28 Dallas-as-centerpiece · Richard Green / MindStar · blurry-parts-ID as sole spine · “Four ways” primer section · FAQ section.

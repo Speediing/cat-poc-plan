@@ -40,12 +40,6 @@ export interface GapStat {
   detail: string;
 }
 
-export interface PrimerCard {
-  label: string;
-  title: string;
-  body: string;
-}
-
 export interface PathRow {
   stage: string;
   today: string;
@@ -66,11 +60,6 @@ export interface TimelineItem {
   when: string;
   what: string;
   who: string;
-}
-
-export interface FaqItem {
-  q: string;
-  a: string;
 }
 
 export interface NextStep {
@@ -104,10 +93,6 @@ export interface SiteContent {
     body: string;
     points: Finding[];
   };
-  whatItDoes: {
-    meta: SectionMeta;
-    cards: PrimerCard[];
-  };
   whereItPlugsIn: {
     meta: SectionMeta;
     rows: PathRow[];
@@ -140,10 +125,6 @@ export interface SiteContent {
   timeline: {
     meta: SectionMeta;
     items: TimelineItem[];
-  };
-  faq: {
-    meta: SectionMeta;
-    items: FaqItem[];
   };
   nextSteps: {
     label: string;
@@ -263,42 +244,9 @@ export const content: SiteContent = {
     ],
   },
 
-  whatItDoes: {
-    meta: {
-      number: "05",
-      id: "what-it-does",
-      navLabel: "What it does",
-      heading: "Four ways your team would use it.",
-      kicker:
-        "Same repositories, same pull requests, same review gates. The change is how much of the work an engineer has to type themselves.",
-    },
-    cards: [
-      {
-        label: "In the editor",
-        title: "Completion that knows the codebase",
-        body: "Predicts the next edit rather than the next word, across every file your change touches.",
-      },
-      {
-        label: "Agent",
-        title: "An agent that does the task",
-        body: "Describe the outcome. It finds the relevant code, makes the change, writes the tests, and runs them.",
-      },
-      {
-        label: "In the background",
-        title: "Work running in the background",
-        body: "Hand routine tickets to agents and get pull requests back while the team works on the hard problem.",
-      },
-      {
-        label: "Review",
-        title: "Review before a person spends time",
-        body: "Every pull request checked against your standards — including the entitlement and security patterns you write down once.",
-      },
-    ],
-  },
-
   whereItPlugsIn: {
     meta: {
-      number: "06",
+      number: "05",
       id: "where-it-plugs-in",
       navLabel: "Where it plugs in",
       heading: "It does not change your path. It removes the waiting on it.",
@@ -342,7 +290,7 @@ export const content: SiteContent = {
 
   ideaWorthTesting: {
     meta: {
-      number: "07",
+      number: "06",
       id: "idea-worth-testing",
       navLabel: "The idea",
       heading: "The idea worth testing.",
@@ -361,7 +309,7 @@ export const content: SiteContent = {
 
   proposedPoc: {
     meta: {
-      number: "08",
+      number: "07",
       id: "proposed-poc",
       navLabel: "Photo quality",
       heading: "Proposed work: photo quality detection.",
@@ -394,7 +342,7 @@ export const content: SiteContent = {
 
   theGroup: {
     meta: {
-      number: "09",
+      number: "08",
       id: "the-group",
       navLabel: "The group",
       heading: "Small, cross-functional, end to end.",
@@ -430,7 +378,7 @@ export const content: SiteContent = {
 
   thePilot: {
     meta: {
-      number: "10",
+      number: "09",
       id: "the-pilot",
       navLabel: "The pilot",
       heading: "Thirty days, no procurement conversation to start.",
@@ -457,7 +405,7 @@ export const content: SiteContent = {
 
   timeline: {
     meta: {
-      number: "11",
+      number: "10",
       id: "timeline",
       navLabel: "Timeline",
       heading: "The next few weeks.",
@@ -492,44 +440,8 @@ export const content: SiteContent = {
     ],
   },
 
-  faq: {
-    meta: {
-      number: "12",
-      id: "faq",
-      navLabel: "FAQ",
-      heading: "What people ask in the first meeting.",
-      kicker: "",
-    },
-    items: [
-      {
-        q: "Does this replace engineers?",
-        a: "No. It absorbs the work engineers do not want — boilerplate, tests, tracing an unfamiliar service — so the same team ships more of what only they can do.",
-      },
-      {
-        q: "What happens to our code?",
-        a: "Privacy mode with zero data retention: code is not stored and is not used to train models. SSO, SCIM, and audit logging are standard. VPC / private-link options exist for AWS.",
-      },
-      {
-        q: "We already have Copilot. Does this conflict?",
-        a: "No. They coexist. Cursor's router, background agents on tickets, and PR review are the differences that matter to your handoff path.",
-      },
-      {
-        q: "What does it cost?",
-        a: "Nothing during the pilot — Cursor covers token usage across every model. The pilot produces the consumption baseline that turns ongoing cost into a known number with per-team caps.",
-      },
-      {
-        q: "How long does setup take?",
-        a: "Under a day for a team. Self-hosted agents can move while the formal GitHub / security review runs in parallel.",
-      },
-      {
-        q: "What if it does not work for us?",
-        a: "Then you have a measured answer in thirty days instead of an ongoing debate, and it cost you attention rather than budget.",
-      },
-    ],
-  },
-
   nextSteps: {
-    label: "13 Next steps",
+    label: "11 Next steps",
     heading: "Four things, then we start.",
     steps: [
       {
@@ -566,12 +478,10 @@ export const sections: SectionMeta[] = [
   content.whatWeHeard.meta,
   content.theGap.meta,
   content.whoCursorIs.meta,
-  content.whatItDoes.meta,
   content.whereItPlugsIn.meta,
   content.ideaWorthTesting.meta,
   content.proposedPoc.meta,
   content.theGroup.meta,
   content.thePilot.meta,
   content.timeline.meta,
-  content.faq.meta,
 ];

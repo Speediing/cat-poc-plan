@@ -115,31 +115,6 @@ export function WhoCursorIs() {
   );
 }
 
-export function WhatItDoes() {
-  const { meta, cards } = content.whatItDoes;
-  return (
-    <Shell id={meta.id}>
-      <SectionHeader meta={meta} />
-      <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        {cards.map((c) => (
-          <div
-            key={c.title}
-            className="rounded-2xl bg-white/80 p-5 shadow-[0_0_0_1px_rgba(38,37,30,0.07)]"
-          >
-            <p className="text-[12px] font-medium tracking-[0.06em] text-ink-faint uppercase">
-              {c.label}
-            </p>
-            <p className="mt-3 text-[15px] font-medium text-ink">{c.title}</p>
-            <p className="mt-2 text-[14px] leading-relaxed text-ink-muted">
-              {c.body}
-            </p>
-          </div>
-        ))}
-      </div>
-    </Shell>
-  );
-}
-
 export function WhereItPlugsIn() {
   const { meta, rows, close } = content.whereItPlugsIn;
   return (
@@ -348,28 +323,6 @@ export function Timeline() {
           </li>
         ))}
       </ol>
-    </Shell>
-  );
-}
-
-export function Faq() {
-  const { meta, items } = content.faq;
-  return (
-    <Shell id={meta.id} warm>
-      <SectionHeader meta={meta} />
-      <div className="mt-10 space-y-3">
-        {items.map((item) => (
-          <div
-            key={item.q}
-            className="rounded-2xl bg-white/80 p-5 shadow-[0_0_0_1px_rgba(38,37,30,0.07)]"
-          >
-            <p className="text-[15px] font-medium text-ink">{item.q}</p>
-            <p className="mt-2 text-[14px] leading-relaxed text-ink-muted">
-              {item.a}
-            </p>
-          </div>
-        ))}
-      </div>
     </Shell>
   );
 }

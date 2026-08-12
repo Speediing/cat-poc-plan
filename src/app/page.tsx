@@ -4,14 +4,12 @@ import {
   WhatWeHeard,
   TheGap,
   WhoCursorIs,
-  WhatItDoes,
   WhereItPlugsIn,
   IdeaWorthTesting,
   ProposedPoc,
   TheGroup,
   ThePilot,
   Timeline,
-  Faq,
 } from "@/components/Sections";
 import { NextSteps } from "@/components/NextSteps";
 
@@ -23,14 +21,12 @@ export default function HomePage() {
       <WhatWeHeard />
       <TheGap />
       <WhoCursorIs />
-      <WhatItDoes />
       <WhereItPlugsIn />
       <IdeaWorthTesting />
       <ProposedPoc />
       <TheGroup />
       <ThePilot />
       <Timeline />
-      <Faq />
       <NextSteps />
     </main>
   );
