@@ -3,8 +3,8 @@ import type { SectionMeta } from "@/lib/content";
 
 export function SectionHeader({ meta }: { meta: SectionMeta }) {
   return (
-    <header className="mb-10 max-w-md md:mb-12">
-      <h2 className="text-[1.75rem] font-medium leading-[1.12] tracking-[-0.02em] text-ink md:text-[1.85rem]">
+    <header className="mb-10 max-w-2xl md:mb-12">
+      <h2 className="text-[1.75rem] font-medium leading-[1.12] tracking-[-0.02em] text-ink md:text-[2rem]">
         {meta.heading}
       </h2>
       <p className="prose-measure mt-4 text-[17px] leading-[1.55] text-ink-muted">
