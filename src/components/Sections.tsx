@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { content } from "@/lib/content";
+import { content, hiddenGroup } from "@/lib/content";
 import { SectionHeader, SoftPanel } from "@/components/SectionHeader";
 
 function Shell({
@@ -155,31 +155,6 @@ export function WhereItPlugsIn() {
   );
 }
 
-export function IdeaWorthTesting() {
-  const { meta, quote, attribution, practice } = content.ideaWorthTesting;
-  return (
-    <Shell id={meta.id}>
-      <SectionHeader meta={meta} />
-      <blockquote className="mt-8 max-w-3xl rounded-2xl bg-ink px-6 py-6 text-canvas sm:px-8 sm:py-8">
-        <p className="text-[1.15rem] font-medium leading-snug tracking-tight">
-          “{quote}”
-        </p>
-        <p className="mt-4 text-[13px] text-canvas/55">{attribution}</p>
-      </blockquote>
-      <ul className="mt-8 max-w-3xl space-y-3">
-        {practice.map((item) => (
-          <li
-            key={item}
-            className="rounded-xl bg-panel px-4 py-3 text-[15px] leading-relaxed text-ink-muted"
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
-    </Shell>
-  );
-}
-
 export function ProposedPoc() {
   const { meta, intro, checks, why } = content.proposedPoc;
   return (
@@ -219,8 +194,9 @@ export function ProposedPoc() {
   );
 }
 
+/** Not mounted on the page until Nate confirms peeps — uses `hiddenGroup`. */
 export function TheGroup() {
-  const { meta, ask, members, expectation } = content.theGroup;
+  const { meta, ask, members, expectation } = hiddenGroup;
   return (
     <Shell id={meta.id}>
       <SectionHeader meta={meta} />

@@ -30,24 +30,18 @@ Cursor in one slide. Model choice, agents on tickets, review, enterprise control
 ## 05 Where it plugs in
 Same path (DPM → HLA/AVT → R&D → execution → review → release). Removes waiting. Nothing asks you to reorganize first.
 
-## 06 The idea
-Modular standard patterns agents reach for upstream. Reusable skill — not an ad hoc demo.
-
-## 07 Proposed POC: photo quality detection
+## 06 Proposed POC: photo quality detection
 Warranty / inspections / field photos. Self-contained. Reusable into Cat Inspect, Spotters Guide. Unlocks parts ID / anomaly / repair cost downstream.
 
-## 08 The group
-Daniela’s eng · Kevin’s MLOps · Charlie (DPM AI, observer) · Olivier (end-to-end) · Shelby. Nominate in 2–3 days.
-
-## 09 The pilot
+## 07 The pilot
 30 days · 100% tokens · &lt;1 day setup · real photo-quality work. Infra: AWS private link / self-hosted agents; GitHub app review; Cat communications for external sharing.
 
-## 10 Timeline
+## 08 Timeline
 2–3 days nominate → Nate+Olivier align → early next week reconnect → credits + overview deck → 30-day pilot.
 
-## 11 Next steps
+## 09 Next steps
 Nate / Joe / Cursor — nominate, align, reconnect, stand up.
 
 ---
 
-**Dropped:** Jul 28 Dallas-as-centerpiece · Richard Green / MindStar · blurry-parts-ID as sole spine · “Four ways” primer section · FAQ section.
+**Not on page:** “The idea worth testing” removed. The group (Daniela / Kevin / Charlie / Olivier / Shelby) kept in `hiddenGroup` until Nate confirms peeps.

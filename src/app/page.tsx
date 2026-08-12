@@ -5,9 +5,7 @@ import {
   TheGap,
   WhoCursorIs,
   WhereItPlugsIn,
-  IdeaWorthTesting,
   ProposedPoc,
-  TheGroup,
   ThePilot,
   Timeline,
 } from "@/components/Sections";
@@ -22,9 +20,8 @@ export default function HomePage() {
       <TheGap />
       <WhoCursorIs />
       <WhereItPlugsIn />
-      <IdeaWorthTesting />
       <ProposedPoc />
-      <TheGroup />
+      {/* TheGroup hidden until Nate confirms peeps — see hiddenGroup in content.ts */}
       <ThePilot />
       <Timeline />
       <NextSteps />
