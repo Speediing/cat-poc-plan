@@ -1,11 +1,15 @@
 # Stack and auth
 
+For the full file tree and bootstrap commands, see [scaffold.md](scaffold.md).
+For token CSS and UI class recipes, see [replication-recipes.md](replication-recipes.md).
+
 ## Recommended stack
 
 - Next.js App Router (current stable), React 19, TypeScript
 - Tailwind CSS v4 (`@import "tailwindcss"`, `@theme inline`)
 - No CMS, no analytics, no i18n unless requested
 - Deploy on Vercel; production domain is the leave-behind URL you share
+- Public docs: [nextjs.org/docs/app](https://nextjs.org/docs/app), [vercel.com/docs](https://vercel.com/docs)
 
 ## File layout
 

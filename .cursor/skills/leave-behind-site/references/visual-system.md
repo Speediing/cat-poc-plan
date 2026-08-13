@@ -2,6 +2,8 @@
 
 Craft target: a Cursor document that acknowledges the customer brand — not a customer-branded brochure, not a generic AI landing page.
 
+**Implement with copy-paste recipes** in [replication-recipes.md](replication-recipes.md) (tokens, nav observer, hero, cards, tables). Public pacing refs: [cursor.com](https://cursor.com), [vercel.com](https://vercel.com), [vercel.com/design](https://vercel.com/design), [Geist](https://vercel.com/font).
+
 ## Tokens (start here, then tune)
 
 Use CSS variables on `:root` and map into Tailwind `@theme inline`.
