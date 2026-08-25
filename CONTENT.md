@@ -18,40 +18,31 @@
 ## 01 How we run it
 **One work week. Real repo. Photo quality detection.**
 
-Path compressed: Intake → Design (HLA + AVT) → Execution → Release → Support.
-
-- Monday through Friday. No weekend build days.
-- Work lives in a real Cat repo: same PRs, not a sandbox.
-- Cursor covers tokens. Setup under a day. Nate names the small group.
-- A 30-day token trial is the commercial envelope around the sprint, not the schedule.
+- Monday through Friday only.
+- Same PRs, not a sandbox.
+- Cursor covers tokens. Nate names the group.
 
 ### Day cards
-1. **Day 1 · Mon · Intake / requirements**  
-   Stand the group up and write the checks before anyone codes.  
-   Daniela eng + Kevin MLOps; Charlie aware as observer; Olivier facilitates. Acceptance checks in a real ticket. Compresses incomplete DPM specs.
+1. **Day 1 · Mon · Write the checks**  
+   Daniela and Kevin's people. Charlie knows. Olivier keeps it moving. Workspaces on. Write what a good photo is. Real ticket, not a half-spec.
 
-2. **Day 2 · Tue · Mini HLA / AVT (design)**  
-   One-day architecture pressure-test instead of months of HLA + AVT.  
-   Shared service path (Cat Inspect, Spotters Guide). Codify review/security/entitlements so day 5 does not start from zero.
+2. **Day 2 · Tue · Agree the design**  
+   One day, not months. Shared check for Cat Inspect and Spotters Guide later. Review and security rules now. Same repo.
 
-3. **Day 3 · Wed · Execution starts**  
-   R&D that engineering will keep. Build on the ticket in the same repos/PRs.  
-   Agents open PRs. Closes the “random Claude code” gap.
+3. **Day 3 · Wed · Build it where they already work**  
+   Same repos and PRs. Not a throwaway demo. Agents take the ticket and open PRs people can review.
 
-4. **Day 4 · Thu · Engineering handoff + MLOps**  
-   Kevin’s path: working check reviewable in context.  
-   PR against day-1 checks and day-2 rules. One thread: ticket → agent → PR.
+4. **Day 4 · Thu · Hand it over**  
+   Review against Monday's checks and Tuesday's rules. One ticket. Nobody starts over. MLOps sees the same work.
 
-5. **Day 5 · Fri · Reverse-demo and decide**  
-   Demo the written checks, not a slide. Copy-paste pattern. Token baseline. Decide.
+5. **Day 5 · Fri · Show the checks. Decide.**  
+   Demo the photos, not a slide. Cost is a real number. Decide if this is worth doing again.
 
 ## 02 What we prove
-Outcomes on file. Not features. Not invented dollars.
-
 1. Bad warranty, inspect, and field photos stop entering the vision stack.
-2. That unlocks parts ID, visual anomaly, and repair-cost estimate downstream.
-3. The path (requirements → prototype → eng handoff) stays in one thread so the next team can copy it. Not another throwaway demo.
-4. A real token baseline so cost is a number, not a guess.
+2. That unlocks parts ID, visual anomaly, and repair-cost estimate.
+3. Requirements, prototype, and eng handoff stay on one ticket so the next team can copy it. Not another throwaway demo.
+4. Token cost is a real number, not a guess.
 
 ## 03 What we heard
 **The bottleneck isn't writing the code.**

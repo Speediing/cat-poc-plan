@@ -49,13 +49,15 @@ export function HowWeRunIt() {
               <p className="text-[13px] font-medium tracking-[0.04em] text-cursor-orange uppercase">
                 {day.when}
               </p>
-              <p className="text-[13px] font-medium text-ink-faint">
+              <p className="text-[1.05rem] font-medium leading-snug tracking-[-0.01em] text-ink md:text-[1.15rem]">
                 {day.stage}
               </p>
             </div>
-            <p className="mt-3 text-[1.05rem] font-medium leading-snug tracking-[-0.01em] text-ink md:text-[1.15rem]">
-              {day.headline}
-            </p>
+            {day.headline ? (
+              <p className="mt-3 text-[1.05rem] font-medium leading-snug tracking-[-0.01em] text-ink md:text-[1.15rem]">
+                {day.headline}
+              </p>
+            ) : null}
             <ul className="mt-4 space-y-2">
               {day.bullets.map((bullet) => (
                 <li
