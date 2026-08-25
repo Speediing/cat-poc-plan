@@ -1,6 +1,6 @@
 # PLAN.md · Caterpillar Digital × Cursor Pilot Microsite (Nate Litton)
 
-> **Live frame (Aug 2026 leave-behind):** Aug 11 Dallas onsite. Customer-facing plan is **one work week / five working days** on photo quality detection (Mon stand up · Tue–Thu build · Fri reverse-demo and decide). A 30-day token trial is the commercial envelope, not the schedule. HOW WE RUN IT + WHAT WE PROVE sit high on the page. See `CONTENT.md` / `src/lib/content.ts`. Sections below are earlier IA notes and may lag the live site.
+> **Live frame (Aug 2026 leave-behind):** Aug 11 Dallas onsite. Customer-facing plan is **one work week / five working days** on photo quality detection, mapped to Cat's path (Intake → HLA/AVT → Execution → Release → Support): Mon intake/requirements · Tue mini HLA/AVT · Wed execution that eng keeps · Thu eng handoff + MLOps · Fri reverse-demo and decide. A 30-day token trial is the commercial envelope, not the schedule. HOW WE RUN IT + WHAT WE PROVE sit high on the page. See `CONTENT.md` / `src/lib/content.ts`. Sections below are earlier IA notes and may lag the live site.
 
 **What this is:** a private leave-behind microsite for Caterpillar Digital stakeholders - Nate Litton and the people he forwards it to (his AI R&D lead, the incoming AI/ML Ops lead, his chief of staff, possibly Augie's office or a CFO reviewer). Not public marketing. It should read like a well-prepared internal memo that happens to be a website.
 

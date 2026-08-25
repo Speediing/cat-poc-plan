@@ -39,18 +39,33 @@ export function HowWeRunIt() {
           </li>
         ))}
       </ul>
-      <ol className="mt-10 grid gap-3 md:grid-cols-3">
+      <ol className="mt-10 space-y-4">
         {days.map((day) => (
           <li
             key={day.when}
             className="rounded-2xl bg-white/80 p-5 shadow-[0_0_0_1px_rgba(38,37,30,0.07)] sm:p-6"
           >
-            <p className="text-[13px] font-medium tracking-[0.04em] text-cursor-orange uppercase">
-              {day.when}
+            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <p className="text-[13px] font-medium tracking-[0.04em] text-cursor-orange uppercase">
+                {day.when}
+              </p>
+              <p className="text-[13px] font-medium text-ink-faint">
+                {day.stage}
+              </p>
+            </div>
+            <p className="mt-3 text-[1.05rem] font-medium leading-snug tracking-[-0.01em] text-ink md:text-[1.15rem]">
+              {day.headline}
             </p>
-            <p className="mt-3 text-[16px] leading-relaxed text-ink">
-              {day.what}
-            </p>
+            <ul className="mt-4 space-y-2">
+              {day.bullets.map((bullet) => (
+                <li
+                  key={bullet}
+                  className="text-[15px] leading-relaxed text-ink-muted"
+                >
+                  {bullet}
+                </li>
+              ))}
+            </ul>
           </li>
         ))}
       </ol>

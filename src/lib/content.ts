@@ -58,7 +58,9 @@ export interface PilotStat {
 
 export interface SprintDay {
   when: string;
-  what: string;
+  stage: string;
+  headline: string;
+  bullets: string[];
 }
 
 export interface NextStep {
@@ -150,27 +152,77 @@ export const content: SiteContent = {
       id: "how-we-run-it",
       navLabel: "How we run it",
       heading: "How we run it.",
-      kicker: "",
+      kicker:
+        "Five working days against your path: Intake → Design (HLA + AVT) → Execution → Release → Support.",
     },
     headline: "One work week. Real repo. Photo quality detection.",
     facts: [
-      "Five working days. Monday through Friday. No weekend build days.",
+      "Monday through Friday. No weekend build days.",
       "Work lives in a real Cat repo: same PRs, not a sandbox.",
-      "Cursor covers tokens. Setup under a day. Nate names the small group (Daniela + Kevin reps, Charlie aware, Olivier facilitates).",
-      "A 30-day token trial is the commercial envelope around the sprint, not the plan.",
+      "Cursor covers tokens. Setup under a day. Nate names the small group.",
+      "A 30-day token trial is the commercial envelope around the sprint, not the schedule.",
     ],
     days: [
       {
         when: "Day 1 · Mon",
-        what: "Stand the group up. Nominees, workspaces, written acceptance checks.",
+        stage: "Intake / requirements",
+        headline:
+          "Stand the group up and write the checks before anyone codes.",
+        bullets: [
+          "Daniela eng rep + Kevin MLOps rep. Charlie (DPM AI) aware as observer. Olivier facilitates the path.",
+          "Workspaces live. Credits in. Hours, not a program.",
+          "Write acceptance checks upfront: resolution good enough, right component visible, no finger on the lens.",
+          "Put that in a real ticket in a real Cat repo so the sprint does not start with an incomplete DPM spec.",
+          "Compresses Intake. Proves against weeks of churn from incomplete requirements.",
+        ],
       },
       {
-        when: "Days 2–4 · Tue–Thu",
-        what: "Build the quality check in the real path: requirements → working service → PR. Most of the work lives here.",
+        when: "Day 2 · Tue",
+        stage: "Mini HLA / AVT (design)",
+        headline:
+          "One-day architecture pressure-test instead of months of HLA + AVT.",
+        bullets: [
+          "How photo quality detection ships as a shared service later (Cat Inspect, Spotters Guide) without a platform-data dependency.",
+          "Codify review, security, and entitlement rules on day 2 so review does not start from zero on day 5.",
+          "Same repo. No sandbox. Design context stays with the ticket.",
+          "Compresses Design (HLA + AVT), the longest pull today. Proves against the dashboard POC that stuck on entitlements after the demo.",
+        ],
+      },
+      {
+        when: "Day 3 · Wed",
+        stage: "Execution starts",
+        headline:
+          "R&D that engineering will keep. Build the quality check on the ticket.",
+        bullets: [
+          "Same repos and PRs Daniela’s team already uses. This is the prototype that is not discarded.",
+          "Agents pick up the ticket, open PRs, leave a reviewable trail.",
+          "Prove the “random Claude code” gap is closed because the code lives where engineering reviews.",
+          "Compresses Execution start. Proves against prototypes that reset the clock at the handoff.",
+        ],
+      },
+      {
+        when: "Day 4 · Thu",
+        stage: "Engineering handoff + MLOps",
+        headline:
+          "Kevin’s path: a working check that is reviewable in context, not a demo zip.",
+        bullets: [
+          "PR review against the day-1 checks and the day-2 rules.",
+          "One thread: ticket → agent → PR. Context does not reset at the R&D / eng seam.",
+          "MLOps sees the production path early, while the work is still warm.",
+          "Compresses the engineering handoff. Proves against shared eng rotating and context dying at the seams.",
+        ],
       },
       {
         when: "Day 5 · Fri",
-        what: "Reverse-demo against the written checks and decide.",
+        stage: "Reverse-demo and decide",
+        headline: "Demo the written checks, not a slide. Then decide.",
+        bullets: [
+          "Reverse-demo against day-1 acceptance checks: resolution, component visible, no obstruction.",
+          "Show the copy-paste pattern (shared service, not a one-off hack) so it can be told at a town hall or Augie offsite.",
+          "Token baseline is a number, not a guess.",
+          "Decide whether the path is real enough to copy across digital.",
+          "Compresses Release / Support storytelling. Proves the pattern travels, not just the demo.",
+        ],
       },
     ],
   },
@@ -372,7 +424,7 @@ export const content: SiteContent = {
     stats: [
       {
         value: "5 days",
-        label: "Working days: Mon stand up, Tue–Thu build, Fri decide",
+        label: "Working days against your path, Mon through Fri",
       },
       {
         value: "30 days",

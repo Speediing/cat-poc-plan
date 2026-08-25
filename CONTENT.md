@@ -18,15 +18,32 @@
 ## 01 How we run it
 **One work week. Real repo. Photo quality detection.**
 
-- Five working days. Monday through Friday. No weekend build days.
-- Work lives in a real Cat repo: same PRs, not a sandbox.
-- Cursor covers tokens. Setup under a day. Nate names the small group (Daniela + Kevin reps, Charlie aware, Olivier facilitates).
-- A 30-day token trial is the commercial envelope around the sprint, not the plan.
+Path compressed: Intake → Design (HLA + AVT) → Execution → Release → Support.
 
-Day strip:
-1. **Day 1 · Mon:** Stand the group up. Nominees, workspaces, written acceptance checks.
-2. **Days 2–4 · Tue–Thu:** Build the quality check in the real path: requirements → working service → PR. Most of the work lives here.
-3. **Day 5 · Fri:** Reverse-demo against the written checks and decide.
+- Monday through Friday. No weekend build days.
+- Work lives in a real Cat repo: same PRs, not a sandbox.
+- Cursor covers tokens. Setup under a day. Nate names the small group.
+- A 30-day token trial is the commercial envelope around the sprint, not the schedule.
+
+### Day cards
+1. **Day 1 · Mon · Intake / requirements**  
+   Stand the group up and write the checks before anyone codes.  
+   Daniela eng + Kevin MLOps; Charlie aware as observer; Olivier facilitates. Acceptance checks in a real ticket. Compresses incomplete DPM specs.
+
+2. **Day 2 · Tue · Mini HLA / AVT (design)**  
+   One-day architecture pressure-test instead of months of HLA + AVT.  
+   Shared service path (Cat Inspect, Spotters Guide). Codify review/security/entitlements so day 5 does not start from zero.
+
+3. **Day 3 · Wed · Execution starts**  
+   R&D that engineering will keep. Build on the ticket in the same repos/PRs.  
+   Agents open PRs. Closes the “random Claude code” gap.
+
+4. **Day 4 · Thu · Engineering handoff + MLOps**  
+   Kevin’s path: working check reviewable in context.  
+   PR against day-1 checks and day-2 rules. One thread: ticket → agent → PR.
+
+5. **Day 5 · Fri · Reverse-demo and decide**  
+   Demo the written checks, not a slide. Copy-paste pattern. Token baseline. Decide.
 
 ## 02 What we prove
 Outcomes on file. Not features. Not invented dollars.
