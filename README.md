@@ -1,7 +1,7 @@
-# Caterpillar Digital × Cursor — Pilot Plan
+# Caterpillar Digital × Cursor · Pilot Plan
 
 Customer-facing leave-behind from Cursor to Caterpillar Digital.  
-**Source:** Aug 11, 2026 Chicago onsite (*Cursor & Cat Digital*) + [cat-cursor-followup](https://cat-cursor-followup.vercel.app) structure/voice.
+**Source:** Aug 11, 2026 Dallas onsite (*Cursor & Cat Digital*) + [cat-cursor-followup](https://cat-cursor-followup.vercel.app) structure/voice.
 
 ## Stack
 
@@ -25,7 +25,7 @@ Set these on Vercel (Production + Preview). Do not commit real values.
 | `SESSION_SECRET` | Long random string used to sign the session cookie |
 
 ```bash
-# Local (optional — without both vars, auth is skipped in development)
+# Local (optional: without both vars, auth is skipped in development)
 cp .env.example .env.local
 # fill SITE_PASSWORD and SESSION_SECRET
 ```
