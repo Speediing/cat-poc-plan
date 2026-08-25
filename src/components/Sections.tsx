@@ -20,6 +20,86 @@ function Shell({
   );
 }
 
+/** Exec skim: how the one-work-week sprint runs. Large and plain. */
+export function HowWeRunIt() {
+  const { meta, headline, facts, days } = content.howWeRunIt;
+  return (
+    <Shell id={meta.id} warm>
+      <SectionHeader meta={meta} />
+      <p className="max-w-3xl text-[1.75rem] font-medium leading-[1.15] tracking-[-0.02em] text-ink md:text-[2.15rem]">
+        {headline}
+      </p>
+      <ul className="mt-8 max-w-3xl space-y-3">
+        {facts.map((fact) => (
+          <li
+            key={fact}
+            className="text-[17px] leading-[1.55] text-ink-muted"
+          >
+            {fact}
+          </li>
+        ))}
+      </ul>
+      <ol className="mt-10 space-y-4">
+        {days.map((day) => (
+          <li
+            key={day.when}
+            className="rounded-2xl bg-white/80 p-5 shadow-[0_0_0_1px_rgba(38,37,30,0.07)] sm:p-6"
+          >
+            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <p className="text-[13px] font-medium tracking-[0.04em] text-cursor-orange uppercase">
+                {day.when}
+              </p>
+              <p className="text-[1.05rem] font-medium leading-snug tracking-[-0.01em] text-ink md:text-[1.15rem]">
+                {day.stage}
+              </p>
+            </div>
+            {day.headline ? (
+              <p className="mt-3 text-[1.05rem] font-medium leading-snug tracking-[-0.01em] text-ink md:text-[1.15rem]">
+                {day.headline}
+              </p>
+            ) : null}
+            <ul className="mt-4 space-y-2">
+              {day.bullets.map((bullet) => (
+                <li
+                  key={bullet}
+                  className="text-[15px] leading-relaxed text-ink-muted"
+                >
+                  {bullet}
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ol>
+    </Shell>
+  );
+}
+
+/** Exec skim: business outcomes on file. */
+export function WhatWeProve() {
+  const { meta, outcomes } = content.whatWeProve;
+  return (
+    <Shell id={meta.id}>
+      <SectionHeader meta={meta} />
+      <ol className="mt-2 space-y-4">
+        {outcomes.map((outcome, index) => (
+          <li
+            key={outcome}
+            className="grid gap-3 border-b border-hairline pb-5 last:border-0 last:pb-0 sm:grid-cols-[3rem_1fr] sm:items-baseline"
+          >
+            <p className="text-[13px] font-medium text-cursor-orange">
+              {String(index + 1).padStart(2, "0")}
+            </p>
+            <p className="text-[1.2rem] font-medium leading-[1.35] tracking-[-0.01em] text-ink md:text-[1.35rem]">
+              {outcome}
+            </p>
+          </li>
+        ))}
+      </ol>
+    </Shell>
+  );
+}
+
 export function WhatWeHeard() {
   const { meta, operatingModel, findings } = content.whatWeHeard;
   return (
@@ -194,7 +274,7 @@ export function ProposedPoc() {
   );
 }
 
-/** Not mounted on the page until Nate confirms peeps — uses `hiddenGroup`. */
+/** Not mounted on the page until Nate confirms peeps. Uses `hiddenGroup`. */
 export function TheGroup() {
   const { meta, ask, members, expectation } = hiddenGroup;
   return (
@@ -276,29 +356,6 @@ export function ThePilot() {
           <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">{infra}</p>
         </SoftPanel>
       </div>
-    </Shell>
-  );
-}
-
-export function Timeline() {
-  const { meta, items } = content.timeline;
-  return (
-    <Shell id={meta.id}>
-      <SectionHeader meta={meta} />
-      <ol className="mt-10 space-y-3">
-        {items.map((item) => (
-          <li
-            key={item.when + item.what}
-            className="grid gap-2 rounded-2xl bg-white/80 p-5 shadow-[0_0_0_1px_rgba(38,37,30,0.07)] sm:grid-cols-[10rem_1fr_8rem] sm:items-baseline"
-          >
-            <p className="text-[13px] font-medium text-cursor-orange">
-              {item.when}
-            </p>
-            <p className="text-[15px] text-ink">{item.what}</p>
-            <p className="text-[13px] text-ink-faint sm:text-right">{item.who}</p>
-          </li>
-        ))}
-      </ol>
     </Shell>
   );
 }

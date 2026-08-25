@@ -28,19 +28,19 @@ export function Hero() {
             </p>
             <p className="mt-10 flex flex-wrap gap-3">
               <a
-                href="#what-we-heard"
+                href="#how-we-run-it"
                 className="inline-flex items-center rounded-full bg-ink px-5 py-2.5 text-[14px] font-medium text-canvas transition-opacity hover:opacity-85"
               >
-                What we heard
+                How we run it
                 <span aria-hidden="true" className="ml-2">
                   →
                 </span>
               </a>
               <a
-                href="#proposed-poc"
+                href="#what-we-prove"
                 className="inline-flex items-center rounded-full bg-panel px-5 py-2.5 text-[14px] font-medium text-ink transition-opacity hover:opacity-85"
               >
-                Photo quality POC
+                What we prove
               </a>
             </p>
           </div>

@@ -1,6 +1,8 @@
-# PLAN.md — Caterpillar Digital × Cursor Pilot Microsite (Nate Litton)
+# PLAN.md · Caterpillar Digital × Cursor Pilot Microsite (Nate Litton)
 
-**What this is:** a private leave-behind microsite for Caterpillar Digital stakeholders — Nate Litton and the people he forwards it to (his AI R&D lead, the incoming AI/ML Ops lead, his chief of staff, possibly Augie's office or a CFO reviewer). Not public marketing. It should read like a well-prepared internal memo that happens to be a website.
+> **Live frame (Aug 2026 leave-behind):** Aug 11 Dallas onsite. One work week (Mon–Fri): write the checks, agree the design, build in real repos, hand over, show the checks and decide. Plain voice. HOW WE RUN IT + WHAT WE PROVE high on the page. 30-day token trial is commercial only (The deal). See `CONTENT.md` / `src/lib/content.ts`. Sections below are earlier IA notes and may lag the live site.
+
+**What this is:** a private leave-behind microsite for Caterpillar Digital stakeholders - Nate Litton and the people he forwards it to (his AI R&D lead, the incoming AI/ML Ops lead, his chief of staff, possibly Augie's office or a CFO reviewer). Not public marketing. It should read like a well-prepared internal memo that happens to be a website.
 
 **Source of truth:** the Jul 28, 2026 discovery call — *Nate Litton | Cursor - Discovery* (Jason Wiker, Joe Masello, Sahil Patel / Nate Litton, Madison Motyl). Every factual claim on the site traces to that call or to Cursor's standard pilot terms. No other Caterpillar conversations are referenced.
 

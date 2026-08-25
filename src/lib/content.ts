@@ -1,7 +1,7 @@
 /**
- * Content — Caterpillar Digital × Cursor leave-behind.
+ * Content: Caterpillar Digital × Cursor leave-behind.
  *
- * Source of truth: Aug 11, 2026 "Cursor & Cat Digital" onsite
+ * Source of truth: Aug 11, 2026 "Cursor & Cat Digital" Dallas onsite
  * (Granola 87ae339d-1c0d-4890-867f-37e9be06d190) + structure/voice of
  * https://cat-cursor-followup.vercel.app
  *
@@ -56,10 +56,11 @@ export interface PilotStat {
   label: string;
 }
 
-export interface TimelineItem {
+export interface SprintDay {
   when: string;
-  what: string;
-  who: string;
+  stage: string;
+  headline: string;
+  bullets: string[];
 }
 
 export interface NextStep {
@@ -74,6 +75,16 @@ export interface Contact {
 
 export interface SiteContent {
   meta: SiteMeta;
+  howWeRunIt: {
+    meta: SectionMeta;
+    headline: string;
+    facts: string[];
+    days: SprintDay[];
+  };
+  whatWeProve: {
+    meta: SectionMeta;
+    outcomes: string[];
+  };
   whatWeHeard: {
     meta: SectionMeta;
     operatingModel: {
@@ -110,10 +121,6 @@ export interface SiteContent {
     goals: string[];
     infra: string;
   };
-  timeline: {
-    meta: SectionMeta;
-    items: TimelineItem[];
-  };
   nextSteps: {
     label: string;
     heading: string;
@@ -129,29 +136,114 @@ export interface SiteContent {
 
 export const content: SiteContent = {
   meta: {
-    badge: "Onsite follow-up · Chicago · August 11, 2026",
+    badge: "Onsite follow-up · Dallas · August 11, 2026",
     title: "Caterpillar × Cursor",
     thesis:
-      "What we heard from your team in Chicago, a plain primer on Cursor, and the smallest cross-functional group that could prove an end-to-end pattern inside digital — starting with photo quality detection.",
+      "What we heard from your team in Dallas, a plain primer on Cursor, and one work week on photo quality detection in a real Cat repo.",
     preparedBy:
       "Jason Wiker, Joe Masello & Sahil Patel, Cursor. With thanks to Olivier and Shelby Bethea.",
     footer:
-      "Follow-up to the August 11 onsite · Prepared by Cursor for Caterpillar Digital. Confidential.",
+      "Follow-up to the August 11 Dallas onsite · Prepared by Cursor for Caterpillar Digital. Confidential.",
+  },
+
+  howWeRunIt: {
+    meta: {
+      number: "01",
+      id: "how-we-run-it",
+      navLabel: "How we run it",
+      heading: "How we run it.",
+      kicker: "",
+    },
+    headline: "One work week. Real repo. Photo quality detection.",
+    facts: [
+      "Monday through Friday only.",
+      "Same PRs, not a sandbox.",
+      "Cursor covers tokens. Nate names the group.",
+    ],
+    days: [
+      {
+        when: "Day 1 · Mon",
+        stage: "Write the checks",
+        headline: "",
+        bullets: [
+          "Get Daniela and Kevin's people. Charlie knows. Olivier keeps it moving.",
+          "Workspaces on.",
+          "Write what a good photo is: sharp enough, right part in frame, no finger on the lens.",
+          "Put it in a real ticket so we don't start with a half-spec.",
+        ],
+      },
+      {
+        when: "Day 2 · Tue",
+        stage: "Agree the design",
+        headline: "",
+        bullets: [
+          "One day, not months.",
+          "How this becomes a shared check Cat Inspect and Spotters Guide can call later.",
+          "Write the review and security rules now so Friday isn't a surprise.",
+          "Same repo.",
+        ],
+      },
+      {
+        when: "Day 3 · Wed",
+        stage: "Build it where they already work",
+        headline: "",
+        bullets: [
+          "Same repos and PRs. Not a demo they will throw away.",
+          "Agents take the ticket and open PRs people can actually review.",
+        ],
+      },
+      {
+        when: "Day 4 · Thu",
+        stage: "Hand it over",
+        headline: "",
+        bullets: [
+          "Review the PR against Monday's checks and Tuesday's rules.",
+          "One ticket. Nobody starts over.",
+          "MLOps sees it while it's still the same work.",
+        ],
+      },
+      {
+        when: "Day 5 · Fri",
+        stage: "Show the checks. Decide.",
+        headline: "",
+        bullets: [
+          "Demo the photos, not a slide.",
+          "Cost is a real number.",
+          "Decide if this way of working is worth doing again.",
+        ],
+      },
+    ],
+  },
+
+  whatWeProve: {
+    meta: {
+      number: "02",
+      id: "what-we-prove",
+      navLabel: "What we prove",
+      heading: "What we prove.",
+      kicker: "",
+    },
+    outcomes: [
+      "Bad warranty, inspect, and field photos stop entering the vision stack.",
+      "That unlocks parts ID, visual anomaly, and repair-cost estimate.",
+      "Requirements, prototype, and eng handoff stay on one ticket so the next team can copy it. Not another throwaway demo.",
+      "Token cost is a real number, not a guess.",
+    ],
   },
 
   whatWeHeard: {
     meta: {
-      number: "02",
+      number: "03",
       id: "what-we-heard",
       navLabel: "What we heard",
       heading: "The bottleneck isn't writing the code.",
       kicker:
-        "Every constraint your team described sits between the idea and production — not inside the editor.",
+        "Every constraint your team described sits between the idea and production, not inside the editor.",
     },
     operatingModel: {
       heading: "How work moves today",
       stages: ["Intake", "Design (HLA + AVT)", "Execution", "Release", "Support"],
-      body: "R&D sits inside a broader digital engineering org — pipeline, data modelers, UI, AI. Upstream, a DPM org of about 700 people owns backlog, scoping, and requirements. Design (HLA + AVT) is the longest pull and can take months. Twenty or more epics often lock together even when they do not depend on each other. Shared engineering resources rotate, so context and ownership erode.",
+      body: "R&D sits inside a broader digital engineering org: pipeline, data modelers, UI, AI. Upstream, a DPM org of about 700 people owns backlog, scoping, and requirements. Design (HLA + AVT) is the longest pull and can take months. Twenty or more epics often lock together even when they do not depend on each other. Shared engineering resources rotate, so context and ownership erode.",
     },
     findings: [
       {
@@ -160,7 +252,7 @@ export const content: SiteContent = {
       },
       {
         label: "Prototypes reset the clock",
-        body: "R&D can stand something up fast. Engineering often ignores the prototype code — “random Claude code” — and rebuilds from raw requirements. There are no shared resources for the transition.",
+        body: "R&D can stand something up fast. Engineering often ignores the prototype code (“random Claude code”) and rebuilds from raw requirements. There are no shared resources for the transition.",
       },
       {
         label: "Review starts from zero",
@@ -168,14 +260,14 @@ export const content: SiteContent = {
       },
       {
         label: "Context leaks at the seams",
-        body: "Each handoff drops the reasoning. Tribal knowledge lives in people, recordings, and Confluence — not in a system agents or the next team can reuse.",
+        body: "Each handoff drops the reasoning. Tribal knowledge lives in people, recordings, and Confluence, not in a system agents or the next team can reuse.",
       },
     ],
   },
 
   theGap: {
     meta: {
-      number: "03",
+      number: "04",
       id: "the-gap",
       navLabel: "The gap",
       heading: "The distance between what your team can do and what it can ship.",
@@ -199,19 +291,19 @@ export const content: SiteContent = {
       },
     ],
     close:
-      "Closing that gap is the whole point of the pilot. Not more prototypes — the same work, through the whole path, as a pattern other teams can copy.",
+      "Closing that gap is the whole point of the sprint. Not more prototypes: the same work, through the whole path, as a pattern other teams can copy.",
   },
 
   whoCursorIs: {
     meta: {
-      number: "04",
+      number: "05",
       id: "who-cursor-is",
       navLabel: "Who Cursor is",
       heading: "Cursor, in one slide.",
       kicker:
         "Cursor is where engineers write software with AI: the environment they already know, plus agents that can read, change, test, and review code across a repository.",
     },
-    body: "Plain differences that matter to your delivery cycle — not a feature list.",
+    body: "Plain differences that matter to your delivery cycle, not a feature list.",
     points: [
       {
         label: "Model choice without the homework",
@@ -223,18 +315,18 @@ export const content: SiteContent = {
       },
       {
         label: "Review before a person spends time",
-        body: "Pull requests checked against your standards — the same rules for people and agents. AI review stops being ad hoc model-picking.",
+        body: "Pull requests checked against your standards: the same rules for people and agents. AI review stops being ad hoc model-picking.",
       },
       {
         label: "Enterprise controls included",
-        body: "SSO and SCIM, privacy mode with zero data retention, audit logging, and per-team spend limits.",
+        body: "SSO and SCIM, privacy mode with zero data retention, audit logging, and per-team spend controls.",
       },
     ],
   },
 
   whereItPlugsIn: {
     meta: {
-      number: "05",
+      number: "06",
       id: "where-it-plugs-in",
       navLabel: "Where it plugs in",
       heading: "It does not change your path. It removes the waiting on it.",
@@ -254,7 +346,7 @@ export const content: SiteContent = {
       {
         stage: "R&D prototype",
         today: "Exciting demo. Engineering does not trust the code.",
-        withCursor: "Same repos and pull requests — prototype work stays reviewable.",
+        withCursor: "Same repos and pull requests. Prototype work stays reviewable.",
       },
       {
         stage: "Execution",
@@ -273,12 +365,12 @@ export const content: SiteContent = {
       },
     ],
     close:
-      "Nothing here asks you to reorganize first. The pilot tests whether this is true on real Cat Digital work — end to end enough to show at a town hall or Augie offsite.",
+      "Nothing here asks you to reorganize first. The sprint tests whether this is true on real Cat Digital work, end to end enough to show at a town hall or Augie offsite.",
   },
 
   proposedPoc: {
     meta: {
-      number: "06",
+      number: "07",
       id: "proposed-poc",
       navLabel: "Photo quality",
       heading: "Proposed work: photo quality detection.",
@@ -286,7 +378,7 @@ export const content: SiteContent = {
         "Self-contained. Real. Definable acceptance criteria. Reusable into Cat Inspect, Spotters Guide, and more.",
     },
     intro:
-      "Assess image quality for warranty claims, inspections, and field submissions — before those photos feed parts ID, anomaly detection, or repair cost estimation downstream.",
+      "Assess image quality for warranty claims, inspections, and field submissions, before those photos feed parts ID, anomaly detection, or repair cost estimation downstream.",
     checks: [
       "Resolution is good enough",
       "The right component is visible",
@@ -296,11 +388,11 @@ export const content: SiteContent = {
     why: [
       {
         label: "Self-contained",
-        body: "No dependency on platform data sources or a long integration chain. Fits a thirty-day window.",
+        body: "No dependency on platform data sources or a long integration chain. Fits one work week.",
       },
       {
         label: "End-to-end path",
-        body: "Requirements → R&D prototype → engineering handoff — the exact path that breaks today.",
+        body: "Requirements → R&D prototype → engineering handoff: the exact path that breaks today.",
       },
       {
         label: "Copy-paste later",
@@ -311,66 +403,32 @@ export const content: SiteContent = {
 
   thePilot: {
     meta: {
-      number: "07",
+      number: "08",
       id: "the-pilot",
-      navLabel: "The pilot",
-      heading: "Thirty days, no procurement conversation to start.",
-      kicker: "",
+      navLabel: "The deal",
+      heading: "One work week. Thirty-day token envelope.",
+      kicker: "Five working days. No procurement conversation to start.",
     },
     stats: [
-      { value: "30 days", label: "Short enough to hold focus" },
+      {
+        value: "5 days",
+        label: "Working days against your path, Mon through Fri",
+      },
+      {
+        value: "30 days",
+        label: "Token trial envelope around the sprint, not the schedule",
+      },
       { value: "100%", label: "Of token costs covered by Cursor, every model" },
       { value: "< 1 day", label: "To stand the team up end to end" },
-      {
-        value: "Real work",
-        label: "Photo quality detection — not a throwaway sandbox",
-      },
     ],
     goals: [
-      "Show an AI-forward end-to-end way of working — not only faster typing.",
+      "Show an AI-forward end-to-end way of working, not only faster typing.",
       "Keep it self-contained and as end-to-end as possible: requirements → prototype → eng handoff.",
-      "Leave a reusable pattern other Cat Digital teams can copy — presentable at a town hall or Augie offsite.",
+      "Leave a reusable pattern other Cat Digital teams can copy, presentable at a town hall or Augie offsite.",
       "Produce a real token baseline so budget is a known number, not a guess.",
     ],
     infra:
-      "You are on AWS. We can private-link into a VPC or run self-hosted agents so work can start while a formal security review runs in parallel. GitHub app install and IP whitelist may need review. External sharing goes through Cat communications and compliance — Olivier's flag from the session.",
-  },
-
-  timeline: {
-    meta: {
-      number: "08",
-      id: "timeline",
-      navLabel: "Timeline",
-      heading: "The next few weeks.",
-      kicker: "",
-    },
-    items: [
-      {
-        when: "In 2–3 days",
-        what: "Nominate reps from Daniela's and Kevin's teams; make Charlie aware",
-        who: "Nate",
-      },
-      {
-        when: "Before next week",
-        what: "Align internally on leads and scope",
-        who: "Nate + Olivier",
-      },
-      {
-        when: "Early next week",
-        what: "Short reconnect to lock the group and use case",
-        who: "Joe + Nate",
-      },
-      {
-        when: "ASAP",
-        what: "Cursor account credits to Olivier and Shelby; short overview deck (Olivier introduced Cursor ~2 years ago)",
-        who: "Jason + Joe",
-      },
-      {
-        when: "Pilot window",
-        what: "Thirty days on photo quality detection against agreed success criteria",
-        who: "Both",
-      },
-    ],
+      "You are on AWS. We can private-link into a VPC or run self-hosted agents so work can start while a formal security review runs in parallel. GitHub app install and IP whitelist may need review. External sharing goes through Cat communications and compliance. Olivier's flag from the session.",
   },
 
   nextSteps: {
@@ -390,7 +448,7 @@ export const content: SiteContent = {
       {
         owner: "Joe",
         action:
-          "Reconnect early next week. Lock the group and confirm photo quality detection as the pilot work.",
+          "Reconnect early next week. Lock the group and confirm photo quality detection as the sprint work.",
       },
       {
         owner: "Cursor",
@@ -409,13 +467,14 @@ export const content: SiteContent = {
 
 /** Visible nav / page sections only (continuous numbering). */
 export const sections: SectionMeta[] = [
+  content.howWeRunIt.meta,
+  content.whatWeProve.meta,
   content.whatWeHeard.meta,
   content.theGap.meta,
   content.whoCursorIs.meta,
   content.whereItPlugsIn.meta,
   content.proposedPoc.meta,
   content.thePilot.meta,
-  content.timeline.meta,
 ];
 
 /**
@@ -435,15 +494,15 @@ export const hiddenGroup = {
   members: [
     {
       name: "One rep from Daniela's space",
-      role: "Engineering — the build side of the handoff",
+      role: "Engineering: the build side of the handoff",
     },
     {
       name: "One rep from Kevin's space",
-      role: "MLOps — production path",
+      role: "MLOps: production path",
     },
     {
       name: "Charlie (DPM AI)",
-      role: "Friendly observer on requirements — not a hard dependency",
+      role: "Friendly observer on requirements, not a hard dependency",
     },
     {
       name: "Olivier",
@@ -451,7 +510,7 @@ export const hiddenGroup = {
     },
     {
       name: "Shelby Bethea",
-      role: "On the Aug 11 session — looped for continuity",
+      role: "On the Aug 11 Dallas session, looped for continuity",
     },
   ],
   expectation:
