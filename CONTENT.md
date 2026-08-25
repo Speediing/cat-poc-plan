@@ -11,21 +11,22 @@
 ## Hero
 - **Badge:** Onsite follow-up · Dallas · August 11, 2026
 - **Title:** Caterpillar × Cursor
-- **Thesis:** What we heard from your team in Dallas, a plain primer on Cursor, and a seven-day sprint on photo quality detection in a real Cat repo.
+- **Thesis:** What we heard from your team in Dallas, a plain primer on Cursor, and one work week on photo quality detection in a real Cat repo.
 - **Credits:** Jason Wiker, Joe Masello & Sahil Patel, Cursor. With thanks to Olivier and Shelby Bethea.
 - **Footer:** Follow-up to the August 11 Dallas onsite · Prepared by Cursor for Caterpillar Digital. Confidential.
 
 ## 01 How we run it
-**One week. Real repo. Photo quality detection.**
+**One work week. Real repo. Photo quality detection.**
 
+- Five working days. Monday through Friday. No weekend build days.
 - Work lives in a real Cat repo: same PRs, not a sandbox.
 - Cursor covers tokens. Setup under a day. Nate names the small group (Daniela + Kevin reps, Charlie aware, Olivier facilitates).
 - A 30-day token trial is the commercial envelope around the sprint, not the plan.
 
 Day strip:
-1. **Day 1:** Stand the group up. Nate's nominees, workspaces, written acceptance checks.
-2. **Days 2–6:** Build the quality check in the real path: requirements → working service → PR. Most of the work lives here.
-3. **Day 7:** Reverse-demo against the written checks and decide.
+1. **Day 1 · Mon:** Stand the group up. Nominees, workspaces, written acceptance checks.
+2. **Days 2–4 · Tue–Thu:** Build the quality check in the real path: requirements → working service → PR. Most of the work lives here.
+3. **Day 5 · Fri:** Reverse-demo against the written checks and decide.
 
 ## 02 What we prove
 Outcomes on file. Not features. Not invented dollars.
@@ -55,7 +56,7 @@ Same path (DPM → HLA/AVT → R&D → execution → review → release). Remove
 Warranty / inspections / field photos. Self-contained. Reusable into Cat Inspect, Spotters Guide. Unlocks parts ID / anomaly / repair cost downstream.
 
 ## 08 The deal
-7-day sprint · 30-day token envelope · 100% tokens · &lt;1 day setup. Infra: AWS private link / self-hosted agents; GitHub app review; Cat communications for external sharing.
+One work week (five working days) · 30-day token envelope · 100% tokens · &lt;1 day setup. Infra: AWS private link / self-hosted agents; GitHub app review; Cat communications for external sharing.
 
 ## 09 Next steps
 Nate / Joe / Cursor: nominate, align, reconnect, stand up.

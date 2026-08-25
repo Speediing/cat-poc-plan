@@ -137,7 +137,7 @@ export const content: SiteContent = {
     badge: "Onsite follow-up · Dallas · August 11, 2026",
     title: "Caterpillar × Cursor",
     thesis:
-      "What we heard from your team in Dallas, a plain primer on Cursor, and a seven-day sprint on photo quality detection in a real Cat repo.",
+      "What we heard from your team in Dallas, a plain primer on Cursor, and one work week on photo quality detection in a real Cat repo.",
     preparedBy:
       "Jason Wiker, Joe Masello & Sahil Patel, Cursor. With thanks to Olivier and Shelby Bethea.",
     footer:
@@ -152,23 +152,24 @@ export const content: SiteContent = {
       heading: "How we run it.",
       kicker: "",
     },
-    headline: "One week. Real repo. Photo quality detection.",
+    headline: "One work week. Real repo. Photo quality detection.",
     facts: [
+      "Five working days. Monday through Friday. No weekend build days.",
       "Work lives in a real Cat repo: same PRs, not a sandbox.",
       "Cursor covers tokens. Setup under a day. Nate names the small group (Daniela + Kevin reps, Charlie aware, Olivier facilitates).",
       "A 30-day token trial is the commercial envelope around the sprint, not the plan.",
     ],
     days: [
       {
-        when: "Day 1",
-        what: "Stand the group up. Nate's nominees, workspaces, written acceptance checks.",
+        when: "Day 1 · Mon",
+        what: "Stand the group up. Nominees, workspaces, written acceptance checks.",
       },
       {
-        when: "Days 2–6",
+        when: "Days 2–4 · Tue–Thu",
         what: "Build the quality check in the real path: requirements → working service → PR. Most of the work lives here.",
       },
       {
-        when: "Day 7",
+        when: "Day 5 · Fri",
         what: "Reverse-demo against the written checks and decide.",
       },
     ],
@@ -347,7 +348,7 @@ export const content: SiteContent = {
     why: [
       {
         label: "Self-contained",
-        body: "No dependency on platform data sources or a long integration chain. Fits a seven-day sprint.",
+        body: "No dependency on platform data sources or a long integration chain. Fits one work week.",
       },
       {
         label: "End-to-end path",
@@ -365,13 +366,13 @@ export const content: SiteContent = {
       number: "08",
       id: "the-pilot",
       navLabel: "The deal",
-      heading: "Seven-day sprint. Thirty-day token envelope.",
-      kicker: "No procurement conversation to start.",
+      heading: "One work week. Thirty-day token envelope.",
+      kicker: "Five working days. No procurement conversation to start.",
     },
     stats: [
       {
-        value: "7 days",
-        label: "The plan: stand up, build, reverse-demo, decide",
+        value: "5 days",
+        label: "Working days: Mon stand up, Tue–Thu build, Fri decide",
       },
       {
         value: "30 days",

@@ -20,7 +20,7 @@ function Shell({
   );
 }
 
-/** Exec skim: how the seven-day sprint runs. Large and plain. */
+/** Exec skim: how the one-work-week sprint runs. Large and plain. */
 export function HowWeRunIt() {
   const { meta, headline, facts, days } = content.howWeRunIt;
   return (
